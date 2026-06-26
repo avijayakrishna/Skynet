@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Siddhartha Centre for Media Studies | Premier Media Institute</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins (Headings) and Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons for premium modern UI iconography -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Custom Brand Colors for TailWind */
+        :root {
+            --brand-green: #2E7D32;
+            --brand-orange: #F7931E;
+            --brand-lightgreen: #8BC34A;
+            --brand-dark: #222222;
+            --brand-cream: #F5F5F5;
+        }
+
+        .text-brand-green {
+            color: var(--brand-green);
+        }
+
+        .bg-brand-green {
+            background-color: var(--brand-green);
+        }
+
+        .border-brand-green {
+            border-color: var(--brand-green);
+        }
+
+        .text-brand-orange {
+            color: var(--brand-orange);
+        }
+
+        .bg-brand-orange {
+            background-color: var(--brand-orange);
+        }
+
+        .border-brand-orange {
+            border-color: var(--brand-orange);
+        }
+
+        .bg-brand-lightgreen {
+            background-color: var(--brand-lightgreen);
+        }
+
+        .text-brand-lightgreen {
+            color: var(--brand-lightgreen);
+        }
+
+        .bg-brand-cream {
+            background-color: var(--brand-cream);
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+        /* Animation Smoothness & Waves */
+        .wave-curve {
+            position: relative;
+            background: linear-gradient(135deg, var(--brand-green) 0%, #1e5321 100%);
+        }
+
+        .wave-curve::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            right: 0;
+            background-size: 100% 100%;
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3%3Cpath fill='%23F5F5F5' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,186.7C960,192,1056,160,1152,144C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body
+    class="bg-brand-cream text-[#222222] min-h-screen flex flex-col antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-dark text-white text-xs py-2 px-4 border-b border-gray-800 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span
+                    class="bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded animate-pulse">ADMISSIONS
+                    OPEN 2026-27</span>
+                <span class="hidden sm:inline opacity-90">Join Tumkur University's top-tier Media & Communication
+                    School!</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:08162201766" class="flex items-center gap-1 hover:text-brand-orange transition-colors">
+                    <i data-lucide="phone" class="w-3 h-3"></i> 0816-2201766
+                </a>
+                <span class="opacity-50">|</span>
+                <span class="flex items-center gap-2">
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i data-lucide="facebook"
+                            class="w-3.5 h-3.5"></i></a>
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i data-lucide="instagram"
+                            class="w-3.5 h-3.5"></i></a>
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i data-lucide="youtube"
+                            class="w-3.5 h-3.5"></i></a>
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i data-lucide="linkedin"
+                            class="w-3.5 h-3.5"></i></a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HERO HEADER & NAVBAR -->
+    <header class="bg-white shadow-md sticky top-0 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="#" onclick="navigateTo('home'); return false;" class="flex items-center gap-3">
+                <img src="logo.png" alt="Sri Siddhartha Logo" class="h-16 w-16 object-contain"
+                    onerror="this.src='https://placehold.co/64x64/2E7D32/ffffff?text=SSCMS'">
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold text-brand-green leading-none tracking-tight">SRI SIDDHARTHA
+                    </h1>
+                    <span class="text-xs font-semibold text-gray-600 block mt-0.5 tracking-wider uppercase">Centre for
+                        Media Studies</span>
+                    <span class="text-[9px] text-brand-orange block font-medium">Affiliated to Tumkur University</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+                <a href="#" onclick="navigateTo('home')"
+                    class="nav-link text-brand-green border-b-2 border-brand-green pb-1" data-page="home">Home</a>
+                <a href="#" onclick="navigateTo('about')"
+                    class="nav-link text-gray-600 hover:text-brand-green transition-colors pb-1" data-page="about">About
+                    Us</a>
+                <a href="#" onclick="navigateTo('programs')"
+                    class="nav-link text-gray-600 hover:text-brand-green transition-colors pb-1"
+                    data-page="programs">Programs</a>
+                <a href="#" onclick="navigateTo('facilities')"
+                    class="nav-link text-gray-600 hover:text-brand-green transition-colors pb-1"
+                    data-page="facilities">Facilities</a>
+                <a href="#" onclick="navigateTo('radio')"
+                    class="nav-link text-gray-600 hover:text-brand-green transition-colors pb-1"
+                    data-page="radio">Community Radio</a>
+                <a href="#" onclick="navigateTo('campus')"
+                    class="nav-link text-gray-600 hover:text-brand-green transition-colors pb-1"
+                    data-page="campus">Campus Life</a>
+                <a href="#" onclick="navigateTo('placements')"
+                    class="nav-link text-gray-600 hover:text-brand-green transition-colors pb-1"
+                    data-page="placements">Placements</a>
+                <a href="#" onclick="navigateTo('contact')"
+                    class="nav-link text-gray-600 hover:text-brand-green transition-colors pb-1"
+                    data-page="contact">Contact Us</a>
+            </nav>
+
+            <!-- CTA Admissions button -->
+            <div class="hidden lg:block">
+                <button onclick="navigateTo('admissions')"
+                    class="bg-brand-orange text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> Apply Now
+                </button>
+            </div>
+
+            <!-- Mobile menu trigger -->
+            <button onclick="toggleMobileMenu()"
+                class="lg:hidden p-2 rounded text-gray-700 hover:bg-gray-100 transition-colors">
+                <i data-lucide="menu" id="mobileMenuIcon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden border-t border-gray-100 bg-white shadow-inner max-h-[80vh] overflow-y-auto">
+            <div class="px-4 py-3 flex flex-col gap-3 text-base font-medium text-gray-700">
+                <a href="#" onclick="navigateTo('home')"
+                    class="mobile-nav-link text-brand-green py-2 border-b border-gray-50" data-page="home">Home</a>
+                <a href="#" onclick="navigateTo('about')"
+                    class="mobile-nav-link hover:text-brand-green py-2 border-b border-gray-50" data-page="about">About
+                    Us</a>
+                <a href="#" onclick="navigateTo('programs')"
+                    class="mobile-nav-link hover:text-brand-green py-2 border-b border-gray-50"
+                    data-page="programs">Programs & Courses</a>
+                <a href="#" onclick="navigateTo('facilities')"
+                    class="mobile-nav-link hover:text-brand-green py-2 border-b border-gray-50"
+                    data-page="facilities">World-Class Facilities</a>
+                <a href="#" onclick="navigateTo('radio')"
+                    class="mobile-nav-link hover:text-brand-green py-2 border-b border-gray-50" data-page="radio">Radio
+                    Siddhartha 90.8 FM</a>
+                <a href="#" onclick="navigateTo('campus')"
+                    class="mobile-nav-link hover:text-brand-green py-2 border-b border-gray-50"
+                    data-page="campus">Campus & Library Dome</a>
+                <a href="#" onclick="navigateTo('placements')"
+                    class="mobile-nav-link hover:text-brand-green py-2 border-b border-gray-50"
+                    data-page="placements">Placements & Careers</a>
+                <a href="#" onclick="navigateTo('contact')"
+                    class="mobile-nav-link hover:text-brand-green py-2 border-b border-gray-50"
+                    data-page="contact">Contact Us</a>
+                <button onclick="navigateTo('admissions')"
+                    class="mt-2 w-full bg-brand-orange text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i> Enroll For Admissions
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT ROUTER CONTAINER -->
+    <main class="flex-grow">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="view-home" class="view-pane">
+            <!-- Wave Hero Section -->
+            <div class="wave-curve text-white pt-16 pb-28 px-4 relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a9940]/20 via-[#2e7d32]/50 to-[#222222]/80 opacity-60 pointer-events-none">
+                </div>
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <div class="lg:col-span-7 space-y-6">
+                        <span
+                            class="inline-block bg-[#8BC34A]/20 text-[#8BC34A] border border-[#8BC34A]/40 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">A
+                            premier media school</span>
+                        <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+                            SHAPE YOUR FUTURE IN <span class="text-brand-orange">MEDIA, JOURNALISM</span> & DIGITAL
+                            COMMUNICATION
+                        </h2>
+                        <p class="text-base md:text-lg text-gray-200 font-light max-w-xl">
+                            Industry-focused education, world-class infrastructure and hands-on training to turn your
+                            creative media passion into a thriving career.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <button onclick="navigateTo('programs')"
+                                class="bg-brand-orange text-white px-6 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg flex items-center gap-2">
+                                Explore Programs <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="navigateTo('admissions')"
+                                class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-3 rounded-full font-bold transition-all flex items-center gap-2">
+                                Apply Online
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Dome Visual representation as an interactive modern image carousel -->
+                    <div class="lg:col-span-5 relative">
+                        <div
+                            class="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl overflow-hidden group">
+                            <div
+                                class="absolute -top-12 -right-12 w-48 h-48 bg-brand-orange/20 rounded-full blur-2xl pointer-events-none">
+                            </div>
+                            <div
+                                class="absolute -bottom-12 -left-12 w-48 h-48 bg-brand-lightgreen/20 rounded-full blur-2xl pointer-events-none">
+                            </div>
+
+                            <!-- INTERACTIVE IMAGE SLIDER / CAROUSEL -->
+                            <div
+                                class="w-full h-64 bg-[#222222] rounded-xl relative overflow-hidden border border-gray-700/50 mb-4 group">
+                                <!-- Slides Container -->
+                                <div id="carouselSlides" class="w-full h-full relative">
+                                    <!-- Slide 1: Aerial view.jpg -->
+                                    <div
+                                        class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out pointer-events-auto">
+                                        <img src="image/campus/Aerial view.jpg" alt="Aerial View"
+                                            class="w-full h-full object-cover"
+                                            onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80'">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                                            <span class="text-xs font-semibold text-brand-orange">Campus Showcase</span>
+                                            <p class="text-sm font-bold text-white leading-tight">65-Acre Lush Green
+                                                Aerial View</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 2: Admin block.jpg -->
+                                    <div
+                                        class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none">
+                                        <img src="image/campus/Admin block.jpg" alt="Administrative Block"
+                                            class="w-full h-full object-cover"
+                                            onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80'">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                                            <span class="text-xs font-semibold text-brand-orange font-sans">SSIT Main
+                                                Administration</span>
+                                            <p class="text-sm font-bold text-white leading-tight">Administrative Block &
+                                                Office Chambers</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 3: sscms campus.jpg -->
+                                    <div
+                                        class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none">
+                                        <img src="image/campus/sscms campus.jpg" alt="SSCMS Campus Greenery"
+                                            class="w-full h-full object-cover"
+                                            onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80'">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                                            <span class="text-xs font-semibold text-brand-orange">Lush
+                                                Landscaping</span>
+                                            <p class="text-sm font-bold text-white leading-tight">Main Campus Drive &
+                                                Roundabout</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 4: birds_eyeview.jpg -->
+                                    <div
+                                        class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none">
+                                        <img src="image/campus/birds_eyeview.jpg" alt="Bird's Eye View"
+                                            class="w-full h-full object-cover"
+                                            onerror="this.src='https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?auto=format&fit=crop&w=800&q=80'">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                                            <span class="text-xs font-semibold text-brand-orange">Scenic Campus</span>
+                                            <p class="text-sm font-bold text-white leading-tight">Bird's Eye Vista of
+                                                SSIT Estate</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 5: HMG_park.jpg -->
+                                    <div
+                                        class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none">
+                                        <img src="image/campus/HMG_park.jpg" alt="HMG Park"
+                                            class="w-full h-full object-cover"
+                                            onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80'">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                                            <span class="text-xs font-semibold text-brand-orange">Lush Greenery</span>
+                                            <p class="text-sm font-bold text-white leading-tight">H.M. Gangadharaiah
+                                                Memorial Park</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 6: IMG_0311.JPG -->
+                                    <div
+                                        class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none">
+                                        <img src="image/campus/IMG_0311.JPG" alt="Central Library Interior"
+                                            class="w-full h-full object-cover"
+                                            onerror="this.src='https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80'">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                                            <span class="text-xs font-semibold text-brand-orange">Central Library
+                                                Dome</span>
+                                            <p class="text-sm font-bold text-white leading-tight">Beautiful Geometric
+                                                Day-lit Reading Hub</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 7: Main Gate.jpg -->
+                                    <div
+                                        class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out pointer-events-none">
+                                        <img src="image/campus/Main Gate.jpg" alt="Main Gate entrance"
+                                            class="w-full h-full object-cover"
+                                            onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80'">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
+                                            <span class="text-xs font-semibold text-brand-orange font-sans">SSIT Main
+                                                Gate</span>
+                                            <p class="text-sm font-bold text-white leading-tight">Entrance to Siddhartha
+                                                Media Studies</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Left Navigation Arrow Button -->
+                                <button onclick="prevSlide()"
+                                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 hover:scale-110 text-white p-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand-orange opacity-100 sm:opacity-0 group-hover:opacity-100 z-10"
+                                    aria-label="Previous image">
+                                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                                </button>
+                                <!-- Right Navigation Arrow Button -->
+                                <button onclick="nextSlide()"
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 hover:scale-110 text-white p-2 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-brand-orange opacity-100 sm:opacity-0 group-hover:opacity-100 z-10"
+                                    aria-label="Next image">
+                                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                                </button>
+
+                                <!-- Indicator Dots -->
+                                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"
+                                    id="carouselDots">
+                                    <!-- Populated dynamically via JS -->
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <p class="text-xs font-semibold uppercase tracking-widest text-[#8BC34A]">Explore Our
+                                    Virtual Campus</p>
+                                <p class="text-sm text-gray-200 mt-1">One of the six globally recognized geodesic dome
+                                    campuses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KEY QUICK-FACTS STAT BAR -->
+            <div class="max-w-7xl mx-auto px-4 -mt-16 relative z-20">
+                <div
+                    class="bg-white rounded-2xl shadow-xl p-6 md:p-8 grid grid-cols-2 lg:grid-cols-5 gap-6 border border-gray-100">
+                    <div class="flex flex-col items-center text-center p-3 border-r border-gray-100 last:border-0">
+                        <div class="p-3 bg-brand-green/10 rounded-full text-brand-green mb-3">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 font-semibold tracking-wider uppercase">Affiliated to</span>
+                        <span class="text-sm font-bold text-gray-800 mt-1">Tumkur University</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-3 border-r border-gray-100 last:border-0">
+                        <div class="p-3 bg-brand-green/10 rounded-full text-brand-green mb-3">
+                            <i data-lucide="trees" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 font-semibold tracking-wider uppercase">Campus Area</span>
+                        <span class="text-sm font-bold text-gray-800 mt-1">65-Acre Eco-Campus</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-3 border-r border-gray-100 last:border-0">
+                        <div class="p-3 bg-brand-green/10 rounded-full text-brand-green mb-3">
+                            <i data-lucide="monitor" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 font-semibold tracking-wider uppercase">Advanced Media
+                            Labs</span>
+                        <span class="text-sm font-bold text-gray-800 mt-1">10+ Premium Studios</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-3 border-r border-gray-100 last:border-0">
+                        <div class="p-3 bg-brand-green/10 rounded-full text-brand-green mb-3">
+                            <i data-lucide="radio" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 font-semibold tracking-wider uppercase">Community FM</span>
+                        <span class="text-sm font-bold text-gray-800 mt-1">90.8 FM Station</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-3 last:border-0 col-span-2 lg:col-span-1">
+                        <div class="p-3 bg-brand-green/10 rounded-full text-brand-green mb-3">
+                            <i data-lucide="briefcase" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 font-semibold tracking-wider uppercase">Placement
+                            Track</span>
+                        <span class="text-sm font-bold text-gray-800 mt-1">100% Core Opportunities</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEET THE VISIONARY PREVIEW -->
+            <div class="py-16 px-4 max-w-7xl mx-auto">
+                <div
+                    class="bg-white rounded-3xl p-8 md:p-12 shadow-md border border-gray-100 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="relative">
+                            <div
+                                class="w-56 h-56 rounded-full bg-brand-green/10 flex items-center justify-center border-4 border-brand-green p-2 shadow-xl">
+                                <!-- Styled Graphic Representation of the Gandhian Visionary H.M. Gangadharaiah -->
+                                <svg class="w-full h-full text-brand-green" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
+                                </svg>
+                            </div>
+                            <div
+                                class="absolute -bottom-4 right-4 bg-brand-orange text-white text-xs px-3 py-1 rounded-full font-bold shadow-md">
+                                SSES Founder</div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4 text-center lg:text-left">
+                        <span class="text-xs font-bold text-brand-orange uppercase tracking-widest">Our Spiritual &
+                            Educational Roots</span>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Shikshana Bhishma H.M.
+                            Gangadharaiah</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            A staunch Gandhian, Buddhist reformer, and visionary founder who decided to rebuild the
+                            post-independent nation by dispersing the seeds of knowledge. Under his noble traditions,
+                            SSCMS empowers student minds through participative and holistic development.
+                        </p>
+                        <div class="pt-2">
+                            <button onclick="navigateTo('about')"
+                                class="text-brand-green font-bold flex items-center gap-2 hover:text-brand-orange transition-colors mx-auto lg:mx-0">
+                                Learn about our legacy <i data-lucide="arrow-right" class="w-4.5 h-4.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORE COURSE OFFERINGS -->
+            <div class="py-16 bg-gray-50 border-t border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center space-y-3 mb-12">
+                        <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Academics</span>
+                        <h3 class="text-2xl md:text-4xl font-extrabold text-gray-800">Programs We Offer</h3>
+                        <p class="text-gray-500 max-w-xl mx-auto text-sm">Unlock paths in core broadcasting, digital
+                            communication, content writing and design streams.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transform transition-all group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-5 group-hover:bg-brand-green group-hover:text-white transition-all">
+                                <i data-lucide="pen-tool" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-brand-green transition-colors">
+                                Journalism & Mass Comm</h4>
+                            <p class="text-gray-500 text-xs mt-2 font-light leading-relaxed">Build core reporting
+                                skills, professional editing, broadcast news writing, and research methodology.</p>
+                            <a href="#" onclick="navigateTo('programs'); return false;"
+                                class="text-brand-orange font-semibold text-xs mt-4 inline-flex items-center gap-1 hover:underline">Read
+                                Syllabus <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transform transition-all group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-5 group-hover:bg-brand-green group-hover:text-white transition-all">
+                                <i data-lucide="video" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-brand-green transition-colors">
+                                Radio & TV Production</h4>
+                            <p class="text-gray-500 text-xs mt-2 font-light leading-relaxed">Master studio mixing,
+                                camera anchoring, dynamic multi-camera setups, and video processing consoles.</p>
+                            <a href="#" onclick="navigateTo('programs'); return false;"
+                                class="text-brand-orange font-semibold text-xs mt-4 inline-flex items-center gap-1 hover:underline">Read
+                                Syllabus <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transform transition-all group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-5 group-hover:bg-brand-green group-hover:text-white transition-all">
+                                <i data-lucide="smartphone" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-brand-green transition-colors">
+                                Digital & Social Media</h4>
+                            <p class="text-gray-500 text-xs mt-2 font-light leading-relaxed">Optimize content writing,
+                                social network marketing strategies, podcast audio suites, and online media curation.
+                            </p>
+                            <a href="#" onclick="navigateTo('programs'); return false;"
+                                class="text-brand-orange font-semibold text-xs mt-4 inline-flex items-center gap-1 hover:underline">Read
+                                Syllabus <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transform transition-all group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-5 group-hover:bg-brand-green group-hover:text-white transition-all">
+                                <i data-lucide="layers" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-brand-green transition-colors">
+                                Multimedia Design</h4>
+                            <p class="text-gray-500 text-xs mt-2 font-light leading-relaxed">Exclusively design
+                                animations using Adobe Photoshop, Corel Draw, and Final Cut Pro suites on Apple
+                                computers.</p>
+                            <a href="#" onclick="navigateTo('programs'); return false;"
+                                class="text-brand-orange font-semibold text-xs mt-4 inline-flex items-center gap-1 hover:underline">Read
+                                Syllabus <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WORLD-CLASS FACILITIES PREVIEW -->
+            <div class="py-16 max-w-7xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                    <div>
+                        <span class="text-xs font-bold text-brand-green uppercase tracking-widest">In-house
+                            Infrastructure</span>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800 mt-1">World-Class Facilities</h3>
+                    </div>
+                    <button onclick="navigateTo('facilities')"
+                        class="text-brand-orange font-bold text-sm mt-3 md:mt-0 flex items-center gap-1 group">
+                        Explore all labs <i data-lucide="arrow-right"
+                            class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Facility 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80"
+                                alt="Television Studio"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute bottom-3 left-3 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">Multi-Camera
+                                Console</span>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-800">Advanced Television Studio</h4>
+                            <p class="text-gray-500 text-xs mt-1 font-light">Industry compatible online production
+                                setups designed for recording high fidelity magazine features.</p>
+                        </div>
+                    </div>
+                    <!-- Facility 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
+                                alt="iMac Lab"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute bottom-3 left-3 bg-brand-green text-white text-[10px] font-bold px-2 py-0.5 rounded">20+
+                                Mac Pro Workstations</span>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-800">Apple iMac Multimedia Suite</h4>
+                            <p class="text-gray-500 text-xs mt-1 font-light">Equipped exclusively with Final Cut Pro
+                                (FCP) rendering and state-of-the-art layout publishing resources.</p>
+                        </div>
+                    </div>
+                    <!-- Facility 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=600&q=80"
+                                alt="Radio Siddhartha"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                            </div>
+                            <span
+                                class="absolute bottom-3 left-3 bg-brand-orange text-white text-[10px] font-bold px-2 py-0.5 rounded">90.8
+                                FM Station</span>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-800">Radio Siddhartha 90.8 FM</h4>
+                            <p class="text-gray-500 text-xs mt-1 font-light">Our pioneering Tumkur community radio
+                                station, catering to surrounding rural farms and women since 2008.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMISSION CALL TO ACTION ROW -->
+            <div
+                class="bg-gradient-to-r from-brand-green to-emerald-900 text-white py-12 px-4 relative overflow-hidden">
+                <div
+                    class="absolute right-0 top-0 opacity-10 pointer-events-none transform translate-x-12 -translate-y-12">
+                    <i data-lucide="graduation-cap" class="w-96 h-96"></i>
+                </div>
+                <div
+                    class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+                    <div class="space-y-2 text-center md:text-left">
+                        <h4 class="text-2xl md:text-3xl font-extrabold">Ready to begin your media journey?</h4>
+                        <p class="text-gray-300 text-sm max-w-xl font-light">Schedule a personal counseling appointment
+                            or apply online right away to reserve your seats for academic term 2026-27.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                        <button onclick="navigateTo('admissions')"
+                            class="bg-brand-orange hover:bg-opacity-90 text-white font-bold px-8 py-3.5 rounded-full shadow-lg transition-transform hover:-translate-y-0.5 text-center whitespace-nowrap">Apply
+                            Now</button>
+                        <button onclick="navigateTo('contact')"
+                            class="bg-white/10 hover:bg-white/25 border border-white/30 text-white font-bold px-6 py-3.5 rounded-full text-center">Contact
+                            Admissions</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= ABOUT US PAGE ================= -->
+        <section id="view-about" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Who We Are</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">About Sri Siddhartha</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Empowering communication skills and modern visual
+                    training nestled in a magnificent green eco-system.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-brand-green">SSCMS - Dynamic Educational Incubator</h3>
+                    <p class="text-gray-600 leading-relaxed font-light text-sm">
+                        Situated in the 65-acre clean, idyllic campus of SSIT, Sri Siddhartha Centre for Media Studies
+                        has carved a unique niche for itself in media education and analytical communications research.
+                        SSCMS is housed inside a spacious custom-designed building, surrounded by lush lawns, ornamental
+                        trees, and paved pathing.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed font-light text-sm">
+                        With proximity to Bangalore, the IT & broadcasting hotspot, our students enjoy exclusive
+                        advantages regarding high-profile field internships, frequent industry visits, and top-tier
+                        studio placements. Learning is fully participative, utilizing active workshops, production of
+                        physical lab journals, and interactive group-dialogue seminars.
+                    </p>
+                    <div class="p-4 bg-brand-green/5 border-l-4 border-brand-green rounded-r-xl">
+                        <p class="text-xs italic text-gray-700">"SSCMS represents the right educational space to become
+                            a seasoned, highly creative media expert ready to confront modern challenges."</p>
+                    </div>
+                </div>
+                <!-- Interactive Grid/Stats representation -->
+                <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg space-y-6">
+                    <h4 class="text-lg font-bold text-gray-800">Key Accolades & Accreditations</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-brand-cream rounded-xl">
+                            <span class="text-2xl font-extrabold text-brand-green">1995</span>
+                            <p class="text-xs text-gray-500 mt-1 font-semibold">Rajiv Gandhi National Award winner (Dr.
+                                G. Shivaprasad)</p>
+                        </div>
+                        <div class="p-4 bg-brand-cream rounded-xl">
+                            <span class="text-2xl font-extrabold text-brand-orange">Tumkur</span>
+                            <p class="text-xs text-gray-500 mt-1 font-semibold">University Affiliation & Recognized
+                                Curriculum standards</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-100 pt-4 space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-brand-lightgreen"></div>
+                            <span class="text-xs text-gray-600 font-medium">Wi-Fi enabled campus with borderless
+                                internet experience</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-brand-lightgreen"></div>
+                            <span class="text-xs text-gray-600 font-medium">Comprehensive CALL (Computer Assisted
+                                Language) systems</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-brand-lightgreen"></div>
+                            <span class="text-xs text-gray-600 font-medium">Member of DELNET & JCCC academic
+                                databases</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CORE INSTITUTIONAL LEADERSHIP (SECRETARY & JOINT SECRETARY) -->
+            <div class="space-y-8 pt-8">
+                <div class="text-center">
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Our Distinguished Leadership</h3>
+                    <p class="text-gray-500 text-xs mt-1">Carrying forward spiritual guidance and modern applied
+                        sciences.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Bio Card 1: Dr. G Shivaprasad -->
+                    <div
+                        class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green border-2 border-brand-green/30">
+                                    <i data-lucide="user" class="w-8 h-8"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Dr. G Shivaprasad</h4>
+                                    <span
+                                        class="text-xs text-brand-orange font-bold uppercase tracking-wider">Secretary,
+                                        SSES</span>
+                                    <span class="block text-[10px] text-gray-500 font-medium">M.B.B.S, D.O.M.S, M.S,
+                                        F.O.C.A</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed font-light">
+                                Eminent ophthalmologist and a staunch follower of Buddha's philosophy. Dr. G.
+                                Shivaprasad shoulders the key responsibility to steer all institutions along the vision
+                                of late Shikshana Bhishma H.M. Gangadharaiah. Steeped in spirituality, he aims to
+                                provide not only sight for the blind but also valuable insight and foresight of academic
+                                wisdom.
+                            </p>
+                        </div>
+                        <button onclick="openBioModal('shivaprasad')"
+                            class="mt-6 w-full text-center bg-brand-green/5 hover:bg-brand-green hover:text-white text-brand-green text-xs font-bold py-2.5 rounded-xl transition-all">
+                            View Full Bio & Publications
+                        </button>
+                    </div>
+
+                    <!-- Bio Card 2: Dr. G Parameshwara -->
+                    <div
+                        class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green border-2 border-brand-green/30">
+                                    <i data-lucide="user" class="w-8 h-8"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Dr. G Parameshwara</h4>
+                                    <span class="text-xs text-brand-orange font-bold uppercase tracking-wider">Joint
+                                        Secretary, SSES</span>
+                                    <span class="block text-[10px] text-gray-500 font-medium">M.Sc. (Agri), Ph.D
+                                        (Australia), MISPP, MISTE</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed font-light">
+                                An able reformer, pragmatist and highly accomplished agriculture scientist who obtained
+                                his PhD from the Waite Agricultural Research Institute, Adelaide, Australia. He believes
+                                education must have deeply practical, positive social impacts for human welfare and
+                                democratization.
+                            </p>
+                        </div>
+                        <button onclick="openBioModal('parameshwara')"
+                            class="mt-6 w-full text-center bg-brand-green/5 hover:bg-brand-green hover:text-white text-brand-green text-xs font-bold py-2.5 rounded-xl transition-all">
+                            View Full Bio & Australian Research
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISION & MISSION BLOCK -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+                <div
+                    class="bg-gradient-to-br from-brand-green to-[#1b4b1e] rounded-3xl p-8 text-white relative overflow-hidden shadow-md">
+                    <div class="absolute right-4 top-4 text-white/5"><i data-lucide="eye" class="w-32 h-32"></i></div>
+                    <h3 class="text-xl font-bold flex items-center gap-2 mb-3">
+                        <i data-lucide="eye" class="w-5 h-5 text-brand-lightgreen"></i> Our Vision
+                    </h3>
+                    <p class="text-sm text-gray-200 font-light leading-relaxed">
+                        Modern communication has largely shaped the global village, awareness and understanding has gone
+                        global. Media communication is an effective method to generate peace on earth through awareness,
+                        understanding and thereby establishing harmony. It is the endeavor of SSCMS to take the first
+                        step towards this ultimate ideal.
+                    </p>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-brand-orange to-[#b36307] rounded-3xl p-8 text-white relative overflow-hidden shadow-md">
+                    <div class="absolute right-4 top-4 text-white/5"><i data-lucide="compass" class="w-32 h-32"></i>
+                    </div>
+                    <h3 class="text-xl font-bold flex items-center gap-2 mb-3">
+                        <i data-lucide="compass" class="w-5 h-5 text-brand-lightgreen"></i> Our Mission
+                    </h3>
+                    <p class="text-sm text-gray-200 font-light leading-relaxed">
+                        Advances in media, technology and society have posed several challenges in our contemporary
+                        times in terms of social inequality, freedom of expression, democratization of information and
+                        invasion into the privacy of individuals. SSCMS aims at establishing a meaningful role in
+                        seeking solutions to these issues through participative teaching, specialized training and
+                        exhaustive research in the field of media.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PROGRAMS PAGE ================= -->
+        <section id="view-programs" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Offered Syllabi</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">Dynamic Media Programs</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Industry-vetted specialization courses to equip you
+                    with robust broadcasting, editorial, and design skills.</p>
+            </div>
+
+            <!-- Syllabus Finder Interactive Search Tool -->
+            <div
+                class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 flex flex-col md:flex-row gap-4 items-center justify-between">
+                <div class="w-full md:w-1/3 relative">
+                    <input type="text" id="courseSearchInput" oninput="filterCourses()"
+                        placeholder="Search core subjects (e.g., editing, TV)..."
+                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-green">
+                    <i data-lucide="search" class="absolute left-3 top-3.5 text-gray-400 w-4 h-4"></i>
+                </div>
+                <div class="flex gap-2 w-full md:w-auto overflow-x-auto pb-2 md:pb-0">
+                    <button onclick="filterCourseCategory('all')"
+                        class="category-btn bg-brand-green text-white px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap">All
+                        Specialties</button>
+                    <button onclick="filterCourseCategory('writing')"
+                        class="category-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap">Reporting
+                        & Writing</button>
+                    <button onclick="filterCourseCategory('studios')"
+                        class="category-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap">Studio
+                        Technicals</button>
+                    <button onclick="filterCourseCategory('design')"
+                        class="category-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap">Multimedia
+                        & Design</button>
+                </div>
+            </div>
+
+            <!-- Course Cards Grid -->
+            <div id="courseCardsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-300"
+                    data-category="writing"
+                    data-keywords="journalism mass communication media reporting writing editing reporting press radio">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span
+                                class="bg-[#8BC34A]/10 text-brand-green font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full">Reporting
+                                & Mass Comm</span>
+                            <span class="text-xs text-gray-400 font-semibold flex items-center gap-1"><i
+                                    data-lucide="clock" class="w-3 h-3"></i> 4 Semesters</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">M.S. in Journalism & Mass Communication</h4>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed">
+                            Comprehensive post-graduate training encompassing live reporting methodology, investigative
+                            editing, print publication pagination (using Corel Draw & Photoshop), and theoretical
+                            research models.
+                        </p>
+                        <div class="border-t border-dashed border-gray-100 pt-4">
+                            <h5 class="text-xs font-bold text-gray-700 uppercase tracking-widest mb-2">Core Subject
+                                Modules:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Media Law &
+                                    Ethics</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Reporting
+                                    Techniques</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Lab Journal
+                                    Production</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Folk
+                                    Media</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="navigateTo('admissions')"
+                        class="mt-6 w-full text-center bg-brand-orange text-white text-xs font-bold py-2.5 rounded-xl hover:bg-opacity-90 transition-all">
+                        Apply For This Stream
+                    </button>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-300"
+                    data-category="studios"
+                    data-keywords="radio television audio production console mixer microphone media sound tv online multi camera editing">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span
+                                class="bg-[#8BC34A]/10 text-brand-green font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full">Studio
+                                Technicals</span>
+                            <span class="text-xs text-gray-400 font-semibold flex items-center gap-1"><i
+                                    data-lucide="clock" class="w-3 h-3"></i> 4 Semesters</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Advanced Radio & Television Production</h4>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed">
+                            A highly vocational stream focusing on live television studio work, sound engineering
+                            console controls, and multi-camera newsroom setups.
+                        </p>
+                        <div class="border-t border-dashed border-gray-100 pt-4">
+                            <h5 class="text-xs font-bold text-gray-700 uppercase tracking-widest mb-2">Core Subject
+                                Modules:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Sound
+                                    Engineering</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">News Casting &
+                                    Anchoring</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Multi-camera
+                                    Console Work</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Acoustic
+                                    Control</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="navigateTo('admissions')"
+                        class="mt-6 w-full text-center bg-brand-orange text-white text-xs font-bold py-2.5 rounded-xl hover:bg-opacity-90 transition-all">
+                        Apply For This Stream
+                    </button>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between transition-transform hover:-translate-y-1 duration-300"
+                    data-category="design"
+                    data-keywords="multimedia design apple imac final cut pro photoshop flash animation corel draw web development text design audio video graphics">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span
+                                class="bg-[#8BC34A]/10 text-brand-green font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full">Multimedia
+                                & Design</span>
+                            <span class="text-xs text-gray-400 font-semibold flex items-center gap-1"><i
+                                    data-lucide="clock" class="w-3 h-3"></i> 2 Semesters</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">PG Diploma in Multimedia Design & Animation</h4>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed">
+                            Practical oriented training program using our professional 20-unit Apple iMac Lab. Gain
+                            competency in vector styling, motion animations, and cinematic editing workflow using Final
+                            Cut Pro.
+                        </p>
+                        <div class="border-t border-dashed border-gray-100 pt-4">
+                            <h5 class="text-xs font-bold text-gray-700 uppercase tracking-widest mb-2">Core Subject
+                                Modules:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Final Cut Pro
+                                    (FCP) Editing</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Vector Graphics
+                                    Design</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">3D Animation
+                                    Basics</span>
+                                <span class="bg-brand-cream text-gray-600 text-[10px] px-2 py-1 rounded">Audio
+                                    Mastering</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="navigateTo('admissions')"
+                        class="mt-6 w-full text-center bg-brand-orange text-white text-xs font-bold py-2.5 rounded-xl hover:bg-opacity-95 transition-all">
+                        Apply For This Stream
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= FACILITIES PAGE ================= -->
+        <section id="view-facilities" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Interactive Campus
+                    Tours</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">State-Of-The-Art Media Labs</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Tour the advanced facilities designed to keep your
+                    media production learning industry compatible.</p>
+            </div>
+
+            <!-- Main Interactive Facility Display -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Tabs column -->
+                <div class="lg:col-span-4 flex flex-col gap-3">
+                    <button onclick="showFacilityDetail('language-lab')"
+                        class="facility-tab-btn flex items-center gap-3 p-4 bg-brand-green text-white rounded-2xl shadow text-left transition-all border border-brand-green/20"
+                        id="btn-fac-language-lab">
+                        <div class="p-2 bg-white/20 rounded-xl"><i data-lucide="languages" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold">Language & Design Lab</h4>
+                            <span class="text-[10px] opacity-80">CALL-based instruction</span>
+                        </div>
+                    </button>
+                    <button onclick="showFacilityDetail('tv-studio')"
+                        class="facility-tab-btn flex items-center gap-3 p-4 bg-white hover:bg-gray-50 text-gray-700 rounded-2xl text-left transition-all border border-gray-100"
+                        id="btn-fac-tv-studio">
+                        <div class="p-2 bg-brand-green/10 text-brand-green rounded-xl"><i data-lucide="video"
+                                class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold">Television Recording Studio</h4>
+                            <span class="text-[10px] text-gray-500">Multi-camera online setups</span>
+                        </div>
+                    </button>
+                    <button onclick="showFacilityDetail('imac-lab')"
+                        class="facility-tab-btn flex items-center gap-3 p-4 bg-white hover:bg-gray-50 text-gray-700 rounded-2xl text-left transition-all border border-gray-100"
+                        id="btn-fac-imac-lab">
+                        <div class="p-2 bg-brand-green/10 text-brand-green rounded-xl"><i data-lucide="monitor"
+                                class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold">Apple iMac Multimedia Lab</h4>
+                            <span class="text-[10px] text-gray-500">20 Mac systems with Final Cut Pro</span>
+                        </div>
+                    </button>
+                    <button onclick="showFacilityDetail('fm-station')"
+                        class="facility-tab-btn flex items-center gap-3 p-4 bg-white hover:bg-gray-50 text-gray-700 rounded-2xl text-left transition-all border border-gray-100"
+                        id="btn-fac-fm-station">
+                        <div class="p-2 bg-brand-green/10 text-brand-green rounded-xl"><i data-lucide="radio"
+                                class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold">Community Radio 90.8 FM</h4>
+                            <span class="text-[10px] text-gray-500">On-Air Audio Mixer console</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Display panel column -->
+                <div
+                    class="lg:col-span-8 bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-md min-h-[450px]">
+                    <!-- Detail 1: Language Lab -->
+                    <div id="fac-detail-language-lab" class="facility-pane space-y-6">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                            alt="Language Lab" class="w-full h-64 object-cover rounded-2xl">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-wider">CALL (Computer
+                                Assisted Language Learning)</span>
+                            <h3 class="text-2xl font-extrabold text-gray-800">Language Lab & Designing Suite</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed font-light">
+                                Language learning becomes an extremely fruitful exercise at SSCMS by blending organic
+                                human interaction with precise mechanical assistance. Apart from mastering premium
+                                phonetic skills, the setup functions as a modern visual lab enabling students to design
+                                magazines, books, and pamphlets using industry-standards like Corel Draw and Adobe
+                                Photoshop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Detail 2: TV Studio -->
+                    <div id="fac-detail-tv-studio" class="facility-pane hidden space-y-6">
+                        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=800&q=80"
+                            alt="Television Studio" class="w-full h-64 object-cover rounded-2xl">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-wider">Professional
+                                Broadcast Console</span>
+                            <h3 class="text-2xl font-extrabold text-gray-800">Modern Television Studio</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed font-light">
+                                Our modern television studio is used extensively by our media scholars in creating
+                                professional magazine programs, news anchoring projects, and talk shows. Equipped with
+                                multi-camera digital consoles, studio recording lights, sound insulation grids, and
+                                editing suites.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Detail 3: iMac Lab -->
+                    <div id="fac-detail-imac-lab" class="facility-pane hidden space-y-6">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+                            alt="iMac Lab" class="w-full h-64 object-cover rounded-2xl">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-wider">Premium macOS
+                                Animation Suite</span>
+                            <h3 class="text-2xl font-extrabold text-gray-800">Apple iMac Multimedia Lab</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed font-light">
+                                SSCMS is one among the very few media institutes in South India to house a full-fledged
+                                Apple iMac based multimedia lab. Comprising 20 pristine Apple iMac setups, students gain
+                                thorough mastery over the macOS workspace environment, learning animation and cinematic
+                                editing with the industry benchmark Final Cut Pro (FCP).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Detail 4: FM Station -->
+                    <div id="fac-detail-fm-station" class="facility-pane hidden space-y-6">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=800&q=80"
+                            alt="FM Station" class="w-full h-64 object-cover rounded-2xl">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-orange uppercase tracking-wider">Tumkur's
+                                Pioneering 90.8 FM Station</span>
+                            <h3 class="text-2xl font-extrabold text-gray-800">Radio Siddhartha 90.8 FM Console</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed font-light">
+                                Our community radio studio matches top commercial FM stations. Equipped with premium
+                                live mixers, microphones, soundproof vocal booths, and digital audio playback
+                                workstations, students experience the real thrill of live radio programming first hand.
+                            </p>
+                            <div class="pt-2">
+                                <button onclick="navigateTo('radio')"
+                                    class="bg-brand-orange text-white px-5 py-2 rounded-xl text-xs font-bold flex items-center gap-2">
+                                    Launch Live Radio Player <i data-lucide="radio" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= COMMUNITY RADIO PAGE ================= -->
+        <section id="view-radio" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Active Broadcasting
+                    Service</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">Radio Siddhartha 90.8 FM</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Launched on 12th June 2008 to empower the
+                    neighborhood farmers, women, and children through insightful programming.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Synthesized Live Audio Visualizer Deck -->
+                <div
+                    class="lg:col-span-5 bg-brand-dark rounded-3xl p-6 border border-gray-800 shadow-2xl text-white relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-40 h-40 bg-brand-green/10 rounded-full blur-xl"></div>
+
+                    <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
+                            <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">90.8 FM Live
+                                Stream</span>
+                        </div>
+                        <span
+                            class="bg-[#2E7D32]/20 text-[#8BC34A] border border-[#2E7D32]/50 text-[9px] font-bold px-2 py-0.5 rounded">TUMKUR
+                            FIRST</span>
+                    </div>
+
+                    <!-- Equalizer Canvas Simulation -->
+                    <div class="my-8 flex flex-col items-center justify-center space-y-4">
+                        <canvas id="radioEqualizer"
+                            class="w-full h-24 bg-black/40 rounded-xl border border-gray-800/40"></canvas>
+
+                        <!-- Station Display text -->
+                        <div class="text-center">
+                            <h4 class="text-xl font-bold tracking-tight text-white">Radio Siddhartha</h4>
+                            <p class="text-xs text-brand-lightgreen mt-0.5" id="currentProgramTrack">Active Shift:
+                                Tuning In...</p>
+                        </div>
+                    </div>
+
+                    <!-- Custom Player Deck Controls -->
+                    <div class="space-y-6">
+                        <div class="flex justify-center items-center gap-6">
+                            <button onclick="changeRadioVolume(-10)"
+                                class="p-2.5 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 transition-colors">
+                                <i data-lucide="volume-x" class="w-4 h-4"></i>
+                            </button>
+                            <button id="radioPlayBtn" onclick="toggleRadioAudio()"
+                                class="p-5 rounded-full bg-brand-orange text-white hover:scale-105 transition-transform shadow-lg shadow-brand-orange/20">
+                                <i data-lucide="play" id="playIconSvg" class="w-8 h-8"></i>
+                            </button>
+                            <button onclick="changeRadioVolume(10)"
+                                class="p-2.5 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 transition-colors">
+                                <i data-lucide="volume-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+
+                        <!-- Info & volume meter -->
+                        <div class="flex items-center justify-between text-[11px] text-gray-400 px-2">
+                            <span class="flex items-center gap-1"><i data-lucide="users"
+                                    class="w-3.5 h-3.5 text-brand-orange"></i> Live Listeners: <b
+                                    id="liveListenerCount">184</b></span>
+                            <span id="volumeIndicatorText">Volume: 80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FM Technical Specifications & Programming Schedule -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-2xl font-bold text-brand-green">Broadcasting Schedule</h3>
+                    <p class="text-gray-600 text-xs font-light leading-relaxed">
+                        Radio Siddhartha serves three daily shifts of specialized community broadcasts utilizing
+                        advanced tools like professional digital on-air audio mixers and workstation software:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div onclick="selectRadioShift('morning')"
+                            class="shift-card p-4 bg-white border border-brand-green border-l-4 border-l-brand-green rounded-xl cursor-pointer hover:shadow transition-shadow"
+                            id="shift-morning">
+                            <h4 class="text-xs font-bold text-gray-800">Morning Shift</h4>
+                            <span class="text-[10px] text-brand-orange block font-semibold mt-0.5">6:00 AM - 9:00
+                                AM</span>
+                            <p class="text-[10px] text-gray-500 mt-2">Spiritual discourse, agriculture advisory & early
+                                news.</p>
+                        </div>
+                        <div onclick="selectRadioShift('afternoon')"
+                            class="shift-card p-4 bg-white border border-gray-100 border-l-4 border-l-gray-300 rounded-xl cursor-pointer hover:shadow transition-shadow"
+                            id="shift-afternoon">
+                            <h4 class="text-xs font-bold text-gray-800">Afternoon Shift</h4>
+                            <span class="text-[10px] text-brand-orange block font-semibold mt-0.5">12:00 PM - 3:00
+                                PM</span>
+                            <p class="text-[10px] text-gray-500 mt-2">Women empowerment seminars & domestic health
+                                advice.</p>
+                        </div>
+                        <div onclick="selectRadioShift('evening')"
+                            class="shift-card p-4 bg-white border border-gray-100 border-l-4 border-l-gray-300 rounded-xl cursor-pointer hover:shadow transition-shadow"
+                            id="shift-evening">
+                            <h4 class="text-xs font-bold text-gray-800">Evening Shift</h4>
+                            <span class="text-[10px] text-brand-orange block font-semibold mt-0.5">6:00 PM - 9:00
+                                PM</span>
+                            <p class="text-[10px] text-gray-500 mt-2">Classical, folk music recordings and student
+                                dramas.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 bg-white border border-gray-100 rounded-2xl flex items-center gap-4">
+                        <div class="p-3 bg-[#8BC34A]/10 text-[#2E7D32] rounded-xl"><i data-lucide="info"
+                                class="w-6 h-6"></i></div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-800">Community Outreach focus</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed mt-0.5">
+                                Our station provides the neighborhood with important medico-social awareness programs in
+                                conjunction with local primary healthcare institutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= CAMPUS LIFE PAGE ================= -->
+        <section id="view-campus" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Life at Tumkur Campus</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">Our Vibrant Campus Life</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">A synthesis of academic learning, co-curricular
+                    hobbies, healthy environment, and high technology.</p>
+            </div>
+
+            <!-- Library Highlights - Geodesic Dome -->
+            <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-md">
+                <div class="lg:col-span-7 space-y-5">
+                    <span
+                        class="bg-[#8BC34A]/10 text-brand-green font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">6th
+                        Dome Library Globally</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">GEO-DESIC DOME Central & Digital
+                        Library</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">
+                        The Central Library is housed inside an architecturally breathtaking Geodesic Dome. Structurally
+                        laid out to serve as an "Energy Hub" providing calm reading spaces, it has **4 reading levels
+                        (500 readers seating capacity)** and **5 stocking levels (100,000 book storage capability)**.
+                    </p>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">
+                        SSCMS students enjoy full access to **67,000 physical volumes**, 156 national journals, DELNET
+                        consortia directories, and a fully air-conditioned modern Digital Library (40 units capacity).
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-gray-100 pt-4">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4 text-brand-orange"></i>
+                            <span class="text-xs font-semibold text-gray-700">Lending limit: 5 books/student</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield" class="w-4 h-4 text-brand-orange"></i>
+                            <span class="text-xs font-semibold text-gray-700">DELNET & JCCC memberships</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mini Schematic Image Render -->
+                <div
+                    class="lg:col-span-5 relative h-64 bg-brand-cream rounded-2xl overflow-hidden border border-gray-100">
+                    <img src="image/campus/IMG_0311.JPG" alt="Central Library Dome" class="w-full h-full object-cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80'">
+                    <div class="absolute inset-0 bg-brand-green/10 flex items-center justify-center">
+                        <span
+                            class="bg-white/90 backdrop-blur-sm text-brand-green text-xs font-bold py-2 px-4 rounded-xl shadow-md uppercase tracking-wider">Geo-Dome
+                            Library</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Campus Utilities & Hostel -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold text-gray-800 text-center">Campus Facilities & Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Facility Block 1 -->
+                    <div class="bg-white rounded-2xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+                        <div
+                            class="p-3 bg-[#8BC34A]/10 text-brand-green rounded-xl w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-800">Comfortable Hostel Accommodations</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">Comfortably accommodating over 750
+                            students. Hygiene food services, clean green spaces, and strict campus security measures.
+                        </p>
+                    </div>
+                    <!-- Facility Block 2 -->
+                    <div class="bg-white rounded-2xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+                        <div
+                            class="p-3 bg-[#8BC34A]/10 text-brand-green rounded-xl w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="heart" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-800">Primary Health Center (360 sq.m)</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">Equipped with qualified physicians,
+                            preliminary checking lab testing instruments, and emergency operation facilities.</p>
+                    </div>
+                    <!-- Facility Block 3 -->
+                    <div class="bg-white rounded-2xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+                        <div
+                            class="p-3 bg-[#8BC34A]/10 text-brand-green rounded-xl w-12 h-12 flex items-center justify-center mb-4">
+                            <i data-lucide="coffee" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-800">Canteen & Late-Night Bakery</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">Furnished canteen with an attached
+                            high-tech kitchen capable of hosting 150 members simultaneously with subsidized menus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PLACEMENTS PAGE ================= -->
+        <section id="view-placements" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Industry Launchpad</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">Placements & Careers</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Connecting media passion with core production houses,
+                    corporate agencies and major news networks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Statistics Deck -->
+                <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <h3 class="text-lg font-bold text-gray-800">Placement Highlights</h3>
+                    <div class="space-y-6 my-6">
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-xs text-gray-500">Highest Package Offered</span>
+                            <span class="text-base font-extrabold text-brand-green">₹ 12.4 LPA</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                            <span class="text-xs text-gray-500">Average Placement Rate</span>
+                            <span class="text-base font-extrabold text-brand-orange">94%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500">Bangalore Industry Partners</span>
+                            <span class="text-base font-extrabold text-[#222222]">45+ Networks</span>
+                        </div>
+                    </div>
+                    <button onclick="navigateTo('contact')"
+                        class="w-full text-center bg-[#8BC34A]/10 text-brand-green hover:bg-brand-green hover:text-white py-3 rounded-xl font-bold transition-all text-xs">
+                        Partner with our Placement Cell
+                    </button>
+                </div>
+
+                <!-- Career Channels/Roles Grid -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="text-xl font-bold text-gray-800">Prominent Career Paths for SSCMS Alumni</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-white border border-gray-100 rounded-2xl flex gap-3">
+                            <div class="text-brand-orange"><i data-lucide="radio" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">FM Radio Jockeys & Playback Specialists</h4>
+                                <p class="text-[11px] text-gray-500 mt-1">Direct transition into FM networks or podcast
+                                    curators using soundboard expertise.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white border border-gray-100 rounded-2xl flex gap-3">
+                            <div class="text-brand-orange"><i data-lucide="tv" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">Live TV News Anchor & Camera Directors</h4>
+                                <p class="text-[11px] text-gray-500 mt-1">Multi-camera studio experience prepares
+                                    graduates directly for regional broadcast outlets.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white border border-gray-100 rounded-2xl flex gap-3">
+                            <div class="text-brand-orange"><i data-lucide="pen-tool" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">Media Analysts & Content Officers</h4>
+                                <p class="text-[11px] text-gray-500 mt-1">Excellent writing skills coupled with public
+                                    policy analysis training for major corporations.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white border border-gray-100 rounded-2xl flex gap-3">
+                            <div class="text-brand-orange"><i data-lucide="layout" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">Mac Multimedia Animators</h4>
+                                <p class="text-[11px] text-gray-500 mt-1">Post production specialists and FCP editors
+                                    handling complex layouts or dynamic motion assets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= ADMISSIONS PORTAL PAGE ================= -->
+        <section id="view-admissions" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Enrolment Form</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">Admissions 2026-27</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Please submit the details below. Our academic
+                    counselor will review and get in touch with you.</p>
+            </div>
+
+            <!-- Two Column Admission workspace -->
+            <div class="grid grid-cols-1 lg:col-span-12 gap-10 items-start">
+
+                <!-- Information sidebar -->
+                <div class="lg:col-span-4 bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+                    <h3 class="text-base font-bold text-gray-800">Admission Guidelines</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <div class="text-brand-green font-bold text-xs">1.</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-700">Course Selection</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">Pick from regular PG master degree or visual
+                                    design diplomas.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="text-brand-green font-bold text-xs">2.</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-700">Submit Documents</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">Copy of Bachelor degree transcripts, address
+                                    proof, photo ID.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="text-brand-green font-bold text-xs">3.</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-700">Counselling Session</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">Personal interaction at campus regarding fee
+                                    concessions and hostel facilities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Fee Estimation Tool -->
+                    <div class="pt-6 border-t border-gray-100 space-y-3">
+                        <h4 class="text-xs font-bold text-gray-800 uppercase tracking-widest">Course Fee Calculator</h4>
+                        <div class="space-y-2">
+                            <label class="text-[10px] text-gray-500 block">Select Target Stream:</label>
+                            <select id="calcStreamSelector" onchange="calculateFeeEstimate()"
+                                class="w-full text-xs p-2 rounded border border-gray-200">
+                                <option value="85000">M.S. in Journalism & Mass Comm (₹85k/yr)</option>
+                                <option value="90000">Advanced Radio & TV Production (₹90k/yr)</option>
+                                <option value="65000">PG Diploma in Multimedia Design (₹65k/yr)</option>
+                            </select>
+                            <div class="flex items-center gap-2 mt-2">
+                                <input type="checkbox" id="calcHostelNeeded" onchange="calculateFeeEstimate()">
+                                <label for="calcHostelNeeded" class="text-[10px] text-gray-600 font-medium">Include
+                                    Hostel Accommodations</label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-brand-cream rounded-xl text-center">
+                            <span
+                                class="text-[9px] text-gray-400 block font-semibold uppercase tracking-wider">Estimated
+                                Tuition Fee</span>
+                            <span id="calculatedFeeValue" class="text-lg font-extrabold text-brand-green">₹ 85,000 /
+                                Year</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main interactive enrolment form -->
+                <div class="lg:col-span-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-md">
+                    <form id="admissionApplicationForm" onsubmit="handleAdmissionSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-xs font-bold text-gray-700 block mb-1">Full Name *</label>
+                                <input type="text" required placeholder="Ex: Rahul Kumar"
+                                    class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-gray-700 block mb-1">Email Address *</label>
+                                <input type="email" required placeholder="rahul@example.com"
+                                    class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-xs font-bold text-gray-700 block mb-1">Phone Number *</label>
+                                <input type="tel" required placeholder="10 Digit Number"
+                                    class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-gray-700 block mb-1">Target Stream *</label>
+                                <select required
+                                    class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                                    <option value="">-- Choose Course --</option>
+                                    <option value="journalism">M.S. in Journalism & Mass Communication</option>
+                                    <option value="production">Advanced Radio & Television Production</option>
+                                    <option value="multimedia">PG Diploma in Multimedia Design & Animation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="text-xs font-bold text-gray-700 block mb-1">Undergraduate Degree % Score
+                                    *</label>
+                                <input type="text" required placeholder="Ex: 82% or 8.2 CGPA"
+                                    class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-gray-700 block mb-1">State / Region *</label>
+                                <input type="text" required placeholder="Ex: Karnataka"
+                                    class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-gray-700 block mb-1">Message / Key Queries</label>
+                            <textarea rows="4"
+                                placeholder="Mention any queries regarding scholarships, hostel facilities or visual labs..."
+                                class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green"></textarea>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" required id="formTermsAgree">
+                            <label for="formTermsAgree" class="text-[10px] text-gray-500 font-light">I declare that all
+                                submitted academic and personal facts are accurate under SSCMS Guidelines.</label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-brand-green text-white font-bold py-3.5 rounded-xl hover:bg-opacity-95 transition-all text-sm shadow-md uppercase tracking-wider">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= CONTACT US PAGE ================= -->
+        <section id="view-contact" class="view-pane hidden max-w-7xl mx-auto px-4 py-12 space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold text-brand-green uppercase tracking-widest">Connect with our desk</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800">Reach SSCMS Tumkur</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-sm">Have queries regarding programs, hostel reservations,
+                    or campus life? We are here to assist.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Details grid -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-6">
+                        <h3 class="text-base font-bold text-gray-800">Official Campus Address</h3>
+
+                        <div class="flex gap-3">
+                            <div class="text-brand-orange mt-1"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-700">Office Location:</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-0.5">
+                                    Director, Sri Siddhartha Centre for Media Studies,<br>
+                                    SSIT Campus, Maralur, Tumkur - 572105, Karnataka, India.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <div class="text-brand-orange mt-1"><i data-lucide="phone" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-700">Phone Directory:</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">0816-2201766 / +91 816 2277258</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <div class="text-brand-orange mt-1"><i data-lucide="mail" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gray-700">Official Enquiries:</h4>
+                                <a href="mailto:srisiddharthamediastudies@yahoo.com"
+                                    class="text-xs text-brand-green hover:underline mt-0.5 block font-medium">srisiddharthamediastudies@yahoo.com</a>
+                                <a href="mailto:sscms@sssit.edu.in"
+                                    class="text-xs text-brand-green hover:underline block font-medium">sscms@sssit.edu.in</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick copy sharing buttons -->
+                    <button onclick="copyContactDetails()"
+                        class="w-full flex items-center justify-center gap-2 bg-brand-green/10 text-brand-green py-3 rounded-2xl hover:bg-brand-green hover:text-white transition-all text-xs font-bold border border-brand-green/20">
+                        <i data-lucide="copy" class="w-4 h-4"></i> Copy Contact Details
+                    </button>
+                    <div id="copySuccessToast"
+                        class="hidden text-center text-xs text-brand-green font-bold animate-fade-in">✓ Contact details
+                        successfully copied to clipboard!</div>
+                </div>
+
+                <!-- Quick Query Message form -->
+                <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-gray-100 shadow-md">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Send a Quick Message</h3>
+                    <form onsubmit="handleQuickQuery(event)" class="space-y-4">
+                        <div>
+                            <label class="text-xs font-bold text-gray-700 block mb-1">Your Name</label>
+                            <input type="text" required placeholder=" Rahul"
+                                class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-gray-700 block mb-1">Your Phone / Email</label>
+                            <input type="text" required placeholder="Email or 10 digit phone"
+                                class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-gray-700 block mb-1">Your Detailed Message</label>
+                            <textarea required rows="4" placeholder="Write your specific questions here..."
+                                class="w-full p-2.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-brand-green"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-brand-orange text-white py-3 rounded-xl text-xs font-bold hover:bg-opacity-95 transition-all shadow-md">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER BLOCK -->
+    <footer class="bg-brand-dark text-white pt-12 pb-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-gray-800">
+            <!-- Col 1 -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Sri Siddhartha Logo"
+                        class="h-12 w-12 object-contain bg-white rounded p-0.5"
+                        onerror="this.src='https://placehold.co/48x48/2E7D32/ffffff?text=SSCMS'">
+                    <div>
+                        <h4 class="text-sm font-extrabold uppercase text-white tracking-wider">SSCMS</h4>
+                        <span class="text-[10px] text-gray-400 block font-semibold uppercase">Siddhartha Media
+                            Studies</span>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">
+                    Carrying forward the spiritual and educational traditions of Late H.M. Gangadharaiah under the
+                    patronage of SSES society.
+                </p>
+            </div>
+            <!-- Col 2 -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-brand-orange">Quick Links</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="#" onclick="navigateTo('home'); return false;"
+                            class="hover:text-brand-lightgreen transition-colors">Home Page</a></li>
+                    <li><a href="#" onclick="navigateTo('about'); return false;"
+                            class="hover:text-brand-lightgreen transition-colors">Our Visionaries</a></li>
+                    <li><a href="#" onclick="navigateTo('programs'); return false;"
+                            class="hover:text-brand-lightgreen transition-colors">Degrees & Syllabi</a></li>
+                    <li><a href="#" onclick="navigateTo('facilities'); return false;"
+                            class="hover:text-brand-lightgreen transition-colors">Laboratories</a></li>
+                </ul>
+            </div>
+            <!-- Col 3 -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-brand-orange">Community Services</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="#" onclick="navigateTo('radio'); return false;"
+                            class="hover:text-brand-lightgreen transition-colors">Radio Siddhartha 90.8 FM</a></li>
+                    <li><a href="#" onclick="navigateTo('campus'); return false;"
+                            class="hover:text-brand-lightgreen transition-colors">Dome Central Library</a></li>
+                    <li><a href="#" onclick="navigateTo('placements'); return false;"
+                            class="hover:text-brand-lightgreen transition-colors">Recruiting Channels</a></li>
+                </ul>
+            </div>
+            <!-- Col 4 -->
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-brand-orange">Contact Desk</h4>
+                <p class="text-xs text-gray-400 leading-relaxed font-light">
+                    SSIT Campus, Maralur, Tumkur - 572105, Karnataka.<br>
+                    Ph: 0816-2201766<br>
+                    E-mail: srisiddharthamediastudies@yahoo.com
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <span>&copy; 2026 Sri Siddhartha Centre for Media Studies. All rights reserved.</span>
+            <span>Affiliated to Tumkur University | Designed for Excellence</span>
+        </div>
+    </footer>
+
+
+    <!-- ================= BIO MODAL MODAL WINDOWS ================= -->
+    <div id="bioModalBackdrop"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div
+            class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-8 space-y-6 relative border border-gray-100 shadow-2xl">
+            <button onclick="closeBioModal()"
+                class="absolute right-4 top-4 p-2 text-gray-400 hover:text-gray-700 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Dr. G Shivaprasad Profile -->
+            <div id="modal-bio-shivaprasad" class="modal-content-pane hidden space-y-4">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-16 h-16 bg-brand-green text-white rounded-2xl flex items-center justify-center text-2xl font-bold font-sans">
+                        S
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Dr. G Shivaprasad</h3>
+                        <span class="text-xs font-semibold text-brand-orange">Secretary of SSES Society</span>
+                    </div>
+                </div>
+                <div class="space-y-3 text-xs text-gray-600 leading-relaxed font-light">
+                    <p>Having obtained MBBS and MS from BMC and Minto Ophthalmic Hospital, Dr. G Shivaprasad served in
+                        district medical departments in Tumkur and Chitradurga. Under his stewardship, the Sri
+                        Siddhartha Academy of Higher Education attained university milestones.</p>
+
+                    <h4 class="text-xs font-bold text-gray-800 uppercase tracking-widest pt-2">Spirit of Sacrifice &
+                        Community</h4>
+                    <p>He is steeped in spirituality and Buddhist philosophy, actively conducting and leading diagnostic
+                        relief operations in surrounding rural locations to provide medico-social aid to the poor.</p>
+
+                    <h4 class="text-xs font-bold text-gray-800 uppercase tracking-widest pt-2">Key Accomplishments &
+                        Published Books:</h4>
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li><b>Rajiv Gandhi National Award (1995)</b></li>
+                        <li>Author of the renowned guide: <i>"Preaching of BUDHA"</i></li>
+                        <li>Former Senate Member of Bangalore University</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Dr. G Parameshwara Profile -->
+            <div id="modal-bio-parameshwara" class="modal-content-pane hidden space-y-4">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-16 h-16 bg-brand-green text-white rounded-2xl flex items-center justify-center text-2xl font-bold font-sans">
+                        P
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Dr. G Parameshwara</h3>
+                        <span class="text-xs font-semibold text-brand-orange">Joint Secretary of SSES</span>
+                    </div>
+                </div>
+                <div class="space-y-3 text-xs text-gray-600 leading-relaxed font-light">
+                    <p>Dr. G Parameshwara is an able leader, reformer, and pragmatic academician. He received his
+                        doctorate in Agricultural Science from the prestigious Waite Agricultural Research Institute,
+                        University of Adelaide, South Australia.</p>
+
+                    <h4 class="text-xs font-bold text-gray-800 uppercase tracking-widest pt-2">Scholarly Background &
+                        Fellowships:</h4>
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li><b>University of Melbourne</b> Post-Doctoral Fellowship (1984-85)</li>
+                        <li>Winner of the <b>National Unity Award (1993)</b></li>
+                        <li>Fellow of the Indian Institute of Agricultural Technologists</li>
+                    </ul>
+
+                    <h4 class="text-xs font-bold text-gray-800 uppercase tracking-widest pt-2">Memberships:</h4>
+                    <p class="text-gray-500">Member of the Australian Society of Plant Physiology, Indian Society of
+                        Plant Physiology, and Indian Society of Technical Education.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= ADMISSION CONFIRMATION MODAL ================= -->
+    <div id="admissionFeedbackModal"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div
+            class="bg-white rounded-3xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl relative border border-gray-100">
+            <div
+                class="w-16 h-16 bg-brand-green/10 text-brand-green rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800">Application Submitted!</h3>
+            <p class="text-xs text-gray-500 leading-relaxed font-light">
+                Thank you for applying to Sri Siddhartha Centre for Media Studies. Our academic officer will review your
+                score sheet and contact you within 48 business hours at your submitted email/phone.
+            </p>
+            <button onclick="closeAdmissionFeedback()"
+                class="w-full bg-brand-green text-white font-bold py-2.5 rounded-xl text-xs hover:bg-opacity-95 transition-all">
+                Wonderful, Thank You
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ================= INQUIRY CONFIRMATION MODAL ================= -->
+    <div id="inquiryFeedbackModal"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div
+            class="bg-white rounded-3xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl relative border border-gray-100">
+            <div
+                class="w-16 h-16 bg-brand-orange/10 text-brand-orange rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="send" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800">Inquiry Received!</h3>
+            <p class="text-xs text-gray-500 leading-relaxed font-light">
+                Your question has been routed directly to the Director's office. We will send a detailed response
+                shortly.
+            </p>
+            <button onclick="closeInquiryFeedback()"
+                class="w-full bg-brand-orange text-white font-bold py-2.5 rounded-xl text-xs hover:bg-opacity-95 transition-all">
+                Dismiss
+            </button>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT LOGIC WORKSPACE -->
+    <script>
+        // Start Lucide icons loader immediately
+        lucide.createIcons();
+
+        // Active State Page Router system
+        function navigateTo(pageId) {
+            // Hide all view panes
+            document.querySelectorAll('.view-pane').forEach(pane => {
+                pane.classList.add('hidden');
+            });
+            // Show target view pane
+            const target = document.getElementById(`view-${pageId}`);
+            if (target) {
+                target.classList.remove('hidden');
+            }
+
+            // Update desktop nav styling
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-brand-green', 'border-b-2', 'border-brand-green');
+                link.classList.add('text-gray-600');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('text-brand-green', 'border-b-2', 'border-brand-green');
+                    link.classList.remove('text-gray-600');
+                }
+            });
+
+            // Update mobile nav styling
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.classList.remove('text-brand-green');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('text-brand-green');
+                }
+            });
+
+            // Close mobile menu if open
+            document.getElementById('mobileMenu').classList.add('hidden');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Toggle Mobile Burger Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Leadership biographies popup modals
+        function openBioModal(personId) {
+            document.getElementById('bioModalBackdrop').classList.remove('hidden');
+            // Hide all modal inner contents
+            document.querySelectorAll('.modal-content-pane').forEach(content => {
+                content.classList.add('hidden');
+            });
+            // Show selected inner bio
+            document.getElementById(`modal-bio-${personId}`).classList.remove('hidden');
+        }
+
+        function closeBioModal() {
+            document.getElementById('bioModalBackdrop').classList.add('hidden');
+        }
+
+        // Interactive Facility Details switcher
+        function showFacilityDetail(facId) {
+            // Hide all details
+            document.querySelectorAll('.facility-pane').forEach(pane => {
+                pane.classList.add('hidden');
+            });
+            // Show selected detail
+            document.getElementById(`fac-detail-${facId}`).classList.remove('hidden');
+
+            // Reset tab styles
+            document.querySelectorAll('.facility-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-green', 'text-white', 'shadow');
+                btn.classList.add('bg-white', 'text-gray-700');
+                // Adjust icon colors
+                const iconContainer = btn.querySelector('div');
+                iconContainer.className = 'p-2 bg-brand-green/10 text-brand-green rounded-xl';
+            });
+
+            // Apply selected styling to current tab button
+            const selectedBtn = document.getElementById(`btn-fac-${facId}`);
+            if (selectedBtn) {
+                selectedBtn.classList.remove('bg-white', 'text-gray-700');
+                selectedBtn.classList.add('bg-brand-green', 'text-white', 'shadow');
+                const iconContainer = selectedBtn.querySelector('div');
+                iconContainer.className = 'p-2 bg-white/20 rounded-xl';
+            }
+        }
+
+        // Dynamic Syllabi Course category filtration
+        function filterCourseCategory(catId) {
+            // Adjust action buttons active styling
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.className = 'category-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap';
+            });
+            event.target.className = 'category-btn bg-brand-green text-white px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap';
+
+            // Filter actual cards
+            const cards = document.getElementById('courseCardsGrid').children;
+            for (let card of cards) {
+                if (catId === 'all' || card.getAttribute('data-category') === catId) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            }
+        }
+
+        // Keyword searchable filter
+        function filterCourses() {
+            const val = document.getElementById('courseSearchInput').value.toLowerCase();
+            const cards = document.getElementById('courseCardsGrid').children;
+            for (let card of cards) {
+                const keywords = card.getAttribute('data-keywords');
+                if (keywords.includes(val)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            }
+        }
+
+        // Dynamic Fee Calculator
+        function calculateFeeEstimate() {
+            const coursePrice = parseInt(document.getElementById('calcStreamSelector').value);
+            const isHostel = document.getElementById('calcHostelNeeded').checked;
+            const finalFee = coursePrice + (isHostel ? 45000 : 0);
+            document.getElementById('calculatedFeeValue').innerText = `₹ ${finalFee.toLocaleString('en-IN')} / Year`;
+        }
+
+        // Admission application submission
+        function handleAdmissionSubmit(e) {
+            e.preventDefault();
+            document.getElementById('admissionFeedbackModal').classList.remove('hidden');
+            document.getElementById('admissionApplicationForm').reset();
+        }
+
+        function closeAdmissionFeedback() {
+            document.getElementById('admissionFeedbackModal').classList.add('hidden');
+            navigateTo('home');
+        }
+
+        // Send Inquiry submission
+        function handleQuickQuery(e) {
+            e.preventDefault();
+            document.getElementById('inquiryFeedbackModal').classList.remove('hidden');
+            e.target.reset();
+        }
+
+        function closeInquiryFeedback() {
+            document.getElementById('inquiryFeedbackModal').classList.add('hidden');
+        }
+
+        // Clipboard copy functionality
+        function copyContactDetails() {
+            const txt = "Sri Siddhartha Centre for Media Studies, SSIT Campus, Maralur, Tumkur - 572105, Ph: 0816-2201766, Email: srisiddharthamediastudies@yahoo.com";
+            const el = document.createElement('textarea');
+            el.value = txt;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const toast = document.getElementById('copySuccessToast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+
+        // ================= COMMUNITY RADIO PLAYBACK EQUALIZER INTERACTIVE WORKSPACE =================
+        let audioContext;
+        let oscillator;
+        let isPlaying = false;
+        let animationFrameId;
+        let radioVolume = 0.8;
+        const canvas = document.getElementById('radioEqualizer');
+        const ctx = canvas.getContext('2d');
+        const shifts = {
+            morning: "Morning Shift (6-9 AM): Organic Farming & Classical Chimes",
+            afternoon: "Afternoon Shift (12-3 PM): Local Women Empowerment Podcasts",
+            evening: "Evening Shift (6-9 PM): Classical Sitar & Regional Rural Theater"
+        };
+        let activeShift = 'morning';
+
+        // Set dimensions dynamically
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = 96;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function selectRadioShift(shiftId) {
+            activeShift = shiftId;
+            document.querySelectorAll('.shift-card').forEach(card => {
+                card.className = 'shift-card p-4 bg-white border border-gray-100 border-l-4 border-l-gray-300 rounded-xl cursor-pointer hover:shadow transition-shadow';
+            });
+            document.getElementById(`shift-${shiftId}`).className = 'shift-card p-4 bg-white border border-brand-green border-l-4 border-l-brand-green rounded-xl cursor-pointer hover:shadow transition-shadow';
+
+            if (isPlaying) {
+                document.getElementById('currentProgramTrack').innerText = shifts[shiftId];
+                playAmbientBroadcastMelody(); // Change tone based on selection
+            } else {
+                document.getElementById('currentProgramTrack').innerText = "Tuned Into " + shiftId.toUpperCase() + " shift. Click play!";
+            }
+        }
+
+        function toggleRadioAudio() {
+            if (!isPlaying) {
+                isPlaying = true;
+                document.getElementById('playIconSvg').setAttribute('data-lucide', 'pause');
+                lucide.createIcons();
+                document.getElementById('currentProgramTrack').innerText = shifts[activeShift];
+                startAudioSynthesis();
+                drawEqualizer();
+                // Randomly change live listener count
+                document.getElementById('liveListenerCount').innerText = Math.floor(Math.random() * (450 - 120 + 1) + 120);
+            } else {
+                isPlaying = false;
+                document.getElementById('playIconSvg').setAttribute('data-lucide', 'play');
+                lucide.createIcons();
+                document.getElementById('currentProgramTrack').innerText = "Radio Paused.";
+                stopAudioSynthesis();
+                cancelAnimationFrame(animationFrameId);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        function startAudioSynthesis() {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            playAmbientBroadcastMelody();
+        }
+
+        function playAmbientBroadcastMelody() {
+            if (oscillator) {
+                try { oscillator.stop(); } catch (e) { }
+            }
+            if (!isPlaying) return;
+
+            // Generate pleasant meditative radio synth tone based on active shift
+            oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            // Set different tone frequencies for a nice lo-fi radio aesthetic
+            if (activeShift === 'morning') {
+                oscillator.type = 'triangle';
+                oscillator.frequency.setValueAtTime(261.63, audioContext.currentTime); // C4 Chime
+            } else if (activeShift === 'afternoon') {
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(329.63, audioContext.currentTime); // E4 Flute
+            } else {
+                oscillator.type = 'sawtooth';
+                oscillator.frequency.setValueAtTime(196.00, audioContext.currentTime); // G3 Deep Sitar
+            }
+
+            gainNode.gain.setValueAtTime(radioVolume * 0.15, audioContext.currentTime); // keep synth volume soft
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            oscillator.start();
+        }
+
+        function stopAudioSynthesis() {
+            if (oscillator) {
+                try { oscillator.stop(); } catch (e) { }
+            }
+            if (audioContext) {
+                audioContext.close();
+            }
+        }
+
+        function changeRadioVolume(val) {
+            radioVolume = Math.max(0, Math.min(1, radioVolume + (val / 100)));
+            document.getElementById('volumeIndicatorText').innerText = `Volume: ${Math.round(radioVolume * 100)}%`;
+            if (isPlaying) {
+                playAmbientBroadcastMelody(); // refresh volume node
+            }
+        }
+
+        // Render dynamic frequency waves to simulate an interactive visualizer
+        function drawEqualizer() {
+            if (!isPlaying) return;
+            animationFrameId = requestAnimationFrame(drawEqualizer);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const numBars = 40;
+            const barWidth = canvas.width / numBars;
+            const time = Date.now() * 0.005;
+
+            // Gradient fill
+            const grad = ctx.createLinearGradient(0, canvas.height, 0, 0);
+            grad.addColorStop(0, '#2E7D32');
+            grad.addColorStop(0.5, '#8BC34A');
+            grad.addColorStop(1, '#F7931E');
+
+            ctx.fillStyle = grad;
+
+            for (let i = 0; i < numBars; i++) {
+                // Synthesize bar heights matching real audio visual style
+                let barHeight;
+                if (activeShift === 'morning') {
+                    barHeight = Math.abs(Math.sin(i * 0.15 + time)) * 40 + Math.random() * 15;
+                } else if (activeShift === 'afternoon') {
+                    barHeight = Math.abs(Math.cos(i * 0.2 + time * 1.5)) * 50 + Math.random() * 10;
+                } else {
+                    barHeight = Math.abs(Math.sin(i * 0.05 + time * 2)) * 60 + Math.random() * 20;
+                }
+
+                ctx.fillRect(i * barWidth, canvas.height - barHeight, barWidth - 2, barHeight);
+            }
+        }
+
+
+        // ================= IMAGE CAROUSEL SYSTEM WORKSPACE =================
+        let currentSlideIndex = 0;
+        let autoPlayTimer;
+
+        function initCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!slides.length || !dotsContainer) return;
+
+            dotsContainer.innerHTML = '';
+
+            // Build indicator dots dynamically for all 7 items
+            slides.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all ${idx === 0 ? 'bg-brand-orange w-6' : 'bg-white/50 hover:bg-white'}`;
+                dot.setAttribute('onclick', `goToSlide(${idx})`);
+                dot.setAttribute('aria-label', `Maps to slide ${idx + 1}`);
+                dotsContainer.appendChild(dot);
+            });
+
+            resetAutoplay();
+        }
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.getElementById('carouselDots')?.children;
+            if (!slides.length) return;
+
+            // Handle wrap-around bounds
+            if (index >= slides.length) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+
+            // Fade slides
+            slides.forEach((slide, idx) => {
+                if (idx === currentSlideIndex) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    slide.classList.remove('opacity-100', 'pointer-events-auto');
+                    slide.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            // Highlight corresponding page indicator dot
+            if (dots) {
+                Array.from(dots).forEach((dot, idx) => {
+                    if (idx === currentSlideIndex) {
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all bg-brand-orange w-6';
+                    } else {
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all bg-white/50 hover:bg-white';
+                    }
+                });
+            }
+        }
+
+        function nextSlide() {
+            showSlide(currentSlideIndex + 1);
+            resetAutoplay();
+        }
+
+        // Left Navigation Handler
+        function prevSlide() {
+            showSlide(currentSlideIndex - 1);
+            resetAutoplay();
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetAutoplay();
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = setInterval(() => {
+                showSlide(currentSlideIndex + 1);
+            }, 5000); // Transitions automatically every 5 seconds
+        }
+
+        // Initialize setup on window load
+        window.onload = function () {
+            selectRadioShift('morning');
+            initCarousel();
+        };
+    </script>
+</body>
+
+</html>
