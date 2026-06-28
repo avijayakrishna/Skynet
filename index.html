@@ -139,11 +139,27 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
+        .nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transform: translateY(0);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+        .nav-wrapper.nav-hidden {
+            transform: translateY(-100%);
+        }
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface overflow-x-hidden antialiased">
 
 <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-3 pointer-events-none"></div>
+
+<!-- Auto-hide Navigation Wrapper -->
+<div id="nav-wrapper" class="nav-wrapper">
 
 <!-- Top Utility Bar (Exact Match of image_fa8e3b.png) -->
 <div class="bg-[#004123] text-white py-2.5 hidden lg:block border-b border-white/10 select-none">
@@ -194,14 +210,14 @@
     </div>
 </div>
 
-<!-- Main Navigation Header (Exact Match of image_fa8e3b.png with logo.png integration) -->
-<header class="sticky top-0 z-50 bg-white shadow-sm border-b border-outline-variant/30 h-24 transition-all duration-300">
+<!-- Main Navigation Header -->
+<header class="bg-white shadow-sm border-b border-outline-variant/30 h-24 transition-all duration-300">
     <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-full">
         <!-- Logo & Three-Line Title stack -->
         <a href="#" class="flex items-center gap-4 group focus:outline-none shrink-0">
             <div class="w-14 h-14 bg-white flex items-center justify-center overflow-hidden rounded-none shrink-0">
                 <!-- Using logo.png and keeping perfect alignment -->
-                <img class="w-full h-full object-contain" alt="Sri Siddhartha Centre for Media Studies Logo Emblem" src="logo.png"/>
+                <img class="w-full h-full object-contain" alt="Sri Siddhartha Centre for Media Studies Logo Emblem" src="image/logo/logo.png"/>
             </div>
             <div class="flex flex-col justify-center">
                 <h1 class="font-extrabold text-[#004123] tracking-wide uppercase leading-none text-[20px] sm:text-[22px]">SRI SIDDHARTHA</h1>
@@ -234,7 +250,7 @@
     </div>
 
     <!-- Responsive Mobile Menu Sliding Drawer Overlay -->
-    <div id="mobile-menu-drawer" class="fixed inset-0 top-20 bg-black/50 z-40 transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden">
+    <div id="mobile-menu-drawer" class="fixed inset-0 top-24 bg-black/50 z-[60] transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden">
         <div id="mobile-menu-content" class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
             <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface">
                 <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100" href="#hero">Home</a>
@@ -268,10 +284,15 @@
     </div>
 </header>
 
+</div><!-- End nav-wrapper -->
+
+<!-- Spacer to offset fixed nav height (utility bar ~40px on lg + header 96px) -->
+<div id="nav-spacer" class="h-24 lg:h-[136px]"></div>
+
 <!-- Hero Banner -->
 <section id="hero" class="relative h-[650px] w-full overflow-hidden">
     <div class="absolute inset-0 hero-gradient z-10"></div>
-    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-10000 scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6ze3dg3_j9nXfLbqHtiMfV3duvJBFFTFMtN0L2HEjU3W4vMNx_h4xhTowzQSv84GeLZjQdQ55_ejLWbBkmJkcbM5rSJ-eSk3brg79xxQLxKys5VwAZiTzn7ib_HDfzKv7MR1biHbJmuHeMnvTAwOXsFvcZxHQDylCjyxiZcv55ki3pCvaj-zcGpdl5toYv4X1WTncJpDJipqIvxOnRhzZ45BIpFdsIO5exMfCDSvHe-m71RNNuwNvuiwABR3wtj_g7QjdkG4_5oY')"></div>
+    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-10000 scale-105" style="background-image: url('image/campus/Aerial view.jpg')"></div>
     
     <div class="relative z-20 max-w-container-max mx-auto px-gutter h-full flex flex-col justify-center text-white">
         <div class="inline-flex items-center gap-2 bg-[#F58220] text-[12px] md:text-[14px] font-bold px-4 py-1.5 rounded-full mb-6 w-fit animate-pulse-slow shadow-lg">
@@ -299,7 +320,7 @@
         </div>
 
         <!-- Floating Admissions Card -->
-        <div class="absolute bottom-10 right-gutter left-gutter md:left-auto md:w-fit bg-white p-5 rounded-2xl shadow-2xl flex items-center gap-5 border border-slate-100 max-w-md hover:scale-[1.02] transition-transform duration-300">
+        <div class="absolute bottom-20 right-gutter left-gutter md:left-auto md:w-fit bg-white p-5 rounded-2xl shadow-2xl flex items-center gap-5 border border-slate-100 max-w-md hover:scale-[1.02] transition-transform duration-300">
             <div class="w-12 h-12 bg-secondary/15 flex items-center justify-center rounded-xl shrink-0">
                 <span class="material-symbols-outlined text-secondary text-[30px] font-bold">event_available</span>
             </div>
@@ -315,14 +336,17 @@
 </section>
 
 <div class="relative z-30 -mt-10 max-w-container-max mx-auto px-gutter">
-    <div class="bg-white rounded-2xl shadow-xl p-8 grid grid-cols-2 md:grid-cols-5 gap-8 border border-outline-variant/30 backdrop-blur-sm bg-white/95">
-        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer">
+    <div class="bg-white rounded-2xl shadow-xl p-8 grid grid-cols-2 md:grid-cols-5 gap-6 border border-outline-variant/30 backdrop-blur-sm bg-white/95 items-stretch">
+        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
             <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
                 <span class="material-symbols-outlined text-primary text-[36px]">account_balance</span>
             </div>
-            <p class="text-[13px] font-semibold text-on-surface-variant leading-tight mt-1">Affiliated to <br/> <span class="text-primary font-semibold">Tumkur University</span></p>
+            <div class="flex items-center gap-0.5 mt-1">
+                <span class="text-[15px] font-semibold text-on-surface-variant leading-tight">Affiliated to</span>
+            </div>
+            <p class="text-[16px] font-bold text-primary leading-tight">Tumkur University</p>
         </div>
-        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer">
+        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
             <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
                 <span class="material-symbols-outlined text-primary text-[36px]">park</span>
             </div>
@@ -331,7 +355,7 @@
             </div>
             <p class="text-[13px] font-semibold text-on-surface-variant leading-tight">Acre Green Campus</p>
         </div>
-        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer">
+        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
             <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
                 <span class="material-symbols-outlined text-primary text-[36px]">biotech</span>
             </div>
@@ -354,7 +378,7 @@
             </div>
             <p class="text-[11px] font-bold text-secondary leading-none uppercase tracking-wider">Listen Now</p>
         </div>
-        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer">
+        <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
             <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
                 <span class="material-symbols-outlined text-primary text-[36px]">workspace_premium</span>
             </div>
@@ -428,7 +452,7 @@
             <div class="absolute -top-4 -left-4 w-72 h-72 bg-primary-fixed/20 rounded-3xl -z-10 animate-pulse-slow"></div>
             <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-secondary/10 rounded-3xl -z-10 animate-pulse-slow"></div>
             <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-[1.01]">
-                <img class="w-full h-96 object-cover" alt="Students in Media Lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1zaX4xY4JN3I9iio1Yj35aNGcfno5fGWGFWhGGUoXNMvsxe8VEGT2pHMR8aG4ExtX4Zot5jBWawSAeT8pCB05a-sGkw8GQ_hKnuzTZPi5n63gaJWmFlm0XmzLQ_ra4rLofd26gCPk4vIHd8x9ufcEHFmvdDiMOMnVn9hYmKuwHjwMQxkOZ0Mfq0ICzbIIzBTg9rhx1bxVp-9Z5WJcPYIjzZN3N5nFrWrwbcShS2ViWU86PwZM3COPoV2UP0Pe76HyOJ_XUOpd5S4" />
+                <img class="w-full h-96 object-cover" alt="Students in Media Lab" src="image/campus/Admin block.jpg" />
             </div>
             
             <div class="absolute -bottom-6 left-6 bg-primary text-white p-6 rounded-xl shadow-xl flex items-center gap-4 max-w-xs border border-white/10">
@@ -619,7 +643,7 @@
         <!-- Facility Card 1 -->
         <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300" onclick="openVirtualTourSpot('tv_studio')">
             <div class="h-56 overflow-hidden relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Television Studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnpfDlVdCIFG4k_5udyF3yxALOdi5kCHy4PYJ0uaCb7zpvEJjq5SBXFtTNWkAYS014YV2TalYGPeK0LW735Zlvkxs-iVSAOyurerh71LhoV05RSLV3zxoo9ZlZvw51fa1o7jC9fm2YlcX9gMwLs586YtKihaPttboBiW7fFJZ_NJ7Rzy3dxz8IF6yYWRJ7IatzExqUfmXTaHVcaC9zWEjkuiFUo3EeMDlY7hEqYiA_oLLNwS7kHeo7h1YqUr4VqY44xQzsIGrKX9I"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Television Studio" src="image/library/SSIT Campus 2.JPG"/>
                 <div class="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-bold px-2.5 py-1 rounded">INTERACTIVE SITE</div>
             </div>
             <div class="p-6">
@@ -630,7 +654,7 @@
         <!-- Facility Card 2 -->
         <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300" onclick="openVirtualTourSpot('radio')">
             <div class="h-56 overflow-hidden relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Radio Siddhartha 90.8 FM Booth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAexzcBbRQrp5vCYBAL1Xl_LIjyrDy1ItwCXd7UemfoFDr_GlG5lBRdN5dEClXGuVbWLpA_zu5WVu87rjI3aSs5t9d_qX9XH6AdLVAIPk2Gp1IICwUxBdimtpIIpRoywslffhcbhedAyvHlxbjNxGztveUAV_F56txliO80k6OSxCp6CRVf3y5VWzl7ZYUUJRTjO3aCrS-BIrUcS4T29rsUtxJbUjHhE9Nx6LALEoWyXe3c6k4AIPiBX8zzYAZOLvZSAyE6hUFsLHg"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Radio Siddhartha 90.8 FM Booth" src="image/library/SSIT Campus7.jpg"/>
                 <div class="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-bold px-2.5 py-1 rounded">INTERACTIVE SITE</div>
             </div>
             <div class="p-6">
@@ -641,7 +665,7 @@
         <!-- Facility Card 3 -->
         <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300" onclick="openVirtualTourSpot('imac')">
             <div class="h-56 overflow-hidden relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Apple iMac Lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYSn-HNjm6iFN8CIZfnx-35IgVKPoKIaL6bgjcWRyGgWW0Ee4C1IRPGN4aqj2T4kAUvQABdLRk5uWxbsyAvLZErmf3YBrFOB6Jitt-W15Mtsd8Lp0DZKq4On5B4BrmG018Ib4JgT--xaqZeLZpBFPFYYsFQrxynKVkgPbBPkF-PeFsp6sbVToXw2uLvmkOUjaxhfN5BbqHFIFzGHQh429ypODW1DvWIvX1UlBH2wEzwuJbmGy6jZiGXi7vlBf3MQeLMRRnh7l8RvI"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Apple iMac Lab" src="image/library/31.jpg"/>
                 <div class="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-bold px-2.5 py-1 rounded">INTERACTIVE SITE</div>
             </div>
             <div class="p-6">
@@ -652,7 +676,7 @@
         <!-- Facility Card 4 -->
         <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300" onclick="openVirtualTourSpot('language')">
             <div class="h-56 overflow-hidden relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Language Lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjqAtwB89A_KvJF8Rdz2mu66y7n7cjVuVL_AnJbBzGXUXCUZAiqtRdqbPY0GXLLGPSf0coJeT3Oe78XrjHr34ddJ9IfRfiZPCzsMWvOvZs2sGvXsc5zKtmb6fqCR-OBjCSZBhche6OuvExWqO2S7PkSjTumiXsvP9HLNlhM_8tiZMl8w3enPUzYEFDPX_0rEZgRg1xgnaQtW7d4mQUY8K_kB2_BVRiJKZo48mUC1GWcyFsZlJdXJHW_eAEvs8B7Oy9jib5-rNkNNA"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Language Lab" src="image/library/Library.jpg"/>
             </div>
             <div class="p-6">
                 <h6 class="font-semibold text-[16px] text-slate-800">Communications Language Lab</h6>
@@ -662,7 +686,7 @@
         <!-- Facility Card 5 -->
         <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300" onclick="openVirtualTourSpot('library')">
             <div class="h-56 overflow-hidden relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Digital Library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2c0jREkmNQiS9S3jBU5srkoXqqWOG4y8deW7hgbbdVxe9WZzVsaNxCiwV0y7uDvJP9FbBJZDccRCRcJixKxrYbYepj-dLoq_unvFIVBJ7YmOn0I5tVlSfwKCiKsP37-vlxO2N3XnVxhcVz5Q4O4swquddWriUzo-F7-w5Sb2E05DGZtkQnhCMQxmwp9ItO1cw46F9YdK1yJ-Np6a8Dn65H2G1xc8xXorog_xIpcac_N530xLhZDTzcX8bUccHVx2sT9hgnTi6KEU"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Digital Library" src="image/library/SSIT-Central-Library-Slider.jpg"/>
             </div>
             <div class="p-6">
                 <h6 class="font-semibold text-[16px] text-slate-800">Unified Digital Reference Library</h6>
@@ -683,7 +707,7 @@
     <div class="w-full max-w-5xl bg-slate-900 rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row h-[85vh]">
         <!-- 360 Visual Spot View panel -->
         <div class="flex-grow bg-black relative flex items-center justify-center h-1/2 md:h-full group">
-            <img id="tour-panorama-view" class="w-full h-full object-cover opacity-90" alt="Tour spot view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnpfDlVdCIFG4k_5udyF3yxALOdi5kCHy4PYJ0uaCb7zpvEJjq5SBXFtTNWkAYS014YV2TalYGPeK0LW735Zlvkxs-iVSAOyurerh71LhoV05RSLV3zxoo9ZlZvw51fa1o7jC9fm2YlcX9gMwLs586YtKihaPttboBiW7fFJZ_NJ7Rzy3dxz8IF6yYWRJ7IatzExqUfmXTaHVcaC9zWEjkuiFUo3EeMDlY7hEqYiA_oLLNwS7kHeo7h1YqUr4VqY44xQzsIGrKX9I"/>
+            <img id="tour-panorama-view" class="w-full h-full object-cover opacity-90" alt="Tour spot view" src="image/campus/IMG_0311.JPG"/>
             
             <!-- Dynamic hotspot indicators on visual -->
             <div id="tour-hotspot-1" class="absolute top-[40%] left-[60%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group/spot">
@@ -743,53 +767,84 @@
     </div>
 </div>
 
-<section class="py-section-gap max-w-container-max mx-auto px-gutter">
-    <div class="flex flex-col lg:flex-row gap-0 lg:items-center bg-primary rounded-[32px] overflow-visible shadow-2xl">
-        <div class="lg:w-1/2 p-12 lg:p-16">
-            <div class="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">SSCMS VALUES</div>
-            <h3 class="text-[36px] md:text-[42px] font-light text-white leading-tight mb-6">WHY CHOOSE <br/> SRI SIDDHARTHA?</h3>
-            <p class="text-white/80 text-[16px] mb-10 leading-relaxed max-w-md font-light">
-                We combine top-tier academic rigor with consistent professional industrial interface to train tomorrow's media leaders.
+<!-- Section: Why Choose Sri Siddhartha — Premium Horizontal Card -->
+<section class="py-section-gap px-gutter" style="max-width:1400px; margin-left:auto; margin-right:auto;">
+    <div class="relative flex flex-col lg:flex-row overflow-hidden" style="background:#F9F6EF; border-radius:6px; border:1px solid #ECE6D8; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
+
+        <!-- Left Block: Dark Green CTA -->
+        <div class="relative flex flex-col justify-center lg:w-[28%] shrink-0 z-10" style="background:#0F4B2B; padding:40px;">
+            <h3 class="uppercase font-bold text-white leading-[1.2] mb-4" style="font-size:clamp(28px,3vw,40px);">
+                WHY CHOOSE<br/>SRI SIDDHARTHA?
+            </h3>
+            <p class="text-white/75 mb-9 leading-relaxed" style="font-size:clamp(14px,1.2vw,18px); font-weight:500;">
+                We combine academic excellence with real-world exposure to prepare you for tomorrow.
             </p>
-            <a href="#about" class="bg-white text-primary px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-slate-100 transition-all w-fit shadow-md">
-                READ OUR HISTORY <span class="material-symbols-outlined">arrow_forward</span>
+            <a href="#about" aria-label="Know more about Sri Siddhartha" class="inline-flex items-center justify-between bg-white hover:bg-[#F5F5F5] text-[#0F4B2B] font-bold rounded-xl transition-all duration-250 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white/50" style="height:52px; width:190px; padding:0 20px; font-size:15px;">
+                <span>KNOW MORE</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            
-            <div class="relative mt-12 w-full h-[280px] lg:h-[320px] lg:-mb-32 z-10 hidden md:block">
-                <img class="w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white" alt="Students together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1zaX4xY4JN3I9iio1Yj35aNGcfno5fGWGFWhGGUoXNMvsxe8VEGT2pHMR8aG4ExtX4Zot5jBWawSAeT8pCB05a-sGkw8GQ_hKnuzTZPi5n63gaJWmFlm0XmzLQ_ra4rLofd26gCPk4vIHd8x9ufcEHFmvdDiMOMnVn9hYmKuwHjwMQxkOZ0Mfq0ICzbIIzBTg9rhx1bxVp-9Z5WJcPYIjzZN3N5nFrWrwbcShS2ViWU86PwZM3COPoV2UP0Pe76HyOJ_XUOpd5S4"/>
+        </div>
+
+        <!-- Middle Block: Student Image with Curved Left Edge -->
+        <div class="relative lg:w-[32%] shrink-0 h-[260px] lg:h-auto overflow-hidden">
+            <!-- Curved green overlay on the left side of the image -->
+            <svg class="absolute top-0 left-0 h-full z-10 hidden lg:block" viewBox="0 0 80 400" preserveAspectRatio="none" style="width:80px;">
+                <path d="M0,0 L0,400 L80,400 Q0,200 80,0 Z" fill="#0F4B2B"/>
+            </svg>
+            <img class="w-full h-full object-cover" alt="SSCMS students collaborating with camera equipment on campus" src="image/campus/sscms campus.jpg" loading="lazy"/>
+        </div>
+
+        <!-- Right Block: Features 2x2 Grid -->
+        <div class="flex-grow flex flex-col justify-center" style="background:#FBF8F2; padding:48px;">
+            <div class="grid grid-cols-1 sm:grid-cols-2" style="gap:36px 40px;">
+
+                <!-- Feature 1: Industry Experts -->
+                <div class="flex items-start gap-4 group">
+                    <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105" style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div>
+                        <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Industry Experts</h6>
+                        <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">Learn from professionals and practitioners.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Hands-on Learning -->
+                <div class="flex items-start gap-4 group">
+                    <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105" style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m7 9 3 3-3 3"/><path d="M13 15h3"/></svg>
+                    </div>
+                    <div>
+                        <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Hands-on Learning</h6>
+                        <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">Work on real projects and live assignments.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Modern Infrastructure -->
+                <div class="flex items-start gap-4 group">
+                    <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105" style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div>
+                        <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Modern Infrastructure</h6>
+                        <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">State-of-the-art labs and studios.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Placement Assistance -->
+                <div class="flex items-start gap-4 group">
+                    <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105" style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <div>
+                        <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Placement Assistance</h6>
+                        <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">100% support for internships and placements.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-        
-        <div class="lg:w-1/2 bg-white rounded-b-[32px] lg:rounded-l-none lg:rounded-r-[32px] p-12 lg:p-16 grid grid-cols-1 md:grid-cols-2 gap-10 border-t lg:border-t-0 lg:border-l border-slate-100">
-            <div class="flex flex-col gap-4">
-                <div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-xl shrink-0 text-primary">
-                    <span class="material-symbols-outlined text-[32px]">groups</span>
-                </div>
-                <h6 class="font-semibold text-[16px] text-slate-800">Experienced Scholars</h6>
-                <p class="text-on-surface-variant text-[13px] leading-relaxed font-light">Learn directly from seasoned columnists, veteran broadcasters, and active communication theorists.</p>
-            </div>
-            <div class="flex flex-col gap-4">
-                <div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-xl shrink-0 text-primary">
-                    <span class="material-symbols-outlined text-[32px]">handyman</span>
-                </div>
-                <h6 class="font-semibold text-[16px] text-slate-800">Active Newsrooms</h6>
-                <p class="text-on-surface-variant text-[13px] leading-relaxed font-light">Gain absolute direct exposure handling practical newsletters, live talk segments, and television newscasts.</p>
-            </div>
-            <div class="flex flex-col gap-4">
-                <div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-xl shrink-0 text-primary">
-                    <span class="material-symbols-outlined text-[32px]">architecture</span>
-                </div>
-                <h6 class="font-semibold text-[16px] text-slate-800">UGC Approved Degrees</h6>
-                <p class="text-on-surface-variant text-[13px] leading-relaxed font-light">Benefit from high-value curriculum architecture approved by respected government accreditation boards.</p>
-            </div>
-            <div class="flex flex-col gap-4">
-                <div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-xl shrink-0 text-primary">
-                    <span class="material-symbols-outlined text-[32px]">work</span>
-                </div>
-                <h6 class="font-semibold text-[16px] text-slate-800">Placement Pipelines</h6>
-                <p class="text-on-surface-variant text-[13px] leading-relaxed font-light">Direct recruitment pathways with state and national mainstream broadcasting agencies and networks.</p>
-            </div>
-        </div>
+
     </div>
 </section>
 
@@ -815,7 +870,7 @@
                 </div>
                 
                 <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
-                    <img id="t-avatar" class="w-14 h-14 rounded-full object-cover border-2 border-primary" alt="Alumni portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3u_IaCUwIElc-pGsBeZp1pqJIy6jyMOWCMuUXSLTVzUkSlTz1m51V7LQGpJzhgZ_uJN5U5Cwm9m16VAshhZq4nWnCxLc8dNBmB8mSR-24g8GMXSTUKhYymZK6yH8xvg0ptDr_qDWhJTULa_-flKumGtxu7hDdVGuOzy5xxmkMH_os_ESC8zsluH1rK4fuJth5J44loKlUJrSmJU8QBxn0JSPVDykyPEmluqHxgIRX_ypnChq_OTrf5u4OwhkvZPzI0L7lCRrsJLM"/>
+                    <img id="t-avatar" class="w-14 h-14 rounded-full object-cover border-2 border-primary" alt="Alumni portrait" src="image/logo/logo.png"/>
                     <div>
                         <h6 id="t-name" class="font-semibold text-[15px] text-slate-800">Ananya R.</h6>
                         <p id="t-role" class="text-[12px] text-slate-500 font-light font-medium">BAJMC Alumna | Assistant Producer, TV9 Kannada</p>
@@ -870,32 +925,148 @@
                 
                 <!-- Infinite Horizontal Scrolling Marquee of Recruiters -->
                 <div class="marquee-container bg-slate-100 py-5 rounded-xl border">
-                    <div class="marquee-content font-black text-slate-400 text-lg uppercase tracking-wider flex items-center">
-                        <span>TV9 KANNADA</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>ZEE NEWS NETWORK</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>NEWS18 KANNADA</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>ASIANET SUVARNA NEWS</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>PUBLIC TV</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>ANI PRESS WIRE</span>
-                        <span class="text-[#F58220]">•</span>
+                    <div class="marquee-content flex items-center gap-10">
+                        <!-- Zee News -->
+                        <span class="shrink-0">
+                            <svg width="60" height="40" viewBox="0 0 60 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <defs>
+                                    <radialGradient id="zeeGrad" cx="30%" cy="30%" r="70%">
+                                        <stop offset="0%" stop-color="#9C27B0" />
+                                        <stop offset="60%" stop-color="#4A148C" />
+                                        <stop offset="100%" stop-color="#1A0033" />
+                                    </radialGradient>
+                                </defs>
+                                <circle cx="30" cy="20" r="18" fill="url(#zeeGrad)"/>
+                                <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle" letter-spacing="0.5">ZEE</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- TV9 Kannada -->
+                        <span class="shrink-0">
+                            <svg width="45" height="40" viewBox="0 0 45 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="0.5" y="0.5" width="44" height="39" rx="3" fill="white" stroke="#ccc" stroke-width="1"/>
+                                <rect x="2" y="2" width="20" height="20" fill="#2E5B9A"/>
+                                <text x="12" y="16" font-family="sans-serif" font-weight="bold" font-style="italic" font-size="12" fill="white" text-anchor="middle">tv</text>
+                                <rect x="22" y="2" width="21" height="20" fill="#D32F2F"/>
+                                <text x="32" y="18" font-family="Georgia, serif" font-weight="900" font-size="18" fill="white" text-anchor="middle">9</text>
+                                <path d="M 6 28 Q 10 24 15 28 T 20 28 M 24 28 Q 28 24 33 28" stroke="#D32F2F" stroke-width="1.5" fill="none"/>
+                                <circle cx="37" cy="28" r="1.5" fill="#D32F2F"/>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- News18 -->
+                        <span class="shrink-0">
+                            <svg width="95" height="40" viewBox="0 0 95 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="0" y="8" width="60" height="24" rx="2" fill="#0C1D33"/>
+                                <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle" letter-spacing="1">NEWS</text>
+                                <rect x="60" y="8" width="25" height="24" rx="2" fill="#D32F2F"/>
+                                <text x="72" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="14" fill="white" text-anchor="middle">18</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- Asianet News -->
+                        <span class="shrink-0">
+                            <svg width="125" height="40" viewBox="0 0 125 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <g stroke="#0F2B5C" stroke-width="2" stroke-linecap="round" fill="none">
+                                    <path d="M 12 30 L 22 10 L 32 30" />
+                                    <path d="M 15 24 L 29 24" />
+                                    <path d="M 18 18 L 26 18" />
+                                    <path d="M 20 13 L 24 13" />
+                                </g>
+                                <text x="38" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="13" fill="#1E293B">asianet</text>
+                                <text x="88" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="#D32F2F">news</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- Public TV -->
+                        <span class="shrink-0">
+                            <svg width="65" height="40" viewBox="0 0 65 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="0.5" y="0.5" width="64" height="39" rx="3" fill="none" stroke="#ddd" stroke-width="1"/>
+                                <rect x="2" y="7" width="61" height="15" rx="1" fill="#0C1D33"/>
+                                <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="white" text-anchor="middle" letter-spacing="0.5">PUBLIC</text>
+                                <circle cx="48" cy="4" r="1.5" fill="#D32F2F"/>
+                                <circle cx="52" cy="4" r="1.5" fill="#2E5B9A"/>
+                                <rect x="2" y="23" width="61" height="15" rx="1" fill="#D32F2F"/>
+                                <text x="32" y="34" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle" letter-spacing="2">TV</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- ANI -->
+                        <span class="shrink-0">
+                            <svg width="55" height="40" viewBox="0 0 55 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="5" y="8" width="45" height="24" rx="2" fill="black"/>
+                                <text x="27" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle" letter-spacing="1.5">ANI</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        
                         <!-- Duplicate set for infinite loop illusion -->
-                        <span>TV9 KANNADA</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>ZEE NEWS NETWORK</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>NEWS18 KANNADA</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>ASIANET SUVARNA NEWS</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>PUBLIC TV</span>
-                        <span class="text-[#F58220]">•</span>
-                        <span>ANI PRESS WIRE</span>
-                        <span class="text-[#F58220]">•</span>
+                        <!-- Zee News -->
+                        <span class="shrink-0">
+                            <svg width="60" height="40" viewBox="0 0 60 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <circle cx="30" cy="20" r="18" fill="url(#zeeGrad)"/>
+                                <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle" letter-spacing="0.5">ZEE</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- TV9 Kannada -->
+                        <span class="shrink-0">
+                            <svg width="45" height="40" viewBox="0 0 45 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="0.5" y="0.5" width="44" height="39" rx="3" fill="white" stroke="#ccc" stroke-width="1"/>
+                                <rect x="2" y="2" width="20" height="20" fill="#2E5B9A"/>
+                                <text x="12" y="16" font-family="sans-serif" font-weight="bold" font-style="italic" font-size="12" fill="white" text-anchor="middle">tv</text>
+                                <rect x="22" y="2" width="21" height="20" fill="#D32F2F"/>
+                                <text x="32" y="18" font-family="Georgia, serif" font-weight="900" font-size="18" fill="white" text-anchor="middle">9</text>
+                                <path d="M 6 28 Q 10 24 15 28 T 20 28 M 24 28 Q 28 24 33 28" stroke="#D32F2F" stroke-width="1.5" fill="none"/>
+                                <circle cx="37" cy="28" r="1.5" fill="#D32F2F"/>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- News18 -->
+                        <span class="shrink-0">
+                            <svg width="95" height="40" viewBox="0 0 95 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="0" y="8" width="60" height="24" rx="2" fill="#0C1D33"/>
+                                <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle" letter-spacing="1">NEWS</text>
+                                <rect x="60" y="8" width="25" height="24" rx="2" fill="#D32F2F"/>
+                                <text x="72" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="14" fill="white" text-anchor="middle">18</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- Asianet News -->
+                        <span class="shrink-0">
+                            <svg width="125" height="40" viewBox="0 0 125 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <g stroke="#0F2B5C" stroke-width="2" stroke-linecap="round" fill="none">
+                                    <path d="M 12 30 L 22 10 L 32 30" />
+                                    <path d="M 15 24 L 29 24" />
+                                    <path d="M 18 18 L 26 18" />
+                                    <path d="M 20 13 L 24 13" />
+                                </g>
+                                <text x="38" y="25" font-family="'Inter', sans-serif" font-weight="800" font-size="13" fill="#1E293B">asianet</text>
+                                <text x="88" y="25" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="#D32F2F">news</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- Public TV -->
+                        <span class="shrink-0">
+                            <svg width="65" height="40" viewBox="0 0 65 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="0.5" y="0.5" width="64" height="39" rx="3" fill="none" stroke="#ddd" stroke-width="1"/>
+                                <rect x="2" y="7" width="61" height="15" rx="1" fill="#0C1D33"/>
+                                <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="white" text-anchor="middle" letter-spacing="0.5">PUBLIC</text>
+                                <circle cx="48" cy="4" r="1.5" fill="#D32F2F"/>
+                                <circle cx="52" cy="4" r="1.5" fill="#2E5B9A"/>
+                                <rect x="2" y="23" width="61" height="15" rx="1" fill="#D32F2F"/>
+                                <text x="32" y="34" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="white" text-anchor="middle" letter-spacing="2">TV</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- ANI -->
+                        <span class="shrink-0">
+                            <svg width="55" height="40" viewBox="0 0 55 40" class="grayscale hover:grayscale-0 transition-all duration-300">
+                                <rect x="5" y="8" width="45" height="24" rx="2" fill="black"/>
+                                <text x="27" y="24" font-family="'Inter', sans-serif" font-weight="900" font-size="13" fill="white" text-anchor="middle" letter-spacing="1.5">ANI</text>
+                            </svg>
+                        </span>
+                        <span class="text-[#F58220] text-lg font-bold">•</span>
                     </div>
                 </div>
             </div>
@@ -925,7 +1096,7 @@
         <!-- Photo Card 1 -->
         <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="fests">
             <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Cultural Events" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMhX1IlFBekkVKYPZNDzA5hTKsdhokoSeVj9m3OmasPB_okopDHKlR4ot1Z8epMExhYRwxzoOmSkQUeSsLWzeRACOojcGjhk9VJb_qAAgsPkKL8eenJWa2tfr4dr71pw_oeBbgouIQLVa50q_xNFTaI-B2ZJ3nByCLQopftlDvpRFQisRYLEQkZwWTHEKqzKN1jPSULaCcFwP7fcjj8L3HFS5yBPJm6F2VAN8ypbehOafJdt3ZarO_76q1e42ZoScKoMdQM2BnZWI"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Cultural Events" src="image/campus/HMG_park.jpg"/>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View Photo</span>
                 </div>
@@ -935,7 +1106,7 @@
         <!-- Photo Card 2 -->
         <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="workshops">
             <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Workshops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1kkxlsDRgqNi3zc_iItiZiKzlg3tih0QqnkexPbmeJD_58moC3kAaHj-b4pco2KO_5OlRWiF37w0ekzDKjXEAHYRuiu5X1WLgyCMoNscQSu-wa2C6sfAUuLScb3O0NUI0li88xur4L-2A9K4UBZYtLqg_ehJPJJrcd9dc7_Thk2ttRsjHng7SPQbbWJhJZBMN-TAeGdP8bKLAD6GtF-wXJMeDD262UPNDKqhBUKetSljLl00M6OQgejTk1BzmCAGbJb8P0dCraM"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Workshops" src="image/campus/birds_eyeview.jpg"/>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View Photo</span>
                 </div>
@@ -945,7 +1116,7 @@
         <!-- Photo Card 3 -->
         <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="shoots">
             <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="On Campus Shoots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBab2oIKPxzsBKpvFULqeCJbgSUpYrjWsK4SkL46hNjPmLD_UcSiprPDsVjxzysfgHaKsDwYaA5CC1PbjIc6hnYomSgIRj3S3GuAyYX5-O-DywE_lU47Pp6d9EmcKxKH59zFA_1HM7TQZnrDjnyL2IS-mOkxJ2aSncWrHKqPVODyc23UPHeejqCkTJimfXbsW9gIeI5BH12RxBL8I3vUb-4cf-q5HRislkEhSLzLvgcEUbD1sDGlWZ1eoMmwSiWRvG7op-WoMcrvjU"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="On Campus Shoots" src="image/campus/Main Gate.jpg"/>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View Photo</span>
                 </div>
@@ -955,7 +1126,7 @@
         <!-- Photo Card 4 -->
         <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="workshops">
             <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Student Club Sessions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmQtalnr1T-nok_WfyoHxHr60eDf6EAeXv0daceq_rcmXtWaE2nPuaO43GsrZwxMZdtM_7Zi9uXN2s1D-6QYEed-IkDcL-llWqMVBLfPnWEMEn06XblEkUI7ZKryJqKxEIBmvVa5yznI2YCIcCdAmckFUWwJECN4O4V-T_oruFY-NOQzQ8qQXGeAGbg64TTsD4PsRPkfYyJxQtqmNS6u7w_hEvQi3X22L-JVYXtIt0WAx4D2fHWtmV8HEG7zV9gfx0q7KDYxeYcq8"/>
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Student Club Sessions" src="image/library/library at night.jpg"/>
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View Photo</span>
                 </div>
@@ -977,7 +1148,7 @@
             <div class="space-y-6 flex-grow font-light">
                 <div class="flex gap-4 group cursor-pointer border-b pb-4 border-dashed" onclick="showToast('Highlight: National Media Fest Winners booklet released.', 'success')">
                     <div class="w-24 h-20 bg-surface-variant rounded-lg overflow-hidden shrink-0 border">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" alt="Award trophy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfDwXpfRBkXHkVr6VoX6ltZ8Ceof_w4g5HVrpS-vUHIlVQGe_Yivf9oWRG_chz1zBj0hj5fQiZROfR2URiVIrk4QOQoQ3yuFBBjt6LHx0Lzy_per9eynm1pOkcqWnnUidO-UuknrZts3d71lVOPIQGtgR-nD6hXEPfS0789BHSsFyJcF2HcSuix1FBz62e1Vrzf53gIW4RV0FZQIvusq7d72cjbA1poHjUysnd7rhRno16jy21vHf16lqSshp6_exJAah3RqFmp3U"/>
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" alt="Award trophy" src="image/campus/Admin block.jpg"/>
                     </div>
                     <div>
                         <h6 class="font-semibold text-slate-800 text-[14px] group-hover:text-primary transition-colors leading-tight">Students Clinch Top Awards at National Media Fest 2026</h6>
@@ -987,7 +1158,7 @@
                 
                 <div class="flex gap-4 group cursor-pointer border-b pb-4 border-dashed" onclick="showToast('Information: Seminar scheduled on AI reporting tools.', 'info')">
                     <div class="w-24 h-20 bg-surface-variant rounded-lg overflow-hidden shrink-0 border">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" alt="Guest speaker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWzcF0ha0jcmMKu4_LiT3WBa4NuSFiKAOQaaJnzLUwzYtlw4ThHgU5NlLwgmyBCK-nzu8jrGok6i80YmYk_Jf34e0SkF-MCUi_aIQ4pPepB3WDdj2OVCBaeKSZgJEggRw8sAA8KlxPoJKs_xZuTqOtgychvVbe1Ey-mi--jGI4tuUqf1UVtkFxw7LnokekHd-hm1uzIs4Ie4cmDsvmo08Eek30yuP7Lnem-mYmachgk2hhWmUcDgcRY5yIe3DDxE8jWesMmsY85IQ"/>
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" alt="Guest speaker" src="image/library/SSIT Campus 2.JPG"/>
                     </div>
                     <div>
                         <h6 class="font-semibold text-slate-800 text-[14px] group-hover:text-primary transition-colors leading-tight">National Seminar Held on AI &amp; Computational Journalism Models</h6>
@@ -997,7 +1168,7 @@
                 
                 <div class="flex gap-4 group cursor-pointer" onclick="showToast('Siddhartha 90.8 FM broadcast logs archive is online.', 'success')">
                     <div class="w-24 h-20 bg-surface-variant rounded-lg overflow-hidden shrink-0 border">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" alt="Radio station anniversary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOXSAymAkAX_stjqn4qetou22sj47HIM53XTTAWa9xpuw7mtKh8ezD5A3aogGOc7FnYYSUCafuv2QYcUfdvSlbCGx7xYfOu1tCq_uQMZsGtWhxtJ2ifBteclsyxG7Uq2ka2SWBGOc5tcEbGgLUqcmeTK3PjYsDeMgS1gPkLYoR-obyyUGICqZR4tnkpHqeTUkTv28uRIZEUHAM9UTGnuzJOH39ompUncVlNj89rVLpWkpHQ3byo5oXPx-zLaj3y2p9i8fQBOv-Nt4"/>
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform" alt="Radio station anniversary" src="image/campus/sscms campus.jpg"/>
                     </div>
                     <div>
                         <h6 class="font-semibold text-slate-800 text-[14px] group-hover:text-primary transition-colors leading-tight">Radio Siddhartha 90.8 FM Commemorates 5 Years of Service</h6>
@@ -1032,7 +1203,7 @@
                 </div>
             </div>
             <div class="relative md:w-2/5 h-64 md:h-auto overflow-hidden">
-                <img class="w-full h-full object-cover object-top md:absolute md:right-0 md:bottom-0 md:h-full md:w-auto scale-105" alt="Prospective Student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1XBAKWftpmE45Hl_A2CXmd7Pd4s2NxY-iL1nBE5pk8e8M8VuXiTb8-3uhTWNOy0_CyDCpd5yLc0LkXZ6ouX7Rer6YO1Z4K5IfriZBWzExzYll89H7GCzdrIhqYneDRw2pwg6Nntpf_sU6DCzN9_0iEzAFgh3ZqrsLjA9_IvscyFIvm9cQVD-wX8T7JA_yQvG8zpLYBua2tSBkn4ZV23C1fb-lJyY1a2bSE8Epjht4fAI7pAz1iCnAg9gO-CziyTEFEx3fVoZhtyc"/>
+                <img class="w-full h-full object-cover object-top md:absolute md:right-0 md:bottom-0 md:h-full md:w-auto scale-105" alt="Prospective Student" src="image/campus/Aerial view.jpg"/>
             </div>
         </div>
     </div>
@@ -1163,7 +1334,7 @@
 
             <!-- Stylized Static Map Container -->
             <div class="rounded-2xl overflow-hidden h-52 border relative shadow-md mt-6">
-                <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOikwzhe4JnvhaIXN4w4Nm6o9K3e9bxnuEwQkBupzrUbpTEVN8uhtqcV6q8-50v4DrHngK1b9kbpSpz89NBQC5J4R3wmYEZ4VggbdO4OyCvb35qcGI8yqU5RMUmoD4SBGUf1We3xh4-YUqGr8tQYmOvWaiohASxhJSA25rSqi4trSqV-QJlK37Ql9kl4f_GU8PrR34osfucyCbVe1zaRbOVOxVywdMeFfDEt4PrhAKMkx9V6YFqjDxWjTzDissdS7GYv-ZMFqGAUI')"></div>
+                <div class="w-full h-full bg-cover bg-center" style="background-image: url('image/campus/birds_eyeview.jpg')"></div>
                 <div class="absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                     <a href="https://maps.google.com" target="_blank" rel="noopener" class="bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-[12px] shadow-lg">OPEN IN GOOGLE MAPS</a>
                 </div>
@@ -1180,7 +1351,7 @@
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border">
                     <!-- Updated with logo.png -->
-                    <img class="w-full h-full object-contain" alt="SSCMS Crest" src="logo.png"/>
+                    <img class="w-full h-full object-contain" alt="SSCMS Crest" src="image/logo/logo.png"/>
                 </div>
                 <div>
                     <h4 class="font-semibold text-[16px] tracking-tight">SRI SIDDHARTHA</h4>
@@ -1600,6 +1771,7 @@
     window.onload = function() {
         initTestimonialCarousel();
         initAutoScrollObservers();
+        initNavAutoHide();
     };
 
     // Visual Slide Intersection Observers
@@ -1618,6 +1790,51 @@
             section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(section);
         });
+    }
+
+    // Intelligent Auto-Hide Navigation on Scroll
+    function initNavAutoHide() {
+        const navWrapper = document.getElementById('nav-wrapper');
+        const SCROLL_THRESHOLD = 10; // Ignore micro-scrolls (px)
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function onScroll() {
+            const currentScrollY = window.scrollY;
+            const delta = currentScrollY - lastScrollY;
+
+            // Always show nav at the very top of the page
+            if (currentScrollY <= 5) {
+                navWrapper.classList.remove('nav-hidden');
+                lastScrollY = currentScrollY;
+                ticking = false;
+                return;
+            }
+
+            // Only react if the scroll delta exceeds the threshold
+            if (Math.abs(delta) < SCROLL_THRESHOLD) {
+                ticking = false;
+                return;
+            }
+
+            if (delta > 0) {
+                // Scrolling DOWN → hide nav
+                navWrapper.classList.add('nav-hidden');
+            } else {
+                // Scrolling UP → show nav
+                navWrapper.classList.remove('nav-hidden');
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(onScroll);
+                ticking = true;
+            }
+        }, { passive: true });
     }
 
     // Dynamic Top Toast Manager
