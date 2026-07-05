@@ -188,7 +188,11 @@
                 <div class="flex items-center gap-6">
                     <div class="flex items-center gap-1.5 text-white/95">
                         <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">school</span>
-                        <span class="font-normal">Shape Your Future in Media & Communication</span>
+                        <span class="italic font-normal">Shape Your Future in Media & Communication</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">campaign</span>
+                        <span class="font-extrabold text-[#ffdcc6]">July 2026 Admissions Open!</span>
                     </div>
                 </div>
 
@@ -197,15 +201,15 @@
                     <div class="flex gap-5 items-center">
                         <button onclick="togglePortalModal('student')"
                             class="flex items-center gap-1.5 hover:text-[#ffb786] transition-colors font-semibold">
-                            <span class="material-symbols-outlined text-[18px]">account_circle</span> Student Portal
+                            <span class="material-symbols-outlined text-[16px]">person</span> Student Portal
                         </button>
                         <button onclick="openVirtualTour()"
                             class="flex items-center gap-1.5 hover:text-[#ffb786] transition-colors font-semibold">
-                            <span class="material-symbols-outlined text-[18px]">motion_photos_on</span> Virtual Tour
+                            <span class="material-symbols-outlined text-[16px]">videogame_asset</span> Virtual Tour
                         </button>
                         <a class="flex items-center gap-1.5 hover:text-[#ffb786] transition-colors font-semibold"
                             href="#admissions" onclick="showToast('Downloading SSCMS Brochure PDF...', 'info')">
-                            <span class="material-symbols-outlined text-[18px]">description</span> Brochure
+                            <span class="material-symbols-outlined text-[16px]">description</span> Brochure
                         </a>
                     </div>
 
@@ -233,7 +237,7 @@
                         <a class="hover:text-[#ffb786] transition-colors" href="#" title="LinkedIn">
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                 <path
-                                    d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" />
+                                    d="M19 0h-14c-1.1 0-2 .45-2 1v22c0 .55.45 1 1 1h14c1.1 0 2-.45 2-1V3c0-5.55-4.44-1-10-1zm-6 18.5h-3v-7h3v7zm-1.5-8.26c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm9 8.26h-3v-4.5c0-1.38-.56-2.5-1.75-2.5-1.03 0-1.75.45-2.25 1v6h-3v-11h3v1.5c.5-.83 1.77-1.5 3.25-1.5 2.5 0 3.75 1.67 3.75 4.5v6.5z" />
                             </svg>
                         </a>
                     </div>
@@ -243,9 +247,9 @@
 
         <!-- Main Navigation Header -->
         <header class="bg-white shadow-sm border-b border-outline-variant/30 h-24 transition-all duration-300">
-            <div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-full">
+            <div class=" mx-auto px-gutter flex justify-between items-center h-full">
                 <!-- Logo & Three-Line Title stack -->
-                <a href="#" class="flex items-center gap-3 group focus:outline-none shrink-0">
+                <a href="#" class="flex items-center gap-4 group focus:outline-none shrink-0">
                     <div
                         class="w-14 h-14 bg-white flex items-center justify-center overflow-hidden rounded-none shrink-0">
                         <!-- Using logo.png and keeping perfect alignment -->
@@ -254,10 +258,10 @@
                     </div>
                     <div class="flex flex-col justify-center">
                         <h1
-                            class="font-extrabold text-[#004123] tracking-wide uppercase leading-none text-[18px] sm:text-[22px]">
+                            class="font-extrabold text-[#004123] tracking-wide uppercase leading-none text-[20px] sm:text-[22px]">
                             SRI SIDDHARTHA</h1>
                         <p
-                            class="text-[12px] sm:text-[14px] font-black text-slate-900 tracking-wider uppercase leading-tight mt-0.5">
+                            class="text-[13px] sm:text-[14px] font-black text-slate-900 tracking-wider uppercase leading-tight mt-0.5">
                             CENTRE FOR MEDIA STUDIES</p>
                         <p class="text-[10px] sm:text-[11px] text-[#707971] font-semibold tracking-normal mt-0.5">—
                             Affiliated to Tumkur University —</p>
@@ -265,29 +269,29 @@
                 </a>
 
                 <!-- Desktop Navigation Menu (Perfectly aligned with logo and CTA button) -->
-                <nav class="hidden lg:flex items-center gap-3 xl:gap-5 h-full pt-1.5">
-                    <a class="font-bold text-[13px] xl:text-[14px] text-[#004123] border-b-4 border-[#004123] h-full flex items-center px-1 transition-all"
+                <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5">
+                    <a class="font-bold text-[14px] text-[#004123] border-b-4 border-[#004123] h-full flex items-center px-1 transition-all"
                         href="#hero">Home</a>
-                    <a class="font-semibold text-[13px] xl:text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
                         href="#about">About Us</a>
-                    <a class="font-semibold text-[13px] xl:text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
                         href="#programs">Programs</a>
-                    <a class="font-semibold text-[13px] xl:text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
                         href="#facilities">Facilities</a>
-                    <a class="font-semibold text-[13px] xl:text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
                         href="#campus-life">Campus Life</a>
-                    <a class="font-semibold text-[13px] xl:text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
                         href="#placements">Placements</a>
-                    <a class="font-semibold text-[13px] xl:text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
                         href="#admissions-section">Admissions</a>
-                    <a class="font-semibold text-[13px] xl:text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
                         href="#contact">Contact Us</a>
                 </nav>
 
                 <!-- CTA & Hamburger menu for responsive breakpoints -->
                 <div class="flex items-center gap-4 shrink-0">
                     <button onclick="openAdmissionsWizard()"
-                        class="hidden md:inline-flex bg-[#F58220] hover:bg-orange-600 text-white px-5 xl:px-7 py-3 rounded-lg font-extrabold uppercase hover:scale-[1.03] active:scale-95 transition-all shadow-md tracking-wider text-[13px]">
+                        class="hidden md:inline-flex bg-[#F58220] hover:bg-orange-600 text-white px-7 py-3 rounded-lg font-extrabold uppercase hover:scale-[1.03] active:scale-95 transition-all shadow-md tracking-wider text-[13px]">
                         APPLY NOW
                     </button>
                     <button onclick="toggleMobileMenu()"
@@ -356,7 +360,7 @@
     <div id="nav-spacer" class="h-24 lg:h-[136px]"></div>
 
     <!-- Hero Banner -->
-    <section id="hero" class="relative h-[650px] w-full overflow-hidden">
+    <section id="hero" class="relative h-[700px] w-full overflow-hidden">
         <div class="absolute inset-0 hero-gradient z-10"></div>
         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-10000 scale-105"
             style="background-image: url('image/campus/Aerial view.jpg')"></div>
@@ -369,7 +373,7 @@
             </div>
 
             <!-- Re-styled heading to exactly match the lightweight editorial font and colors of image_fa20df.png -->
-            <h2 class="text-[38px] md:text-[62px] font-light leading-[1.1] max-w-4xl mb-6 tracking-tight">
+            <h2 class="text-[28px] md:text-[52px] font-light leading-[1.1] max-w-4xl mb-6 tracking-tight">
                 Where <span class="text-[#22c55e] font-light">Creativity</span> Meets Communication.<br />
                 Where <span class="text-[#F58220] font-light">Futures</span> Are Built.
             </h2>
@@ -392,14 +396,18 @@
 
             <!-- Floating Admissions Card -->
             <div
-                class="absolute bottom-20 right-gutter left-gutter md:left-auto md:w-fit bg-white p-5 rounded-2xl shadow-2xl flex items-center gap-5 border border-slate-100 max-w-md hover:scale-[1.02] transition-transform duration-300">
-                <div class="w-12 h-12 bg-secondary/15 flex items-center justify-center rounded-xl shrink-0">
-                    <span class="material-symbols-outlined text-secondary text-[30px] font-bold">event_available</span>
-                </div>
-                <div class="flex-grow">
-                    <h4 class="font-semibold text-slate-800 text-[15px] tracking-tight leading-tight">JULY 2026
-                        REGISTRATION OPEN</h4>
-                    <p class="text-slate-500 text-[12px] font-semibold mt-0.5">Apply for BAJMC &amp; MAJMC Courses</p>
+                class="relative z-20 w-full max-w-3xl bg-white p-5 rounded-2xl shadow-2xl flex items-center justify-between gap-5 border border-slate-100 hover:scale-[1.02] transition-transform duration-300 text-on-surface mt-6">
+                <div class="flex items-center gap-5">
+                    <div class="w-12 h-12 bg-secondary/15 flex items-center justify-center rounded-xl shrink-0">
+                        <span
+                            class="material-symbols-outlined text-secondary text-[30px] font-bold">event_available</span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-800 text-[15px] tracking-tight leading-tight">JULY 2026
+                            REGISTRATION OPEN</h4>
+                        <p class="text-slate-500 text-[12px] font-semibold mt-0.5">Apply for BAJMC &amp; MAJMC Courses
+                        </p>
+                    </div>
                 </div>
                 <button onclick="openAdmissionsWizard()"
                     class="bg-[#F58220] hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-bold text-[12px] whitespace-nowrap shadow-sm transition-all">
@@ -409,54 +417,112 @@
         </div>
     </section>
 
-    <div class="relative z-30 -mt-10 max-w-container-max mx-auto px-gutter">
+    <div class="relative z-30 -mt-10  mx-auto px-gutter">
         <div
-            class="bg-white rounded-2xl shadow-xl p-8 grid grid-cols-2 md:grid-cols-5 gap-6 border border-outline-variant/30 backdrop-blur-sm bg-white/95 items-stretch">
-            <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
-                <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
-                    <span class="material-symbols-outlined text-primary text-[36px]">account_balance</span>
+            class="bg-white rounded-t-2xl shadow-xl p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-6 lg:gap-0 border border-outline-variant/30 backdrop-blur-sm bg-white/95 items-center lg:divide-x lg:divide-slate-200">
+            <!-- Item 1: Affiliated to Tumkur University -->
+            <div class="flex items-center gap-4 group cursor-pointer lg:pr-6">
+                <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">school</span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[13px] text-slate-500 font-medium leading-none">Affiliated to</span>
+                    <span class="text-[15px] font-bold text-[#0F4B2B] mt-1 leading-tight">Tumkur University</span>
                 </div>
-                <div class="flex items-center gap-0.5 mt-1">
-                    <span class="text-[15px] font-semibold text-on-surface-variant leading-tight">Affiliated to</span>
-                </div>
-                <p class="text-[16px] font-bold text-primary leading-tight">Tumkur University</p>
             </div>
-            <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
-                <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
-                    <span class="material-symbols-outlined text-primary text-[36px]">park</span>
+            <!-- Item 2: 65+ Acre Green Campus -->
+            <div class="flex items-center gap-4 group cursor-pointer lg:px-6">
+                <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">park</span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[24px] font-bold text-[#0F4B2B] leading-none">65+</span>
+                    <span class="text-[13px] text-slate-500 font-medium mt-1 leading-tight">Acre Green Campus</span>
                 </div>
-                <div class="flex items-center gap-0.5 mt-1">
-                    <span class="text-[26px] font-light text-primary">65+</span>
-                </div>
-                <p class="text-[13px] font-semibold text-on-surface-variant leading-tight">Acre Green Campus</p>
             </div>
-            <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
-                <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
-                    <span class="material-symbols-outlined text-primary text-[36px]">biotech</span>
+            <!-- Item 3: 10+ Advanced Labs -->
+            <div class="flex items-center gap-4 group cursor-pointer lg:px-6">
+                <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">biotech</span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[24px] font-bold text-[#0F4B2B] leading-none">10+</span>
+                    <span class="text-[13px] text-slate-500 font-medium mt-1 leading-tight">Advanced Labs</span>
                 </div>
-                <div class="flex items-center gap-0.5 mt-1">
-                    <span class="text-[26px] font-light text-primary">10+</span>
-                </div>
-                <p class="text-[13px] font-semibold text-on-surface-variant leading-tight">Advanced Labs</p>
             </div>
-            <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
-                <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
-                    <span class="material-symbols-outlined text-primary text-[36px]">military_tech</span>
+            <!-- Item 4: 90.8 FM Community Radio -->
+            <div class="flex items-center gap-4 group cursor-pointer lg:px-6">
+                <span
+                    class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">settings_input_antenna</span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[24px] font-bold text-[#0F4B2B] leading-none">90.8 FM</span>
+                    <span class="text-[13px] text-slate-500 font-medium mt-1 leading-tight">Community Radio</span>
                 </div>
-                <div class="flex items-center gap-0.5 mt-1">
-                    <span class="text-[26px] font-light text-primary">UGC</span>
-                </div>
-                <p class="text-[13px] font-semibold text-on-surface-variant leading-tight">Approved Programs</p>
             </div>
-            <div class="flex flex-col items-center text-center gap-2 group cursor-pointer justify-between">
-                <div class="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
-                    <span class="material-symbols-outlined text-primary text-[36px]">workspace_premium</span>
+            <!-- Item 5: 100% Industry Oriented -->
+            <div class="flex items-center gap-4 group cursor-pointer lg:pl-6">
+                <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">workspace_premium</span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[24px] font-bold text-[#0F4B2B] leading-none">100%</span>
+                    <span class="text-[13px] text-slate-500 font-medium mt-1 leading-tight">Industry Oriented</span>
                 </div>
-                <div class="flex items-center gap-0.5 mt-1">
-                    <span class="text-[26px] font-light text-primary">100%</span>
-                </div>
-                <p class="text-[13px] font-semibold text-on-surface-variant leading-tight">Career Assistance</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Siddhartha Community Radio Live Floating Web Player Widget -->
+    <div id="live-radio-widget"
+        class="fixed bottom-6 right-6 z-40 bg-slate-900 text-white rounded-2xl shadow-2xl p-5 border border-slate-700 w-80 translate-y-12 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
+            <div class="flex items-center gap-2">
+                <span class="flex h-2.5 w-2.5 relative">
+                    <span id="radio-live-ping"
+                        class="absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+                </span>
+                <h5 class="text-sm font-bold tracking-wider text-slate-200 uppercase">Radio Siddhartha 90.8</h5>
+            </div>
+            <button onclick="toggleRadioPlayer()" class="text-slate-400 hover:text-white transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <!-- Player Meta & Controller -->
+        <div class="flex items-center gap-4">
+            <div
+                class="relative w-16 h-16 bg-gradient-to-tr from-primary to-secondary rounded-xl flex items-center justify-center overflow-hidden shrink-0 group">
+                <span id="radio-antenna-icon" class="material-symbols-outlined text-white text-3xl">radio</span>
+
+                <!-- SVG Audio Sound wave Visualizer -->
+                <div id="wave-visualizer"
+                    class="absolute inset-0 flex items-end justify-center gap-[3px] bg-black/50 p-2 opacity-0 transition-opacity">
+                    <div class="w-1 bg-secondary h-4 animate-[bounce_0.8s_infinite]"></div>
+                    <div class="w-1 bg-secondary h-8 animate-[bounce_0.5s_infinite_delay-150]"></div>
+                    <div class="w-1 bg-secondary h-5 animate-[bounce_0.7s_infinite_delay-300]"></div>
+                    <div class="w-1 bg-secondary h-7 animate-[bounce_0.6s_infinite_delay-450]"></div>
+                </div>
+            </div>
+
+            <div class="flex-grow min-w-0">
+                <p id="radio-track-title" class="text-sm font-semibold truncate text-white">Community Broadcast Stream
+                </p>
+                <p id="radio-track-rj" class="text-xs text-slate-400 truncate">On Air: RJ Amit</p>
+
+                <div class="flex items-center gap-2 mt-1">
+                    <button onclick="toggleRadioPlayState()" id="radio-play-btn"
+                        class="bg-secondary hover:bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors shadow">
+                        <span id="radio-play-icon" class="material-symbols-outlined text-[18px]">play_arrow</span>
+                    </button>
+                    <div class="text-[10px] text-slate-400 font-bold bg-slate-800 px-2 py-0.5 rounded"
+                        id="radio-duration">00:00 / LIVE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Program Selection -->
+        <div class="mt-4 pt-3 border-t border-slate-800">
+            <label class="text-[10px] uppercase font-bold text-slate-500 block mb-1.5">Select Broadcast Track</label>
+            <select onchange="changeRadioTrack(this.value)"
+                class="w-full bg-slate-800 border-none text-xs rounded-lg text-white py-2 px-3 focus:ring-1 focus:ring-secondary">
+                <option value="drive">Morning Drive with RJ Amit (9:00 AM)</option>
+                <option value="alumni">Alumni Success Talk - Trends in Media</option>
+                <option value="campus_news">SSCMS Weekly Campus News Bulletin</option>
+                <option value="music">Siddhartha Cultural Medley Selection</option>
+            </select>
         </div>
     </div>
 
@@ -464,21 +530,19 @@
     <section id="about" class="py-section-gap max-w-container-max mx-auto px-gutter">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Visual Column -->
-            <div class="relative group mb-12 lg:mb-0">
+            <div class="relative group">
                 <div class="absolute -top-4 -left-4 w-72 h-72 bg-primary-fixed/20 rounded-3xl -z-10 animate-pulse-slow">
                 </div>
                 <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-secondary/10 rounded-3xl -z-10 animate-pulse-slow">
                 </div>
-                <!-- Image Wrapper with height constraints to crop out the burnt-in image label -->
                 <div
-                    class="h-[340px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-[1.01]">
-                    <img class="w-full h-[380px] object-cover object-top" alt="SSCMS Admin Block"
-                        src="image/campus/Admin%20block.jpg" />
+                    class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-[1.01]">
+                    <img class="w-full h-96 object-cover" alt="Students in Media Lab"
+                        src="image/campus/Admin block.jpg" />
                 </div>
 
-                <!-- Badge hanging offset elegantly below the card -->
                 <div
-                    class="absolute -bottom-10 left-6 bg-primary text-white p-6 rounded-xl shadow-xl flex items-center gap-4 max-w-xs border border-white/10 z-10">
+                    class="absolute -bottom-6 left-6 bg-primary text-white p-6 rounded-xl shadow-xl flex items-center gap-4 max-w-xs border border-white/10">
                     <span
                         class="material-symbols-outlined text-[40px] text-secondary font-bold">workspace_premium</span>
                     <div>
@@ -527,98 +591,106 @@
     </section>
 
     <!-- Section: Programs and Factsheets -->
-    <section id="programs" class="py-section-gap max-w-container-max mx-auto px-gutter">
+    <section id="programs" class="py-section-gap  mx-auto px-gutter">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-4 space-y-6">
-                <div
-                    class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded">
-                    ACADEMIC PATHWAYS</div>
-                <h3 class="text-[36px] font-light text-primary leading-tight">PROGRAMS WE OFFER</h3>
-                <p class="text-on-surface-variant text-[16px] md:text-[18px] leading-relaxed font-light">
-                    Industry-driven, professionally validated programs designed specifically to cater to the upcoming
-                    paradigms of visual storytelling.
+            <!-- Left Column: Heading and description -->
+            <div class="lg:col-span-3 space-y-5">
+                <h3 class="text-[32px] font-extrabold text-[#004123] tracking-tight leading-tight uppercase">
+                    PROGRAMS WE OFFER
+                </h3>
+                <p class="text-slate-500 text-[14px] leading-relaxed font-light">
+                    Industry-driven programs designed for the future of media and communication.
                 </p>
-                <div class="p-4 bg-surface-container rounded-xl border border-outline-variant/50">
-                    <h6 class="font-semibold text-slate-800 text-[14px]">Need Consultation?</h6>
-                    <p class="text-xs text-slate-500 mt-1 font-light">Chat directly with our admission counselors to
-                        understand which stream matches your creativity.</p>
-                    <button onclick="scrollToContact()"
-                        class="mt-3 text-secondary font-bold text-xs flex items-center gap-1 hover:gap-2 transition-all">TALK
-                        TO ADVISOR <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
-                </div>
+                <button onclick="openAdmissionsWizard()"
+                    class="bg-[#0F4B2B] hover:bg-[#0a351e] text-white px-6 py-3 rounded-lg font-bold text-[12px] flex items-center gap-2 tracking-wide uppercase transition-all shadow-md">
+                    VIEW ALL PROGRAMS <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
             </div>
 
-            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Right Column: Card Grid -->
+            <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
                 <!-- Program Card 1 -->
-                <div class="bg-white p-8 rounded-xl border border-outline-variant/30 hover:shadow-xl hover:scale-[1.02] hover:border-primary/20 transition-all group cursor-pointer"
+                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('bajmc')">
-                    <div
-                        class="w-16 h-16 bg-surface flex items-center justify-center rounded-xl mb-6 group-hover:bg-primary/10 transition-colors shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-[32px]">campaign</span>
+                    <div class="flex flex-col items-center w-full">
+                        <div class="w-20 h-20 bg-[#E8F3ED] rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-[#0F4B2B] text-[36px]">mic</span>
+                        </div>
+                        <h5
+                            class="text-[17px] font-bold text-slate-800 mb-3 group-hover:text-primary transition-colors leading-snug">
+                            Journalism &amp;<br>Mass Communication
+                        </h5>
+                        <p class="text-slate-500 text-[13px] leading-relaxed font-light mb-6">
+                            Build skills in reporting, writing, editing and broadcasting.
+                        </p>
                     </div>
-                    <h5
-                        class="text-[19px] font-semibold text-slate-800 mb-2 group-hover:text-primary transition-colors">
-                        Journalism &amp; Mass Comm (BAJMC)</h5>
-                    <p class="text-on-surface-variant text-[13px] mb-6 leading-relaxed font-light">Build fundamental
-                        reporting, content drafting, editorial compilation, and camera mechanics skills.</p>
-                    <button class="text-primary font-bold text-[13px] flex items-center gap-2">
-                        VIEW DETAILS <span
-                            class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+                    <span
+                        class="text-[#0F4B2B] font-bold text-[13px] flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
+                        LEARN MORE <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </span>
                 </div>
 
                 <!-- Program Card 2 -->
-                <div class="bg-white p-8 rounded-xl border border-outline-variant/30 hover:shadow-xl hover:scale-[1.02] hover:border-primary/20 transition-all group cursor-pointer"
+                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('majmc')">
-                    <div
-                        class="w-16 h-16 bg-surface flex items-center justify-center rounded-xl mb-6 group-hover:bg-primary/10 transition-colors shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-[32px]">photo_camera</span>
+                    <div class="flex flex-col items-center w-full">
+                        <div class="w-20 h-20 bg-[#FDF2E9] rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-[#0F4B2B] text-[36px]">photo_camera</span>
+                        </div>
+                        <h5
+                            class="text-[17px] font-bold text-slate-800 mb-3 group-hover:text-primary transition-colors leading-snug">
+                            Radio &amp; Television<br>Production
+                        </h5>
+                        <p class="text-slate-500 text-[13px] leading-relaxed font-light mb-6">
+                            Learn studio production, anchoring, video editing and broadcasting.
+                        </p>
                     </div>
-                    <h5
-                        class="text-[19px] font-semibold text-slate-800 mb-2 group-hover:text-primary transition-colors">
-                        Post Graduate (MAJMC)</h5>
-                    <p class="text-on-surface-variant text-[13px] mb-6 leading-relaxed font-light">Advanced broadcasting
-                        strategies, audio-visual edits, social research, and media production.</p>
-                    <button class="text-primary font-bold text-[13px] flex items-center gap-2">
-                        VIEW DETAILS <span
-                            class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+                    <span
+                        class="text-[#0F4B2B] font-bold text-[13px] flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
+                        LEARN MORE <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </span>
                 </div>
 
                 <!-- Program Card 3 -->
-                <div class="bg-white p-8 rounded-xl border border-outline-variant/30 hover:shadow-xl hover:scale-[1.02] hover:border-primary/20 transition-all group cursor-pointer"
+                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('diploma')">
-                    <div
-                        class="w-16 h-16 bg-surface flex items-center justify-center rounded-xl mb-6 group-hover:bg-primary/10 transition-colors shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-[32px]">devices</span>
+                    <div class="flex flex-col items-center w-full">
+                        <div class="w-20 h-20 bg-[#E8F3ED] rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-[#0F4B2B] text-[36px]">monitor</span>
+                        </div>
+                        <h5
+                            class="text-[17px] font-bold text-slate-800 mb-3 group-hover:text-primary transition-colors leading-snug">
+                            Digital Media &amp;<br>Content Creation
+                        </h5>
+                        <p class="text-slate-500 text-[13px] leading-relaxed font-light mb-6">
+                            Master digital storytelling, social media, content strategy and more.
+                        </p>
                     </div>
-                    <h5
-                        class="text-[19px] font-semibold text-slate-800 mb-2 group-hover:text-primary transition-colors">
-                        Digital Content Creation Diploma</h5>
-                    <p class="text-on-surface-variant text-[13px] mb-6 leading-relaxed font-light">Master digital
-                        storytelling methodologies, SEO writing, brand marketing, and social channel management.</p>
-                    <button class="text-primary font-bold text-[13px] flex items-center gap-2">
-                        VIEW DETAILS <span
-                            class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+                    <span
+                        class="text-[#0F4B2B] font-bold text-[13px] flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
+                        LEARN MORE <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </span>
                 </div>
 
                 <!-- Program Card 4 -->
-                <div class="bg-white p-8 rounded-xl border border-outline-variant/30 hover:shadow-xl hover:scale-[1.02] hover:border-primary/20 transition-all group cursor-pointer"
+                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('phd')">
-                    <div
-                        class="w-16 h-16 bg-surface flex items-center justify-center rounded-xl mb-6 group-hover:bg-primary/10 transition-colors shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-[32px]">palette</span>
+                    <div class="flex flex-col items-center w-full">
+                        <div class="w-20 h-20 bg-[#FDF2E9] rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-[#F58220] text-[36px]">palette</span>
+                        </div>
+                        <h5
+                            class="text-[17px] font-bold text-slate-800 mb-3 group-hover:text-primary transition-colors leading-snug">
+                            Multimedia &amp; Visual<br>Communication
+                        </h5>
+                        <p class="text-slate-500 text-[13px] leading-relaxed font-light mb-6">
+                            Learn design, animation, editing and visual communication.
+                        </p>
                     </div>
-                    <h5
-                        class="text-[19px] font-semibold text-slate-800 mb-2 group-hover:text-primary transition-colors">
-                        Ph.D. in Journalism &amp; Research</h5>
-                    <p class="text-on-surface-variant text-[13px] mb-6 leading-relaxed font-light">Intense academic
-                        exploration focusing on mass communication, societal impact, and public policy.</p>
-                    <button class="text-primary font-bold text-[13px] flex items-center gap-2">
-                        VIEW DETAILS <span
-                            class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+                    <span
+                        class="text-[#0F4B2B] font-bold text-[13px] flex items-center gap-1.5 mt-auto group-hover:gap-2.5 transition-all">
+                        LEARN MORE <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -696,112 +768,104 @@
     </div>
 
     <section id="facilities" class="py-section-gap bg-surface-container-low overflow-hidden">
-        <div class="max-w-container-max mx-auto px-gutter mb-12 flex justify-between items-end">
-            <div>
-                <div
-                    class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-3">
-                    INFRASTRUCTURE</div>
-                <h3 class="text-[36px] md:text-[40px] font-light text-primary leading-tight mb-2">WORLD-CLASS FACILITIES
+        <div class=" mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Column: Heading, description and link -->
+            <div class="lg:col-span-3 space-y-5">
+                <h3 class="text-[32px] font-extrabold text-[#004123] tracking-tight leading-tight uppercase">
+                    WORLD-CLASS<br>FACILITIES
                 </h3>
-                <p class="text-on-surface-variant text-[16px] max-w-xl leading-relaxed font-light">Learn by operating
-                    industry-standard hardware, broadcast centers, and advanced audio processing tools.</p>
+                <p class="text-slate-500 text-[14px] leading-relaxed font-light">
+                    Learn with industry-standard infrastructure and hands-on experience.
+                </p>
+                <a href="#about" onclick="openVirtualTour()"
+                    class="text-[#0F4B2B] hover:text-[#0a351e] font-bold text-[13px] inline-flex items-center gap-1.5 mt-2 transition-all hover:gap-2.5">
+                    EXPLORE FACILITIES <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
             </div>
-            <button onclick="openVirtualTour()"
-                class="text-primary font-bold flex items-center gap-2 border-b-2 border-primary hover:border-transparent transition-all pb-1 hidden sm:inline-flex">
-                EXPLORE IN 360° TOUR <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
-        </div>
 
-        <!-- Facility Slides with Horizontal Scrolling & Hover states -->
-        <div class="flex gap-6 overflow-x-auto px-gutter pb-8 no-scrollbar scroll-smooth" id="facilities-container">
-            <!-- Facility Card 1 -->
-            <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300"
-                onclick="openVirtualTourSpot('tv_studio')">
-                <div class="h-56 overflow-hidden relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        alt="Television Studio" src="image/library/SSIT Campus 2.JPG" />
-                    <div
-                        class="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-bold px-2.5 py-1 rounded">
-                        INTERACTIVE SITE</div>
+            <!-- Right Column: Image Slider -->
+            <div class="lg:col-span-9 relative w-full">
+                <div class="flex gap-6 overflow-x-auto pb-4 no-scrollbar scroll-smooth w-full"
+                    id="facilities-container">
+                    <!-- Facility Slide 1 -->
+                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                        onclick="openVirtualTourSpot('tv_studio')">
+                        <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Television Studio" src="image/library/SSIT Campus 2.JPG" />
+                        </div>
+                        <h6
+                            class="font-bold text-[14px] text-slate-700 text-center leading-tight group-hover:text-primary transition-colors">
+                            Television Studio
+                        </h6>
+                    </div>
+
+                    <!-- Facility Slide 2 -->
+                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                        onclick="openVirtualTourSpot('radio')">
+                        <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Radio Siddhartha 90.8 FM" src="image/library/SSIT Campus7.jpg" />
+                        </div>
+                        <h6
+                            class="font-bold text-[14px] text-slate-700 text-center leading-tight group-hover:text-primary transition-colors">
+                            Radio Siddhartha 90.8 FM
+                        </h6>
+                    </div>
+
+                    <!-- Facility Slide 3 -->
+                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                        onclick="openVirtualTourSpot('imac')">
+                        <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Apple iMac Lab" src="image/library/31.jpg" />
+                        </div>
+                        <h6
+                            class="font-bold text-[14px] text-slate-700 text-center leading-tight group-hover:text-primary transition-colors">
+                            Apple iMac Lab
+                        </h6>
+                    </div>
+
+                    <!-- Facility Slide 4 -->
+                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                        onclick="openVirtualTourSpot('language')">
+                        <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Language Lab" src="image/library/Library.jpg" />
+                        </div>
+                        <h6
+                            class="font-bold text-[14px] text-slate-700 text-center leading-tight group-hover:text-primary transition-colors">
+                            Language Lab
+                        </h6>
+                    </div>
+
+                    <!-- Facility Slide 5 -->
+                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                        onclick="openVirtualTourSpot('library')">
+                        <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Digital Library" src="image/library/SSIT-Central-Library-Slider.jpg" />
+                        </div>
+                        <h6
+                            class="font-bold text-[14px] text-slate-700 text-center leading-tight group-hover:text-primary transition-colors">
+                            Digital Library
+                        </h6>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h6 class="font-semibold text-[16px] text-slate-800">Television Broadcast Studio</h6>
-                    <p class="text-slate-500 text-xs mt-1.5 leading-relaxed font-light">Equipped with standard
-                        multi-view editing panel, high-definition digital cameras, and dynamic background chromakeys.
-                    </p>
-                </div>
-            </div>
-            <!-- Facility Card 2 -->
-            <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300"
-                onclick="openVirtualTourSpot('radio')">
-                <div class="h-56 overflow-hidden relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        alt="Radio Siddhartha 90.8 FM Booth" src="image/library/SSIT Campus7.jpg" />
-                    <div
-                        class="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-bold px-2.5 py-1 rounded">
-                        INTERACTIVE SITE</div>
-                </div>
-                <div class="p-6">
-                    <h6 class="font-semibold text-[16px] text-slate-800">Radio Siddhartha 90.8 FM</h6>
-                    <p class="text-slate-500 text-xs mt-1.5 leading-relaxed font-light">Our fully licensed community
-                        radio station broadcasting student programs, social news, and regional talk shows across Tumkur.
-                    </p>
-                </div>
-            </div>
-            <!-- Facility Card 3 -->
-            <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300"
-                onclick="openVirtualTourSpot('imac')">
-                <div class="h-56 overflow-hidden relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        alt="Apple iMac Lab" src="image/library/31.jpg" />
-                    <div
-                        class="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-bold px-2.5 py-1 rounded">
-                        INTERACTIVE SITE</div>
-                </div>
-                <div class="p-6">
-                    <h6 class="font-semibold text-[16px] text-slate-800">Apple iMac Editing Suite</h6>
-                    <p class="text-slate-500 text-xs mt-1.5 leading-relaxed font-light">Retina display systems
-                        integrated with premium professional editing application suites including Final Cut Pro &amp;
-                        Adobe Creative Suite.</p>
-                </div>
-            </div>
-            <!-- Facility Card 4 -->
-            <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300"
-                onclick="openVirtualTourSpot('language')">
-                <div class="h-56 overflow-hidden relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        alt="Language Lab" src="image/library/Library.jpg" />
-                </div>
-                <div class="p-6">
-                    <h6 class="font-semibold text-[16px] text-slate-800">Communications Language Lab</h6>
-                    <p class="text-slate-500 text-xs mt-1.5 leading-relaxed font-light">Advanced language consoles,
-                        vocal amplifiers and feedback software to strengthen phonetic accents and voice modulation.</p>
-                </div>
-            </div>
-            <!-- Facility Card 5 -->
-            <div class="min-w-[320px] md:min-w-[360px] bg-white rounded-xl overflow-hidden shadow-md group border cursor-pointer hover:border-primary/20 transition-all duration-300"
-                onclick="openVirtualTourSpot('library')">
-                <div class="h-56 overflow-hidden relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        alt="Digital Library" src="image/library/SSIT-Central-Library-Slider.jpg" />
-                </div>
-                <div class="p-6">
-                    <h6 class="font-semibold text-[16px] text-slate-800">Unified Digital Reference Library</h6>
-                    <p class="text-slate-500 text-xs mt-1.5 leading-relaxed font-light">Access hundreds of premium
-                        research journals, media logs, news databases, and e-archives directly from modern terminals.
-                    </p>
-                </div>
+
+                <!-- Right Floating Arrow -->
+                <button onclick="scrollFacilities('right')"
+                    class="absolute right-[-20px] top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center border shadow-lg text-[#0F4B2B] hover:bg-slate-50 transition-all z-10 hidden lg:flex">
+                    <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+                </button>
             </div>
         </div>
 
-        <!-- Mobile scroll controls -->
-        <div class="flex justify-center gap-2 mt-4 sm:hidden">
-            <button onclick="scrollFacilities('left')"
-                class="w-10 h-10 bg-white rounded-full flex items-center justify-center border shadow-sm text-primary"><span
-                    class="material-symbols-outlined">arrow_back</span></button>
-            <button onclick="scrollFacilities('right')"
-                class="w-10 h-10 bg-white rounded-full flex items-center justify-center border shadow-sm text-primary"><span
-                    class="material-symbols-outlined">arrow_forward</span></button>
+        <!-- Dots Indicators -->
+        <div class="flex justify-center gap-2 mt-8">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#0F4B2B] cursor-pointer"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-200 cursor-pointer"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-200 cursor-pointer"></span>
         </div>
     </section>
 
@@ -891,23 +955,20 @@
     </div>
 
     <!-- Section: Why Choose Sri Siddhartha — Premium Horizontal Card -->
-    <section class="py-section-gap px-gutter" style="max-width:1400px; margin-left:auto; margin-right:auto;">
-        <div class="relative flex flex-col lg:flex-row overflow-hidden"
-            style="background:#F9F6EF; border-radius:6px; border:1px solid #ECE6D8; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
+    <section class="py-section-gap mx-auto px-gutter">
+        <div
+            class="relative flex flex-col lg:flex-row overflow-hidden bg-[#F9F6EF] border border-[#ECE6D8] rounded-2xl shadow-xl">
 
             <!-- Left Block: Dark Green CTA -->
-            <div class="relative flex flex-col justify-center lg:w-[28%] shrink-0 z-10"
-                style="background:#0F4B2B; padding:40px;">
-                <h3 class="uppercase font-bold text-white leading-[1.2] mb-4" style="font-size:clamp(28px,3vw,40px);">
+            <div class="relative flex flex-col justify-center lg:w-[28%] shrink-0 z-10 bg-[#0F4B2B] p-8 md:p-10">
+                <h3 class="uppercase font-bold text-white leading-[1.2] mb-4 text-[28px] md:text-[36px] tracking-tight">
                     WHY CHOOSE<br />SRI SIDDHARTHA?
                 </h3>
-                <p class="text-white/75 mb-9 leading-relaxed"
-                    style="font-size:clamp(14px,1.2vw,18px); font-weight:500;">
+                <p class="text-white/75 mb-9 leading-relaxed text-[14px] md:text-[16px] font-medium">
                     We combine academic excellence with real-world exposure to prepare you for tomorrow.
                 </p>
                 <a href="#about" aria-label="Know more about Sri Siddhartha"
-                    class="inline-flex items-center justify-between bg-white hover:bg-[#F5F5F5] text-[#0F4B2B] font-bold rounded-xl transition-all duration-250 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white/50"
-                    style="height:52px; width:190px; padding:0 20px; font-size:15px;">
+                    class="inline-flex items-center justify-between bg-white hover:bg-slate-50 text-[#0F4B2B] font-bold rounded-xl h-[52px] w-[190px] px-5 text-[15px] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white/50">
                     <span>KNOW MORE</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -930,13 +991,13 @@
             </div>
 
             <!-- Right Block: Features 2x2 Grid -->
-            <div class="flex-grow flex flex-col justify-center" style="background:#FBF8F2; padding:48px;">
-                <div class="grid grid-cols-1 sm:grid-cols-2" style="gap:36px 40px;">
+            <div class="flex-grow flex flex-col justify-center bg-[#FBF8F2] p-8 md:p-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9">
 
                     <!-- Feature 1: Industry Experts -->
                     <div class="flex items-start gap-4 group">
-                        <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105"
-                            style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <div
+                            class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -946,16 +1007,16 @@
                             </svg>
                         </div>
                         <div>
-                            <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Industry Experts</h6>
-                            <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">Learn from
+                            <h6 class="font-bold text-[17px] text-[#0F4B2B] mb-1.5">Industry Experts</h6>
+                            <p class="text-[14px] text-slate-500 leading-relaxed max-w-[260px]">Learn from
                                 professionals and practitioners.</p>
                         </div>
                     </div>
 
                     <!-- Feature 2: Hands-on Learning -->
                     <div class="flex items-start gap-4 group">
-                        <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105"
-                            style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <div
+                            class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -966,16 +1027,16 @@
                             </svg>
                         </div>
                         <div>
-                            <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Hands-on Learning</h6>
-                            <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">Work on real
+                            <h6 class="font-bold text-[17px] text-[#0F4B2B] mb-1.5">Hands-on Learning</h6>
+                            <p class="text-[14px] text-slate-500 leading-relaxed max-w-[260px]">Work on real
                                 projects and live assignments.</p>
                         </div>
                     </div>
 
                     <!-- Feature 3: Modern Infrastructure -->
                     <div class="flex items-start gap-4 group">
-                        <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105"
-                            style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <div
+                            class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -983,17 +1044,16 @@
                             </svg>
                         </div>
                         <div>
-                            <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Modern Infrastructure
-                            </h6>
-                            <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">State-of-the-art
+                            <h6 class="font-bold text-[17px] text-[#0F4B2B] mb-1.5">Modern Infrastructure</h6>
+                            <p class="text-[14px] text-slate-500 leading-relaxed max-w-[260px]">State-of-the-art
                                 labs and studios.</p>
                         </div>
                     </div>
 
                     <!-- Feature 4: Placement Assistance -->
                     <div class="flex items-start gap-4 group">
-                        <div class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-250 group-hover:scale-105"
-                            style="width:56px; height:56px; background:#F4F2EA; border:1px solid #E7E2D5;">
+                        <div
+                            class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
@@ -1001,9 +1061,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h6 class="font-bold mb-1.5" style="font-size:17px; color:#0F4B2B;">Placement Assistance
-                            </h6>
-                            <p style="font-size:14px; color:#666; line-height:1.6; max-width:260px;">100% support for
+                            <h6 class="font-bold text-[17px] text-[#0F4B2B] mb-1.5">Placement Assistance</h6>
+                            <p class="text-[14px] text-slate-500 leading-relaxed max-w-[260px]">100% support for
                                 internships and placements.</p>
                         </div>
                     </div>
@@ -1016,284 +1075,194 @@
 
     <!-- Section: Placements and Testimonials -->
     <section id="placements" class="py-section-gap bg-surface-container-low mt-16 border-y border-outline-variant/30">
-        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div
+            class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-16 lg:divide-x lg:divide-slate-200">
 
             <!-- Student Voice Interactive Carousel -->
-            <div class="lg:col-span-5 flex flex-col justify-between">
-                <div>
-                    <div
-                        class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">
-                        ALUMNI VOICES</div>
-                    <h3 class="text-[32px] font-light text-primary mb-6">STUDENTS LOGS</h3>
+            <div class="lg:col-span-5 flex flex-col justify-between lg:pr-12">
+                <div class="text-left">
+                    <h3 class="text-[32px] font-extrabold text-[#004123] tracking-tight leading-tight uppercase mb-8">
+                        STUDENT VOICES</h3>
                 </div>
 
                 <!-- Dynamic Testimonial Display Card -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border relative min-h-[300px] flex flex-col justify-between transition-all duration-300"
+                <div class="relative min-h-[220px] flex flex-col justify-between transition-all duration-300"
                     id="testimonial-card">
-                    <span
-                        class="material-symbols-outlined text-primary/15 text-[72px] absolute -top-2 -left-2 select-none pointer-events-none">format_quote</span>
-
-                    <div class="relative z-10">
-                        <p id="t-quote" class="text-slate-600 text-[15px] leading-relaxed italic mb-6 font-light">
-                            "The hands-on environment and supportive professors at SSCMS enabled me to hone my writing
-                            and speaking abilities, paving the path for high-profile internships in mainstream
-                            newsrooms."
+                    <div class="relative pl-6 pr-6 text-left">
+                        <span class="text-[#0F4B2B] text-[24px] font-extrabold select-none mr-1 inline-block">“</span>
+                        <p id="t-quote" class="text-slate-600 text-[15px] leading-relaxed inline font-medium">
+                            The hands-on experience and amazing faculty helped me grow from a passionate student to a
+                            confident professional.
                         </p>
+                        <span class="text-[#0F4B2B] text-[24px] font-extrabold select-none ml-1 inline-block">”</span>
                     </div>
 
-                    <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
-                        <img id="t-avatar" class="w-14 h-14 rounded-full object-cover border-2 border-primary"
-                            alt="Alumni portrait" src="image/logo/logo.png" />
-                        <div>
-                            <h6 id="t-name" class="font-semibold text-[15px] text-slate-800">Ananya R.</h6>
-                            <p id="t-role" class="text-[12px] text-slate-500 font-light font-medium">BAJMC Alumna |
-                                Assistant Producer, TV9 Kannada</p>
+                    <div class="flex items-center gap-4 pt-6 mt-4 border-t border-slate-100">
+                        <img id="t-avatar" class="w-14 h-14 rounded-full object-cover border" alt="Alumni portrait"
+                            src="image/logo/logo.png" />
+                        <div class="text-left">
+                            <h6 id="t-name" class="font-bold text-[15px] text-slate-800">Ananya R.</h6>
+                            <p id="t-role" class="text-[12px] text-slate-500 font-semibold leading-normal">
+                                BAJMC Alumni<br>News Producer, TV9
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Slider indicators and navigation buttons -->
+                <!-- Slider indicators (Navigation chevrons removed per screenshot) -->
                 <div class="flex items-center gap-4 mt-6">
                     <div class="flex gap-2" id="carousel-dots">
                         <!-- Dot indicators injected by JS -->
                     </div>
-                    <div class="flex gap-1 ml-auto">
-                        <button onclick="navigateTestimonial('prev')"
-                            class="w-9 h-9 rounded-full bg-white hover:bg-primary hover:text-white border text-primary flex items-center justify-center transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-                        </button>
-                        <button onclick="navigateTestimonial('next')"
-                            class="w-9 h-9 rounded-full bg-white hover:bg-primary hover:text-white border text-primary flex items-center justify-center transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        </button>
-                    </div>
                 </div>
             </div>
 
-            <!-- Placement Highlights & Endless Recruiters Marquee -->
-            <div class="lg:col-span-7 flex flex-col justify-between">
-                <div>
-                    <div
-                        class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">
-                        CAREER METRICS</div>
-                    <h3 class="text-[32px] font-light text-primary mb-8">PLACEMENT MILESTONES</h3>
+            <!-- Placement Highlights & Recruiters Slider -->
+            <div class="lg:col-span-7 flex flex-col justify-between lg:pl-12">
+                <div class="text-left">
+                    <h3 class="text-[32px] font-extrabold text-[#004123] tracking-tight leading-tight uppercase mb-8">
+                        PLACEMENT HIGHLIGHTS</h3>
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left mb-10">
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <p class="text-[36px] font-light text-[#F58220] leading-none">95%+</p>
-                        <p class="text-xs text-slate-500 font-extrabold uppercase mt-2 tracking-wide font-light">
-                            Placements</p>
+                <!-- 4 stats columns with vertical dividers -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-slate-200 mb-10">
+                    <div class="flex flex-col text-left pr-4">
+                        <p class="text-[36px] font-bold text-[#F58220] leading-none">95%+</p>
+                        <p class="text-[12px] text-slate-500 font-semibold mt-2 tracking-wide">Placement Rate</p>
                     </div>
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <p class="text-[36px] font-light text-[#F58220] leading-none">150+</p>
-                        <p class="text-xs text-slate-500 font-extrabold uppercase mt-2 tracking-wide font-light">
-                            Recruiters</p>
+                    <div class="flex flex-col text-left md:px-6">
+                        <p class="text-[36px] font-bold text-[#F58220] leading-none">150+</p>
+                        <p class="text-[12px] text-slate-500 font-semibold mt-2 tracking-wide">Recruiters</p>
                     </div>
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <p class="text-[36px] font-light text-[#F58220] leading-none">6 <span
-                                class="text-[16px] font-bold">LPA</span></p>
-                        <p class="text-xs text-slate-500 font-extrabold uppercase mt-2 tracking-wide font-light">Top
-                            Offer</p>
+                    <div class="flex flex-col text-left md:px-6">
+                        <p class="text-[36px] font-bold text-[#F58220] leading-none">6 <span
+                                class="text-[28px] text-black font-bold ml-1">LPA</span></p>
+                        <p class="text-[12px] text-slate-500 font-semibold mt-2 tracking-wide">Highest Package</p>
                     </div>
-                    <div class="bg-white p-4 rounded-xl border shadow-sm">
-                        <p class="text-[36px] font-light text-[#F58220] leading-none">3.5 <span
-                                class="text-[16px] font-bold">LPA</span></p>
-                        <p class="text-xs text-slate-500 font-extrabold uppercase mt-2 tracking-wide font-light">Average
-                            Package</p>
+                    <div class="flex flex-col text-left md:pl-6">
+                        <p class="text-[36px] font-bold text-[#F58220] leading-none">3.5 <span
+                                class="text-[28px] text-black font-bold ml-1">LPA</span></p>
+                        <p class="text-[12px] text-slate-500 font-semibold mt-2 tracking-wide">Average Package</p>
                     </div>
                 </div>
 
-                <div class="border-t border-outline-variant/30 pt-8">
-                    <p
-                        class="text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-6 text-center md:text-left">
-                        PROMINENT RECRUITING NETWORKS &amp; CHANNELS</p>
+                <div class="border-t border-slate-100 pt-8 text-left">
+                    <p class="text-xs font-bold text-slate-800 uppercase tracking-widest mb-4">
+                        Our Recruiters
+                    </p>
 
-                    <!-- Infinite Horizontal Scrolling Marquee of Recruiters -->
-                    <div class="marquee-container bg-slate-100 py-5 rounded-xl border">
-                        <div class="marquee-content flex items-center gap-10">
-                            <!-- Zee News -->
-                            <span class="shrink-0">
-                                <svg width="60" height="40" viewBox="0 0 60 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <defs>
-                                        <radialGradient id="zeeGrad" cx="30%" cy="30%" r="70%">
-                                            <stop offset="0%" stop-color="#9C27B0" />
-                                            <stop offset="60%" stop-color="#4A148C" />
-                                            <stop offset="100%" stop-color="#1A0033" />
-                                        </radialGradient>
-                                    </defs>
-                                    <circle cx="30" cy="20" r="18" fill="url(#zeeGrad)" />
-                                    <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="11" fill="white" text-anchor="middle" letter-spacing="0.5">ZEE</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- TV9 Kannada -->
-                            <span class="shrink-0">
-                                <svg width="45" height="40" viewBox="0 0 45 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="0.5" y="0.5" width="44" height="39" rx="3" fill="white" stroke="#ccc"
-                                        stroke-width="1" />
-                                    <rect x="2" y="2" width="20" height="20" fill="#2E5B9A" />
-                                    <text x="12" y="16" font-family="sans-serif" font-weight="bold" font-style="italic"
-                                        font-size="12" fill="white" text-anchor="middle">tv</text>
-                                    <rect x="22" y="2" width="21" height="20" fill="#D32F2F" />
-                                    <text x="32" y="18" font-family="Georgia, serif" font-weight="900" font-size="18"
-                                        fill="white" text-anchor="middle">9</text>
-                                    <path d="M 6 28 Q 10 24 15 28 T 20 28 M 24 28 Q 28 24 33 28" stroke="#D32F2F"
-                                        stroke-width="1.5" fill="none" />
-                                    <circle cx="37" cy="28" r="1.5" fill="#D32F2F" />
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- News18 -->
-                            <span class="shrink-0">
-                                <svg width="95" height="40" viewBox="0 0 95 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="0" y="8" width="60" height="24" rx="2" fill="#0C1D33" />
-                                    <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="13" fill="white" text-anchor="middle" letter-spacing="1">NEWS</text>
-                                    <rect x="60" y="8" width="25" height="24" rx="2" fill="#D32F2F" />
-                                    <text x="72" y="25" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="14" fill="white" text-anchor="middle">18</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- Asianet News -->
-                            <span class="shrink-0">
-                                <svg width="125" height="40" viewBox="0 0 125 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <g stroke="#0F2B5C" stroke-width="2" stroke-linecap="round" fill="none">
-                                        <path d="M 12 30 L 22 10 L 32 30" />
-                                        <path d="M 15 24 L 29 24" />
-                                        <path d="M 18 18 L 26 18" />
-                                        <path d="M 20 13 L 24 13" />
-                                    </g>
-                                    <text x="38" y="25" font-family="'Inter', sans-serif" font-weight="800"
-                                        font-size="13" fill="#1E293B">asianet</text>
-                                    <text x="88" y="25" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="13" fill="#D32F2F">news</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- Public TV -->
-                            <span class="shrink-0">
-                                <svg width="65" height="40" viewBox="0 0 65 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="0.5" y="0.5" width="64" height="39" rx="3" fill="none" stroke="#ddd"
-                                        stroke-width="1" />
-                                    <rect x="2" y="7" width="61" height="15" rx="1" fill="#0C1D33" />
-                                    <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="10" fill="white" text-anchor="middle"
-                                        letter-spacing="0.5">PUBLIC</text>
-                                    <circle cx="48" cy="4" r="1.5" fill="#D32F2F" />
-                                    <circle cx="52" cy="4" r="1.5" fill="#2E5B9A" />
-                                    <rect x="2" y="23" width="61" height="15" rx="1" fill="#D32F2F" />
-                                    <text x="32" y="34" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="11" fill="white" text-anchor="middle" letter-spacing="2">TV</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- ANI -->
-                            <span class="shrink-0">
-                                <svg width="55" height="40" viewBox="0 0 55 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="5" y="8" width="45" height="24" rx="2" fill="black" />
-                                    <text x="27" y="24" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="13" fill="white" text-anchor="middle" letter-spacing="1.5">ANI</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
+                    <!-- Scrollable Recruiter Row with Chevrons -->
+                    <div class="flex items-center gap-4 w-full">
+                        <!-- Left chevron -->
+                        <button onclick="scrollRecruiters('left')"
+                            class="w-10 h-10 rounded-full bg-white hover:bg-slate-50 border shadow-sm flex items-center justify-center text-slate-400 shrink-0">
+                            <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                        </button>
 
-                            <!-- Duplicate set for infinite loop illusion -->
-                            <!-- Zee News -->
-                            <span class="shrink-0">
-                                <svg width="60" height="40" viewBox="0 0 60 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <circle cx="30" cy="20" r="18" fill="url(#zeeGrad)" />
-                                    <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="11" fill="white" text-anchor="middle" letter-spacing="0.5">ZEE</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- TV9 Kannada -->
-                            <span class="shrink-0">
-                                <svg width="45" height="40" viewBox="0 0 45 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="0.5" y="0.5" width="44" height="39" rx="3" fill="white" stroke="#ccc"
-                                        stroke-width="1" />
-                                    <rect x="2" y="2" width="20" height="20" fill="#2E5B9A" />
-                                    <text x="12" y="16" font-family="sans-serif" font-weight="bold" font-style="italic"
-                                        font-size="12" fill="white" text-anchor="middle">tv</text>
-                                    <rect x="22" y="2" width="21" height="20" fill="#D32F2F" />
-                                    <text x="32" y="18" font-family="Georgia, serif" font-weight="900" font-size="18"
-                                        fill="white" text-anchor="middle">9</text>
-                                    <path d="M 6 28 Q 10 24 15 28 T 20 28 M 24 28 Q 28 24 33 28" stroke="#D32F2F"
-                                        stroke-width="1.5" fill="none" />
-                                    <circle cx="37" cy="28" r="1.5" fill="#D32F2F" />
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- News18 -->
-                            <span class="shrink-0">
-                                <svg width="95" height="40" viewBox="0 0 95 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="0" y="8" width="60" height="24" rx="2" fill="#0C1D33" />
-                                    <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="13" fill="white" text-anchor="middle" letter-spacing="1">NEWS</text>
-                                    <rect x="60" y="8" width="25" height="24" rx="2" fill="#D32F2F" />
-                                    <text x="72" y="25" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="14" fill="white" text-anchor="middle">18</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- Asianet News -->
-                            <span class="shrink-0">
-                                <svg width="125" height="40" viewBox="0 0 125 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <g stroke="#0F2B5C" stroke-width="2" stroke-linecap="round" fill="none">
-                                        <path d="M 12 30 L 22 10 L 32 30" />
-                                        <path d="M 15 24 L 29 24" />
-                                        <path d="M 18 18 L 26 18" />
-                                        <path d="M 20 13 L 24 13" />
-                                    </g>
-                                    <text x="38" y="25" font-family="'Inter', sans-serif" font-weight="800"
-                                        font-size="13" fill="#1E293B">asianet</text>
-                                    <text x="88" y="25" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="13" fill="#D32F2F">news</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- Public TV -->
-                            <span class="shrink-0">
-                                <svg width="65" height="40" viewBox="0 0 65 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="0.5" y="0.5" width="64" height="39" rx="3" fill="none" stroke="#ddd"
-                                        stroke-width="1" />
-                                    <rect x="2" y="7" width="61" height="15" rx="1" fill="#0C1D33" />
-                                    <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="10" fill="white" text-anchor="middle"
-                                        letter-spacing="0.5">PUBLIC</text>
-                                    <circle cx="48" cy="4" r="1.5" fill="#D32F2F" />
-                                    <circle cx="52" cy="4" r="1.5" fill="#2E5B9A" />
-                                    <rect x="2" y="23" width="61" height="15" rx="1" fill="#D32F2F" />
-                                    <text x="32" y="34" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="11" fill="white" text-anchor="middle" letter-spacing="2">TV</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
-                            <!-- ANI -->
-                            <span class="shrink-0">
-                                <svg width="55" height="40" viewBox="0 0 55 40"
-                                    class="grayscale hover:grayscale-0 transition-all duration-300">
-                                    <rect x="5" y="8" width="45" height="24" rx="2" fill="black" />
-                                    <text x="27" y="24" font-family="'Inter', sans-serif" font-weight="900"
-                                        font-size="13" fill="white" text-anchor="middle" letter-spacing="1.5">ANI</text>
-                                </svg>
-                            </span>
-                            <span class="text-[#F58220] text-lg font-bold">•</span>
+                        <!-- White logo container -->
+                        <div
+                            class="flex-grow bg-white py-4 px-6 rounded-2xl border border-slate-100 shadow-sm overflow-hidden relative">
+                            <div id="recruiters-slider"
+                                class="flex items-center gap-10 overflow-x-auto no-scrollbar scroll-smooth">
+                                <!-- Zee News -->
+                                <span class="shrink-0">
+                                    <svg width="60" height="40" viewBox="0 0 60 40">
+                                        <defs>
+                                            <radialGradient id="zeeGrad" cx="30%" cy="30%" r="70%">
+                                                <stop offset="0%" stop-color="#9C27B0" />
+                                                <stop offset="60%" stop-color="#4A148C" />
+                                                <stop offset="100%" stop-color="#1A0033" />
+                                            </radialGradient>
+                                        </defs>
+                                        <circle cx="30" cy="20" r="18" fill="url(#zeeGrad)" />
+                                        <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900"
+                                            font-size="11" fill="white" text-anchor="middle"
+                                            letter-spacing="0.5">ZEE</text>
+                                    </svg>
+                                </span>
+
+                                <!-- TV9 News -->
+                                <span class="shrink-0">
+                                    <svg width="45" height="40" viewBox="0 0 45 40">
+                                        <rect x="0.5" y="0.5" width="44" height="39" rx="3" fill="white" stroke="#ccc"
+                                            stroke-width="1" />
+                                        <rect x="2" y="2" width="20" height="20" fill="#2E5B9A" />
+                                        <text x="12" y="16" font-family="sans-serif" font-weight="bold"
+                                            font-style="italic" font-size="12" fill="white"
+                                            text-anchor="middle">tv</text>
+                                        <rect x="22" y="2" width="21" height="20" fill="#D32F2F" />
+                                        <text x="32" y="18" font-family="Georgia, serif" font-weight="900"
+                                            font-size="18" fill="white" text-anchor="middle">9</text>
+                                        <path d="M 6 28 Q 10 24 15 28 T 20 28 M 24 28 Q 28 24 33 28" stroke="#D32F2F"
+                                            stroke-width="1.5" fill="none" />
+                                        <circle cx="37" cy="28" r="1.5" fill="#D32F2F" />
+                                    </svg>
+                                </span>
+
+                                <!-- News 18 -->
+                                <span class="shrink-0">
+                                    <svg width="95" height="40" viewBox="0 0 95 40">
+                                        <rect x="0" y="8" width="60" height="24" rx="2" fill="#0C1D33" />
+                                        <text x="30" y="24" font-family="'Inter', sans-serif" font-weight="900"
+                                            font-size="13" fill="white" text-anchor="middle"
+                                            letter-spacing="1">NEWS</text>
+                                        <rect x="60" y="8" width="25" height="24" rx="2" fill="#D32F2F" />
+                                        <text x="72" y="25" font-family="'Inter', sans-serif" font-weight="900"
+                                            font-size="14" fill="white" text-anchor="middle">18</text>
+                                    </svg>
+                                </span>
+
+                                <!-- Asianet News -->
+                                <span class="shrink-0">
+                                    <svg width="125" height="40" viewBox="0 0 125 40">
+                                        <g stroke="#0F2B5C" stroke-width="2" stroke-linecap="round" fill="none">
+                                            <path d="M 12 30 L 22 10 L 32 30" />
+                                            <path d="M 15 24 L 29 24" />
+                                            <path d="M 18 18 L 26 18" />
+                                            <path d="M 20 13 L 24 13" />
+                                        </g>
+                                        <text x="38" y="25" font-family="'Inter', sans-serif" font-weight="800"
+                                            font-size="13" fill="#1E293B">asianet</text>
+                                        <text x="88" y="25" font-family="'Inter', sans-serif" font-weight="900"
+                                            font-size="13" fill="#D32F2F">news</text>
+                                    </svg>
+                                </span>
+
+                                <!-- Public TV -->
+                                <span class="shrink-0">
+                                    <svg width="65" height="40" viewBox="0 0 65 40">
+                                        <rect x="0.5" y="0.5" width="64" height="39" rx="3" fill="none" stroke="#ddd"
+                                            stroke-width="1" />
+                                        <rect x="2" y="7" width="61" height="15" rx="1" fill="#0C1D33" />
+                                        <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="900"
+                                            font-size="10" fill="white" text-anchor="middle"
+                                            letter-spacing="0.5">PUBLIC</text>
+                                        <circle cx="48" cy="4" r="1.5" fill="#D32F2F" />
+                                        <circle cx="52" cy="4" r="1.5" fill="#2E5B9A" />
+                                        <rect x="2" y="23" width="61" height="15" rx="1" fill="#D32F2F" />
+                                        <text x="32" y="34" font-family="'Inter', sans-serif" font-weight="900"
+                                            font-size="11" fill="white" text-anchor="middle"
+                                            letter-spacing="2">TV</text>
+                                    </svg>
+                                </span>
+
+                                <!-- ANI -->
+                                <span class="shrink-0">
+                                    <svg width="55" height="40" viewBox="0 0 55 40">
+                                        <rect x="5" y="8" width="45" height="24" rx="2" fill="black" />
+                                        <text x="27" y="24" font-family="'Inter', sans-serif" font-weight="900"
+                                            font-size="13" fill="white" text-anchor="middle"
+                                            letter-spacing="1.5">ANI</text>
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
+
+                        <!-- Right chevron -->
+                        <button onclick="scrollRecruiters('right')"
+                            class="w-10 h-10 rounded-full bg-white hover:bg-slate-50 border shadow-sm flex items-center justify-center text-slate-400 shrink-0">
+                            <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1301,180 +1270,162 @@
     </section>
 
     <!-- Section: Campus Life Gallery -->
-    <section id="campus-life" class="py-section-gap max-w-container-max mx-auto px-gutter">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
-            <div>
-                <div
-                    class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-3">
-                    GALLERY</div>
-                <h3 class="text-[32px] font-light text-primary">LIFE AT SRI SIDDHARTHA</h3>
-            </div>
-
-            <!-- Interactive Category Filters -->
-            <div class="flex flex-wrap gap-2 mt-4 md:mt-0">
-                <button onclick="filterGallery('all')" id="btn-gal-all"
-                    class="px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-primary text-white shadow-sm">All
-                    Highlights</button>
-                <button onclick="filterGallery('fests')" id="btn-gal-fests"
-                    class="px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">Events
-                    &amp; Fests</button>
-                <button onclick="filterGallery('workshops')" id="btn-gal-workshops"
-                    class="px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">Workshops</button>
-                <button onclick="filterGallery('shoots')" id="btn-gal-shoots"
-                    class="px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">Campus
-                    Shoots</button>
-            </div>
+    <section id="campus-life" class="py-section-gap mx-auto px-gutter">
+        <div class="mb-10 text-left">
+            <h3 class="text-[28px] font-extrabold text-[#004123] uppercase tracking-tight">LIFE @ SRI SIDDHARTHA</h3>
         </div>
 
-        <!-- Gallery Grid with Dynamic Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="gallery-grid">
+        <!-- Gallery Grid with 5 Columns -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6" id="gallery-grid">
             <!-- Photo Card 1 -->
-            <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="fests">
-                <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        alt="Cultural Events" src="image/campus/HMG_park.jpg" />
-                    <div
-                        class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View
-                            Photo</span>
-                    </div>
+            <div class="flex flex-col group cursor-pointer">
+                <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        alt="Events & Fests" src="image/campus/HMG_park.jpg" />
                 </div>
-                <p class="text-center font-semibold text-slate-700 text-sm">Siddhartha Fest &amp; Cultural Show</p>
+                <p
+                    class="text-center font-bold text-slate-700 text-[14px] mt-4 group-hover:text-primary transition-colors">
+                    Events & Fests</p>
             </div>
             <!-- Photo Card 2 -->
-            <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="workshops">
-                <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            <div class="flex flex-col group cursor-pointer">
+                <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="Workshops" src="image/campus/birds_eyeview.jpg" />
-                    <div
-                        class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View
-                            Photo</span>
-                    </div>
                 </div>
-                <p class="text-center font-semibold text-slate-700 text-sm">Print Reporting &amp; Editorial Workshop</p>
+                <p
+                    class="text-center font-bold text-slate-700 text-[14px] mt-4 group-hover:text-primary transition-colors">
+                    Workshops</p>
             </div>
             <!-- Photo Card 3 -->
-            <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="shoots">
-                <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            <div class="flex flex-col group cursor-pointer">
+                <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="On Campus Shoots" src="image/campus/Main Gate.jpg" />
-                    <div
-                        class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View
-                            Photo</span>
-                    </div>
                 </div>
-                <p class="text-center font-semibold text-slate-700 text-sm">Outdoor Cinematic Short Film Shoot</p>
+                <p
+                    class="text-center font-bold text-slate-700 text-[14px] mt-4 group-hover:text-primary transition-colors">
+                    On Campus Shoots</p>
             </div>
             <!-- Photo Card 4 -->
-            <div class="gallery-item flex flex-col gap-3 group cursor-pointer" data-category="workshops">
-                <div class="h-56 rounded-xl overflow-hidden shadow-md border relative">
-                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        alt="Student Club Sessions" src="image/library/library at night.jpg" />
-                    <div
-                        class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="bg-white/90 text-primary px-4 py-2 rounded-lg text-xs font-bold shadow">View
-                            Photo</span>
-                    </div>
+            <div class="flex flex-col group cursor-pointer">
+                <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        alt="Student Clubs" src="image/library/library at night.jpg" />
                 </div>
-                <p class="text-center font-semibold text-slate-700 text-sm">Weekly Debate Club Gathering</p>
+                <p
+                    class="text-center font-bold text-slate-700 text-[14px] mt-4 group-hover:text-primary transition-colors">
+                    Student Clubs</p>
+            </div>
+            <!-- Photo Card 5 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        alt="Green Campus" src="image/campus/sscms campus.jpg" />
+                </div>
+                <p
+                    class="text-center font-bold text-slate-700 text-[14px] mt-4 group-hover:text-primary transition-colors">
+                    Green Campus</p>
             </div>
         </div>
     </section>
 
-    <section id="news" class="py-section-gap max-w-container-max mx-auto px-gutter border-t border-outline-variant/30">
+    <section id="news" class="py-section-gap mx-auto px-gutter border-t border-outline-variant/30">
         <div class="flex flex-col lg:flex-row gap-12">
             <!-- News Section -->
             <div class="lg:w-1/3 flex flex-col justify-between">
                 <div>
-                    <div
-                        class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded mb-4">
-                        MEDIA LOGS</div>
-                    <h3 class="text-[28px] font-light text-primary mb-8 uppercase tracking-wide">Latest Announcements
-                    </h3>
+                    <h3 class="text-[20px] font-extrabold text-slate-800 uppercase tracking-tight mb-8">LATEST NEWS &
+                        EVENTS</h3>
                 </div>
 
                 <div class="space-y-6 flex-grow font-light">
+                    <!-- News Item 1 -->
                     <div class="flex gap-4 group cursor-pointer border-b pb-4 border-dashed"
                         onclick="showToast('Highlight: National Media Fest Winners booklet released.', 'success')">
-                        <div class="w-24 h-20 bg-surface-variant rounded-lg overflow-hidden shrink-0 border">
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                        <div
+                            class="w-24 h-16 bg-surface-variant rounded-[6px] overflow-hidden shrink-0 border border-slate-100 shadow-sm">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 alt="Award trophy" src="image/campus/Admin block.jpg" />
                         </div>
                         <div>
                             <h6
-                                class="font-semibold text-slate-800 text-[14px] group-hover:text-primary transition-colors leading-tight">
-                                Students Clinch Top Awards at National Media Fest 2026</h6>
-                            <p class="text-[12px] text-slate-400 mt-2 font-semibold">June 20, 2026</p>
+                                class="font-bold text-slate-800 text-[13px] group-hover:text-primary transition-colors leading-tight">
+                                Students Win Award at National Media Fest 2025</h6>
+                            <p class="text-[11px] text-slate-400 mt-1 font-semibold">May 20, 2026</p>
                         </div>
                     </div>
 
+                    <!-- News Item 2 -->
                     <div class="flex gap-4 group cursor-pointer border-b pb-4 border-dashed"
                         onclick="showToast('Information: Seminar scheduled on AI reporting tools.', 'info')">
-                        <div class="w-24 h-20 bg-surface-variant rounded-lg overflow-hidden shrink-0 border">
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                        <div
+                            class="w-24 h-16 bg-surface-variant rounded-[6px] overflow-hidden shrink-0 border border-slate-100 shadow-sm">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 alt="Guest speaker" src="image/library/SSIT Campus 2.JPG" />
                         </div>
                         <div>
                             <h6
-                                class="font-semibold text-slate-800 text-[14px] group-hover:text-primary transition-colors leading-tight">
-                                National Seminar Held on AI &amp; Computational Journalism Models</h6>
-                            <p class="text-[12px] text-slate-400 mt-2 font-semibold">June 15, 2026</p>
+                                class="font-bold text-slate-800 text-[13px] group-hover:text-primary transition-colors leading-tight">
+                                Expert Talk on AI in Journalism and Media</h6>
+                            <p class="text-[11px] text-slate-400 mt-1 font-semibold">May 15, 2026</p>
                         </div>
                     </div>
 
+                    <!-- News Item 3 -->
                     <div class="flex gap-4 group cursor-pointer"
                         onclick="showToast('Siddhartha 90.8 FM broadcast logs archive is online.', 'success')">
-                        <div class="w-24 h-20 bg-surface-variant rounded-lg overflow-hidden shrink-0 border">
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                        <div
+                            class="w-24 h-16 bg-surface-variant rounded-[6px] overflow-hidden shrink-0 border border-slate-100 shadow-sm">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 alt="Radio station anniversary" src="image/campus/sscms campus.jpg" />
                         </div>
                         <div>
                             <h6
-                                class="font-semibold text-slate-800 text-[14px] group-hover:text-primary transition-colors leading-tight">
-                                Radio Siddhartha 90.8 FM Commemorates 5 Years of Service</h6>
-                            <p class="text-[12px] text-slate-400 mt-2 font-semibold">June 02, 2026</p>
+                                class="font-bold text-slate-800 text-[13px] group-hover:text-primary transition-colors leading-tight">
+                                Radio Siddhartha 90.8 FM Completes 5 Successful Years</h6>
+                            <p class="text-[11px] text-slate-400 mt-1 font-semibold">May 05, 2026</p>
                         </div>
                     </div>
                 </div>
 
-                <button onclick="showToast('All college archives loaded successfully.', 'success')"
-                    class="mt-8 text-primary font-bold text-[14px] inline-flex items-center gap-2 hover:gap-3 transition-all">
-                    VIEW NEWS BULLETIN ARCHIVE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </button>
+                <a href="#news" onclick="showToast('Loading full news archive...', 'success')"
+                    class="text-[#0F4B2B] hover:text-[#0a351e] font-bold text-[12px] inline-flex items-center gap-1.5 mt-8 transition-all hover:gap-2.5 uppercase">
+                    VIEW ALL NEWS <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
             </div>
 
             <!-- Admissions Block CTA Banner -->
             <div id="admissions-section"
-                class="lg:w-2/3 bg-primary rounded-3xl overflow-hidden flex flex-col md:flex-row relative min-h-[420px] shadow-2xl">
-                <div class="p-10 md:p-14 md:w-3/5 z-10 flex flex-col justify-between">
+                class="lg:w-2/3 bg-[#0F4B2B] rounded-2xl overflow-hidden flex flex-col md:flex-row relative min-h-[380px] w-full shadow-lg">
+                <div class="p-8 md:p-12 md:w-3/5 z-10 flex flex-col justify-center text-left space-y-4">
                     <div>
-                        <h2 class="text-[36px] md:text-[44px] font-light text-white leading-tight mb-2">ADMISSIONS OPEN
-                        </h2>
+                        <h2 class="text-[36px] font-bold text-white leading-none uppercase tracking-tight mb-2">
+                            ADMISSIONS OPEN</h2>
                         <p
-                            class="text-secondary-container text-[18px] md:text-[21px] font-medium mb-6 tracking-wide uppercase font-light">
-                            FOR ACADEMIC CYCLE 2026-2027</p>
-                        <p class="text-white/80 text-[14px] leading-relaxed mb-8 font-light">
-                            Take your foremost confident stride to design and drive tomorrow's global reporting.
-                            Scholarships accessible based on qualifications. Seats are limited.
-                        </p>
+                            class="text-white text-[18px] md:text-[20px] font-bold tracking-tight uppercase leading-tight">
+                            FOR JULY 2026–2027 BATCH</p>
                     </div>
+                    <p class="text-white/80 text-[14px] leading-relaxed max-w-md">
+                        Take the first step towards a successful career in media and communication. Limited seats. Apply
+                        today!
+                    </p>
 
-                    <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-wrap gap-4 pt-2">
                         <button onclick="openAdmissionsWizard()"
-                            class="bg-[#F58220] hover:bg-orange-600 text-white px-8 py-3.5 rounded-lg font-bold flex items-center gap-2 transition-all shadow-md">
-                            APPLY ONLINE NOW <span class="material-symbols-outlined">arrow_forward</span>
+                            class="bg-[#F58220] hover:bg-orange-600 text-white px-5 py-3 rounded-lg font-bold flex items-center gap-1.5 transition-all shadow-md text-[13px]">
+                            APPLY NOW <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </button>
                         <button onclick="showToast('Downloading curriculum booklet...', 'info')"
-                            class="border border-white/30 text-white px-6 py-3.5 rounded-lg font-bold flex items-center gap-2 hover:bg-white/10 transition-all text-xs">
-                            BROCHURE PDF <span class="material-symbols-outlined">download</span>
+                            class="border border-white/30 text-white hover:border-white px-5 py-3 rounded-lg font-bold flex items-center gap-1.5 hover:bg-white/10 transition-all text-[13px]">
+                            DOWNLOAD BROCHURE <span class="material-symbols-outlined text-[16px]">download</span>
                         </button>
                     </div>
                 </div>
+                <!-- Student Image -->
                 <div class="relative md:w-2/5 h-64 md:h-auto overflow-hidden">
-                    <img class="w-full h-full object-cover object-top md:absolute md:right-0 md:bottom-0 md:h-full md:w-auto scale-105"
-                        alt="Prospective Student" src="image/campus/Aerial view.jpg" />
+                    <img class="w-full h-full object-cover object-center md:absolute md:right-0 md:bottom-0 md:h-full md:w-auto"
+                        alt="Prospective Student" src="image/campus/student_admissions.png" />
                 </div>
             </div>
         </div>
@@ -1601,10 +1552,9 @@
                                 Course</label>
                             <select
                                 class="w-full border-slate-200 focus:ring-1 focus:ring-primary focus:border-primary rounded-lg text-sm">
-                                <option>BAJMC (Undergraduate)</option>
-                                <option>MAJMC (Postgraduate)</option>
-                                <option>Digital Media Diploma</option>
-                                <option>Ph.D. in Journalism</option>
+                                <option>M.A. JOURNALISM & MASS COMMUNICATION(PG)</option>
+                                <option>M.Sc Electronic Media(PG)</option>
+                                <option>B.A. JOURNALISM, KANNADA (OPT), PSYCHOLOGY(UG)</option>
                             </select>
                         </div>
                     </div>
@@ -1664,106 +1614,137 @@
     </section>
 
     <!-- Footer Block -->
-    <footer class="bg-primary text-white pt-16 pb-10 border-t border-white/10">
-        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <!-- Footer Block -->
+    <footer class="bg-[#0F4B2B] text-white pt-16 pb-10 border-t border-white/10">
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
             <!-- Brand Information -->
-            <div class="space-y-6">
+            <div class="space-y-6 lg:col-span-1">
                 <div class="flex items-center gap-3">
                     <div
-                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border">
-                        <!-- Updated with logo.png -->
-                        <img class="w-full h-full object-contain" alt="SSCMS Crest" src="image/logo/logo.png" />
+                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-slate-100 shrink-0">
+                        <img class="w-[85%] h-[85%] object-contain" alt="SSCMS Logo" src="image/logo/logo.png" />
                     </div>
-                    <div>
-                        <h4 class="font-semibold text-[16px] tracking-tight">SRI SIDDHARTHA</h4>
-                        <p class="text-[9px] text-primary-fixed font-bold uppercase tracking-widest">Centre for Media
-                            Studies</p>
+                    <div class="text-left">
+                        <h4 class="font-extrabold text-[15px] tracking-wide leading-none text-white uppercase">SRI
+                            SIDDHARTHA</h4>
+                        <p class="text-[11px] font-bold text-white uppercase tracking-wider mt-1 leading-none">CENTRE
+                            FOR MEDIA STUDIES</p>
+                        <p
+                            class="text-[9px] text-emerald-400 font-semibold uppercase tracking-widest mt-1.5 leading-none">
+                            — Affiliated to Tumkur University —</p>
                     </div>
                 </div>
-                <p class="text-[13px] text-white/70 leading-relaxed font-light">
-                    Empowering ethical and technically robust media scholars through excellence in critical reporting,
-                    advanced studio operations, and licensed community broadcasts.
+                <p class="text-[13px] text-slate-200/90 leading-relaxed text-left">
+                    Empowering future media professionals through quality education, creativity and community.
                 </p>
-                <div class="flex gap-3 font-light">
-                    <a class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#F58220] hover:border-[#F58220] transition-colors"
-                        href="#" title="Facebook"><span
-                            class="material-symbols-outlined text-[15px]">face_nod</span></a>
-                    <a class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#F58220] hover:border-[#F58220] transition-colors"
-                        href="#" title="Instagram"><span
-                            class="material-symbols-outlined text-[15px]">photo_camera</span></a>
-                    <a class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#F58220] hover:border-[#F58220] transition-colors"
-                        href="#" title="YouTube"><span
-                            class="material-symbols-outlined text-[15px]">play_circle</span></a>
-                    <a class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#F58220] hover:border-[#F58220] transition-colors"
-                        href="#" title="LinkedIn"><span class="material-symbols-outlined text-[15px]">person</span></a>
+                <div class="flex gap-5 pt-2">
+                    <!-- Facebook -->
+                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V2h-3c-3 0-5 2-5 5v1z" />
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" title="Instagram">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://youtube.com" target="_blank" title="YouTube">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.53 3.545 12 3.545 12 3.545s-7.53 0-9.388.508a3.003 3.003 0 00-2.11 2.11C0 8.017 0 12 0 12s0 3.983.502 5.837a3.003 3.003 0 002.11 2.11c1.858.507 9.388.507 9.388.507s7.53 0 9.388-.507a3.003 3.003 0 002.11-2.11C24 15.983 24 12 24 12s0-3.983-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.58c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM20.45 20.45h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.86 3.39-1.86 3.63 0 4.3 2.39 4.3 5.5v6.25z" />
+                        </svg>
+                    </a>
                 </div>
             </div>
 
             <!-- College Sections Quick navigation -->
-            <div>
-                <h5
-                    class="text-[16px] font-semibold tracking-wide mb-6 relative after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:w-8 after:h-0.5 after:bg-secondary uppercase">
-                    QUICK LINKS</h5>
-                <ul class="space-y-3.5 text-[13px] text-white/70 font-light">
-                    <li><a class="hover:text-white hover:underline transition-colors" href="#about">About Our
-                            Heritage</a></li>
-                    <li><a class="hover:text-white hover:underline transition-colors" href="#programs">Academic
-                            Pathways</a></li>
-                    <li><a class="hover:text-white hover:underline transition-colors" href="#facilities">Campus
-                            Infrastructure</a></li>
-                    <li><a class="hover:text-white hover:underline transition-colors" href="#campus-life">Life @ Sri
-                            Siddhartha</a></li>
-                    <li><a class="hover:text-white hover:underline transition-colors" href="#placements">Milestones
-                            &amp; Placements</a></li>
-                    <li><a class="hover:text-white hover:underline transition-colors" href="#contact">Counseling
-                            Department</a></li>
-                    <li><button onclick="togglePortalModal('staff')"
-                            class="hover:text-white text-left hover:underline transition-colors">Staff Login
-                            Directory</button></li>
+            <div class="text-left">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">QUICK LINKS</h5>
+                <ul class="space-y-3.5 text-[13px] text-white/80">
+                    <li><a class="hover:text-orange-500 transition-colors" href="#about">About Us</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="#programs">Programs</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="#facilities">Facilities</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="#campus-life">Campus Life</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="#placements">Placements</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="#admissions-section">Admissions</a>
+                    </li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
 
             <!-- Academic Streams quick reference -->
-            <div>
-                <h5
-                    class="text-[16px] font-semibold tracking-wide mb-6 relative after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:w-8 after:h-0.5 after:bg-secondary uppercase">
-                    PROGRAMS</h5>
-                <ul class="space-y-3.5 text-[13px] text-white/70 font-light">
+            <div class="text-left">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">PROGRAMS</h5>
+                <ul class="space-y-3.5 text-[13px] text-white/80">
                     <li><button onclick="openProgramDetails('bajmc')"
-                            class="text-left hover:text-white hover:underline transition-colors">B.A. in Journalism
-                            &amp; Mass Comm</button></li>
+                            class="text-left hover:text-orange-500 transition-colors">Journalism & Mass
+                            Communication</button></li>
                     <li><button onclick="openProgramDetails('majmc')"
-                            class="text-left hover:text-white hover:underline transition-colors">M.A. in Journalism
-                            &amp; Mass Comm</button></li>
+                            class="text-left hover:text-orange-500 transition-colors">Radio & Television
+                            Production</button></li>
                     <li><button onclick="openProgramDetails('diploma')"
-                            class="text-left hover:text-white hover:underline transition-colors">Creative Content
-                            Creation Diploma</button></li>
+                            class="text-left hover:text-orange-500 transition-colors">Digital Media & Content
+                            Creation</button></li>
                     <li><button onclick="openProgramDetails('phd')"
-                            class="text-left hover:text-white hover:underline transition-colors">Ph.D. in Mass
+                            class="text-left hover:text-orange-500 transition-colors">Multimedia & Visual
                             Communication</button></li>
                 </ul>
             </div>
 
-            <!-- Interactive Newsletter widget -->
-            <div class="space-y-4">
-                <h5
-                    class="text-[16px] font-semibold tracking-wide mb-6 relative after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:w-8 after:h-0.5 after:bg-secondary uppercase font-headline">
-                    NEWSLETTER</h5>
-                <p class="text-[13px] text-white/70 leading-normal font-light">Subscribe to get monthly newsletters,
-                    fest invitations, and admissions briefs.</p>
-
-                <form onsubmit="handleSubscribe(event)" class="space-y-2">
-                    <div class="flex gap-2">
-                        <input type="email" required id="newsletter-email"
-                            class="bg-white/10 border-white/20 text-white rounded-lg text-xs flex-grow focus:ring-1 focus:ring-secondary focus:border-secondary placeholder-white/40"
-                            placeholder="your.email@gmail.com" />
-                        <button type="submit"
-                            class="bg-secondary hover:bg-orange-600 text-white px-4 rounded-lg font-bold transition-all flex items-center justify-center"><span
-                                class="material-symbols-outlined text-[16px]">send</span></button>
+            <!-- Contact Information -->
+            <div class="text-left space-y-6">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">CONTACT US</h5>
+                <div class="space-y-4 text-[13px] text-white/80">
+                    <p class="leading-relaxed">
+                        Sri Siddhartha Centre for Media Studies<br>
+                        SST Campus, Maralur, Tumakuru,<br>
+                        Karnataka - 572105
+                    </p>
+                    <div class="space-y-2 pt-2">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">call</span>
+                            <span>0816 2277258 / 59</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">mail</span>
+                            <a href="mailto:sscms3g@ssit.edu.in" class="hover:underline">sscms3g@ssit.edu.in</a>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">language</span>
+                            <a href="http://www.sscms.ac.in" target="_blank" class="hover:underline">www.sscms.ac.in</a>
+                        </div>
                     </div>
-                </form>
-                <p class="text-[10px] text-white/40 font-light">Rest assured, we strictly respect your inbox privacy.
-                </p>
+                </div>
+            </div>
+
+            <!-- Visit Us: Map Card -->
+            <div class="space-y-4 text-left">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">VISIT US</h5>
+                <div
+                    class="bg-white p-3 rounded-2xl shadow-lg border border-slate-100/10 max-w-[240px] flex flex-col items-center">
+                    <img class="w-full h-32 object-cover rounded-lg" alt="SSCMS Map Location"
+                        src="image/campus/map_directions.png" />
+                    <a href="https://maps.google.com/?q=Sri+Siddhartha+Centre+for+Media+Studies,+Tumakuru"
+                        target="_blank"
+                        class="w-full bg-[#2A3B5C] hover:bg-[#1E293B] text-white py-2.5 rounded-lg text-[11px] font-bold text-center mt-3 tracking-wider block transition-colors uppercase">
+                        GET DIRECTIONS
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -1863,10 +1844,11 @@
                                 Choice *</label>
                             <select id="w-course"
                                 class="w-full border-slate-200 focus:ring-1 focus:ring-secondary rounded-lg text-sm font-light">
-                                <option value="BAJMC">Bachelor of Arts (BAJMC) - 3 Years</option>
-                                <option value="MAJMC">Master of Arts (MAJMC) - 2 Years</option>
-                                <option value="DIPLOMA">Creative Content Creation Diploma</option>
-                                <option value="PHD">Ph.D. Academic Doctorate Degree</option>
+                                <option value="M.A. JOURNALISM & MASS COMMUNICATION(PG)">M.A. JOURNALISM & MASS
+                                    COMMUNICATION(PG)</option>
+                                <option value="M.Sc Electronic Media(PG)">M.Sc Electronic Media(PG)</option>
+                                <option value="B.A. JOURNALISM, KANNADA (OPT), PSYCHOLOGY(UG)">B.A. JOURNALISM, KANNADA
+                                    (OPT), PSYCHOLOGY(UG)</option>
                             </select>
                         </div>
                         <div>
@@ -2164,21 +2146,21 @@
         // Interactive Testimonial Rotator Dataset
         const TESTIMONIALS = [
             {
-                quote: "The hands-on environment and supportive professors at SSCMS enabled me to hone my writing and speaking abilities, paving the path for high-profile internships in mainstream newsrooms.",
+                quote: "The hands-on experience and amazing faculty helped me grow from a passionate student to a confident professional.",
                 name: "Ananya R.",
-                role: "BAJMC Alumna | Assistant Producer, TV9 Kannada",
+                role: "BAJMC Alumni<br>News Producer, TV9",
                 avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuB3u_IaCUwIElc-pGsBeZp1pqJIy6jyMOWCMuUXSLTVzUkSlTz1m51V7LQGpJzhgZ_uJN5U5Cwm9m16VAshhZq4nWnCxLc8dNBmB8mSR-24g8GMXSTUKhYymZK6yH8xvg0ptDr_qDWhJTULa_-flKumGtxu7hDdVGuOzy5xxmkMH_os_ESC8zsluH1rK4fuJth5J44loKlUJrSmJU8QBxn0JSPVDykyPEmluqHxgIRX_ypnChq_OTrf5u4OwhkvZPzI0L7lCRrsJLM"
             },
             {
-                quote: "Hosting live segments on Radio Siddhartha 90.8 FM gave me real-time broadcast training that other colleges only teach theoretically. It completely removed my camera and mic anxiety.",
+                quote: "Hosting live segments on Radio Siddhartha 90.8 FM gave me real-time broadcast training that other colleges only teach theoretically.",
                 name: "Rahul Verma",
-                role: "MAJMC Alumnus | News Anchor, Asianet News",
+                role: "MAJMC Alumnus<br>News Anchor, Asianet News",
                 avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150"
             },
             {
-                quote: "The visual design and photography modules here are top-tier. Operating Final Cut Pro suites in the iMac lab directly assisted me in building a robust digital agency portfolio.",
+                quote: "Operating Final Cut Pro suites in the iMac lab directly assisted me in building a robust digital agency portfolio.",
                 name: "Shreya Ghoshal",
-                role: "Content Creator Diploma Alumna | Freelance Brand Lead",
+                role: "Content Creator Diploma Alumna<br>Freelance Brand Lead",
                 avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150"
             }
         ];
@@ -2392,7 +2374,7 @@
             dotsContainer.innerHTML = '';
             TESTIMONIALS.forEach((_, index) => {
                 const dot = document.createElement('button');
-                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-primary w-6' : 'bg-primary/20'}`;
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-[#0F4B2B]' : 'bg-slate-200'}`;
                 dot.setAttribute('onclick', `switchTestimonial(${index})`);
                 dot.setAttribute('id', `testi-dot-${index}`);
                 dotsContainer.appendChild(dot);
@@ -2409,18 +2391,18 @@
             card.classList.add('opacity-0', 'scale-95');
 
             setTimeout(() => {
-                document.getElementById('t-quote').textContent = `"${data.quote}"`;
+                document.getElementById('t-quote').textContent = data.quote;
                 document.getElementById('t-name').textContent = data.name;
-                document.getElementById('t-role').textContent = data.role;
+                document.getElementById('t-role').innerHTML = data.role;
                 document.getElementById('t-avatar').src = data.avatar;
 
                 // Adjust dot indicators
                 TESTIMONIALS.forEach((_, i) => {
                     const dot = document.getElementById(`testi-dot-${i}`);
                     if (i === index) {
-                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all duration-300 bg-primary w-6';
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all duration-300 bg-[#0F4B2B]';
                     } else {
-                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all duration-300 bg-primary/20';
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all duration-300 bg-slate-200';
                     }
                 });
 
@@ -2746,6 +2728,13 @@
         function scrollFacilities(dir) {
             const container = document.getElementById('facilities-container');
             const amount = 340;
+            container.scrollLeft += dir === 'left' ? -amount : amount;
+        }
+
+        // Scroll recruiters slide wrapper
+        function scrollRecruiters(dir) {
+            const container = document.getElementById('recruiters-slider');
+            const amount = 200;
             container.scrollLeft += dir === 'left' ? -amount : amount;
         }
 
