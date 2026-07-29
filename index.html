@@ -2594,18 +2594,60 @@
             if (dir === 'next') {
                 if (wizardCurrentStep === 1) {
                     // Validation Step 1
-                    if (!document.getElementById('w-fullname').value || !document.getElementById('w-phone').value || !document.getElementById('w-email').value) {
+                    const fullname = document.getElementById('w-fullname').value.trim();
+                    const phone = document.getElementById('w-phone').value.trim();
+                    const email = document.getElementById('w-email').value.trim();
+                    const parentName = document.getElementById('w-parentname').value.trim();
+                    const location = document.getElementById('w-location').value.trim();
+                    
+                    if (!fullname || !phone || !email || !parentName || !location) {
                         showToast('Please fill out all Stage-1 mandatory fields.', 'error');
                         return;
                     }
+                    if (fullname.length < 3 || parentName.length < 3) {
+                        showToast('Please enter a valid full name (at least 3 characters).', 'error');
+                        return;
+                    }
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showToast('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+                    if (!phoneRegex.test(phone)) {
+                        showToast('Please enter a valid mobile number (at least 10 digits).', 'error');
+                        return;
+                    }
+                    if (location.length < 3) {
+                        showToast('Please enter a valid residential city/state.', 'error');
+                        return;
+                    }
+                    
                     wizardCurrentStep = 2;
                     document.getElementById('wizard-pane-1').classList.add('hidden');
                     document.getElementById('wizard-pane-2').classList.remove('hidden');
                     document.getElementById('btn-w-back').classList.remove('hidden');
                 } else if (wizardCurrentStep === 2) {
                     // Validation Step 2
-                    if (!document.getElementById('w-prevschool').value || !document.getElementById('w-prevpercent').value || !document.getElementById('w-sop').value) {
+                    const prevschool = document.getElementById('w-prevschool').value.trim();
+                    const prevpercent = document.getElementById('w-prevpercent').value;
+                    const sop = document.getElementById('w-sop').value.trim();
+
+                    if (!prevschool || !prevpercent || !sop) {
                         showToast('Please specify credentials details and write SOP brief.', 'error');
+                        return;
+                    }
+                    if (prevschool.length < 3) {
+                        showToast('Please enter a valid school/college name.', 'error');
+                        return;
+                    }
+                    const percentVal = parseFloat(prevpercent);
+                    if (isNaN(percentVal) || percentVal < 35 || percentVal > 100) {
+                        showToast('Please enter a valid percentage between 35 and 100.', 'error');
+                        return;
+                    }
+                    if (sop.length < 20) {
+                        showToast('Please write a more detailed Statement of Purpose (minimum 20 characters).', 'error');
                         return;
                     }
                     wizardCurrentStep = 3;
