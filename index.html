@@ -252,22 +252,22 @@
                 </a>
 
                 <!-- Desktop Navigation Menu (Perfectly aligned with logo and CTA button) -->
-                <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5">
-                    <a class="font-bold text-[14px] text-[#004123] border-b-4 border-[#004123] h-full flex items-center px-1 transition-all"
+                <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5" id="desktop-nav">
+                    <a class="nav-link font-bold text-[14px] text-[#004123] border-b-4 border-[#004123] h-full flex items-center px-1 transition-all"
                         href="#hero">Home</a>
-                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#about">About Us</a>
-                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#programs">Programs</a>
-                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#facilities">Facilities</a>
-                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#campus-life">Campus Life</a>
-                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#placements">Placements</a>
-                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#admissions-section">Admissions</a>
-                    <a class="font-semibold text-[14px] text-slate-600 hover:text-[#004123] h-full flex items-center px-1 transition-all"
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#contact">Contact Us</a>
                 </nav>
 
@@ -290,22 +290,22 @@
                 class="fixed inset-0 top-24 bg-black/50 z-[60] transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden">
                 <div id="mobile-menu-content"
                     class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
-                    <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface">
-                        <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100"
+                    <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface" id="mobile-nav">
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link text-primary font-bold py-2 border-b border-slate-100"
                             href="#hero">Home</a>
-                        <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100"
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#about">About Us</a>
-                        <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100"
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#programs">Programs</a>
-                        <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100"
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#facilities">Facilities</a>
-                        <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100"
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#campus-life">Campus Life</a>
-                        <a onclick="toggleMobileMenu()" class="hover:text-[#004123] py-2 border-b border-slate-100"
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#placements">Placements</a>
-                        <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100"
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#news">News &amp; Events</a>
-                        <a onclick="toggleMobileMenu()" class="hover:text-primary py-2 border-b border-slate-100"
+                        <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#contact">Contact Us</a>
                     </nav>
                     <div class="mt-8 flex flex-col gap-4">
@@ -413,11 +413,11 @@
         </div>
     </section>
 
-    <div class="relative z-30 -mt-10  mx-auto px-gutter">
+    <div class="stagger-container relative z-30 -mt-10  mx-auto px-gutter">
         <div
             class="bg-white rounded-t-2xl shadow-xl p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-6 lg:gap-0 border border-outline-variant/30 backdrop-blur-sm bg-white/95 items-center lg:divide-x lg:divide-slate-200">
             <!-- Item 1: Affiliated to Tumkur University -->
-            <div class="flex items-center gap-4 group cursor-pointer lg:pr-6">
+            <div class="stagger-item flex items-center gap-4 group cursor-pointer lg:pr-6">
                 <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">school</span>
                 <div class="flex flex-col text-left">
                     <span class="text-[13px] text-slate-500 font-medium leading-none">Affiliated to</span>
@@ -425,7 +425,7 @@
                 </div>
             </div>
             <!-- Item 2: 65+ Acre Green Campus -->
-            <div class="flex items-center gap-4 group cursor-pointer lg:px-6">
+            <div class="stagger-item flex items-center gap-4 group cursor-pointer lg:px-6">
                 <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">park</span>
                 <div class="flex flex-col text-left">
                     <span class="text-[24px] font-bold text-[#0F4B2B] leading-none">65+</span>
@@ -433,7 +433,7 @@
                 </div>
             </div>
             <!-- Item 3: 10+ Advanced Labs -->
-            <div class="flex items-center gap-4 group cursor-pointer lg:px-6">
+            <div class="stagger-item flex items-center gap-4 group cursor-pointer lg:px-6">
                 <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">biotech</span>
                 <div class="flex flex-col text-left">
                     <span class="text-[24px] font-bold text-[#0F4B2B] leading-none">10+</span>
@@ -441,7 +441,7 @@
                 </div>
             </div>
             <!-- Item 4: 90.8 FM Community Radio -->
-            <div class="flex items-center gap-4 group cursor-pointer lg:px-6">
+            <div class="stagger-item flex items-center gap-4 group cursor-pointer lg:px-6">
                 <span
                     class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">settings_input_antenna</span>
                 <div class="flex flex-col text-left">
@@ -450,7 +450,7 @@
                 </div>
             </div>
             <!-- Item 5: 100% Industry Oriented -->
-            <div class="flex items-center gap-4 group cursor-pointer lg:pl-6">
+            <div class="stagger-item flex items-center gap-4 group cursor-pointer lg:pl-6">
                 <span class="material-symbols-outlined text-[#0F4B2B] text-[40px] shrink-0">workspace_premium</span>
                 <div class="flex flex-col text-left">
                     <span class="text-[24px] font-bold text-[#0F4B2B] leading-none">100%</span>
@@ -605,7 +605,7 @@
             <!-- Right Column: Card Grid -->
             <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
                 <!-- Program Card 1 -->
-                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
+                <div class="stagger-item bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('bajmc')">
                     <div class="flex flex-col items-center w-full">
                         <div class="w-20 h-20 bg-[#E8F3ED] rounded-full flex items-center justify-center mb-6">
@@ -626,7 +626,7 @@
                 </div>
 
                 <!-- Program Card 2 -->
-                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
+                <div class="stagger-item bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('majmc')">
                     <div class="flex flex-col items-center w-full">
                         <div class="w-20 h-20 bg-[#FDF2E9] rounded-full flex items-center justify-center mb-6">
@@ -647,7 +647,7 @@
                 </div>
 
                 <!-- Program Card 3 -->
-                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
+                <div class="stagger-item bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('diploma')">
                     <div class="flex flex-col items-center w-full">
                         <div class="w-20 h-20 bg-[#E8F3ED] rounded-full flex items-center justify-center mb-6">
@@ -668,7 +668,7 @@
                 </div>
 
                 <!-- Program Card 4 -->
-                <div class="bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
+                <div class="stagger-item bg-white p-6 rounded-[15px] border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 group cursor-pointer flex flex-col items-center text-center justify-between min-h-[380px]"
                     onclick="openProgramDetails('phd')">
                     <div class="flex flex-col items-center w-full">
                         <div class="w-20 h-20 bg-[#FDF2E9] rounded-full flex items-center justify-center mb-6">
@@ -789,7 +789,7 @@
                 <div class="flex gap-6 overflow-x-auto pb-4 no-scrollbar scroll-smooth w-full"
                     id="facilities-container">
                     <!-- Facility Slide 1 -->
-                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                    <div class="stagger-item min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
                         onclick="openVirtualTourSpot('tv_studio')">
                         <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -802,7 +802,7 @@
                     </div>
 
                     <!-- Facility Slide 2 -->
-                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                    <div class="stagger-item min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
                         onclick="openVirtualTourSpot('radio')">
                         <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -815,7 +815,7 @@
                     </div>
 
                     <!-- Facility Slide 3 -->
-                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                    <div class="stagger-item min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
                         onclick="openVirtualTourSpot('imac')">
                         <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -828,7 +828,7 @@
                     </div>
 
                     <!-- Facility Slide 4 -->
-                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                    <div class="stagger-item min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
                         onclick="openVirtualTourSpot('language')">
                         <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -841,7 +841,7 @@
                     </div>
 
                     <!-- Facility Slide 5 -->
-                    <div class="min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
+                    <div class="stagger-item min-w-[240px] md:min-w-[280px] flex flex-col items-center group cursor-pointer"
                         onclick="openVirtualTourSpot('library')">
                         <div class="w-full h-48 md:h-52 overflow-hidden rounded-[15px] shadow-sm relative mb-4">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -996,7 +996,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9">
 
                     <!-- Feature 1: Industry Experts -->
-                    <div class="flex items-start gap-4 group">
+                    <div class="stagger-item flex items-start gap-4 group">
                         <div
                             class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
@@ -1015,7 +1015,7 @@
                     </div>
 
                     <!-- Feature 2: Hands-on Learning -->
-                    <div class="flex items-start gap-4 group">
+                    <div class="stagger-item flex items-start gap-4 group">
                         <div
                             class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
@@ -1035,7 +1035,7 @@
                     </div>
 
                     <!-- Feature 3: Modern Infrastructure -->
-                    <div class="flex items-start gap-4 group">
+                    <div class="stagger-item flex items-start gap-4 group">
                         <div
                             class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
@@ -1052,7 +1052,7 @@
                     </div>
 
                     <!-- Feature 4: Placement Assistance -->
-                    <div class="flex items-start gap-4 group">
+                    <div class="stagger-item flex items-start gap-4 group">
                         <div
                             class="shrink-0 flex items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 w-14 h-14 bg-[#F4F2EA] border border-[#E7E2D5]">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3D6A47"
@@ -1227,7 +1227,7 @@
         <!-- Gallery Grid with 5 Columns -->
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6" id="gallery-grid">
             <!-- Photo Card 1 -->
-            <div class="flex flex-col group cursor-pointer">
+            <div class="stagger-item flex flex-col group cursor-pointer">
                 <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="Events & Fests" src="image/sscms_1/00007.webp" />
@@ -1237,7 +1237,7 @@
                     Events & Fests</p>
             </div>
             <!-- Photo Card 2 -->
-            <div class="flex flex-col group cursor-pointer">
+            <div class="stagger-item flex flex-col group cursor-pointer">
                 <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="Workshops" src="image/sscms_1/00008.webp" />
@@ -1247,7 +1247,7 @@
                     Workshops</p>
             </div>
             <!-- Photo Card 3 -->
-            <div class="flex flex-col group cursor-pointer">
+            <div class="stagger-item flex flex-col group cursor-pointer">
                 <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="On Campus Shoots" src="image/campus/birds_eyeview.jpg" />
@@ -1257,7 +1257,7 @@
                     On Campus Shoots</p>
             </div>
             <!-- Photo Card 4 -->
-            <div class="flex flex-col group cursor-pointer">
+            <div class="stagger-item flex flex-col group cursor-pointer">
                 <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="Girls Hostel" src="image/sscms_1/00009.webp" />
@@ -1267,7 +1267,7 @@
                     Girls Hostel</p>
             </div>
             <!-- Photo Card 5 -->
-            <div class="flex flex-col group cursor-pointer">
+            <div class="stagger-item flex flex-col group cursor-pointer">
                 <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="Boys Hostel" src="image/sscms_1/00010.webp" />
@@ -1290,7 +1290,7 @@
 
                 <div class="space-y-6 flex-grow font-light">
                     <!-- News Item 1 -->
-                    <div class="flex gap-4 group cursor-pointer border-b pb-4 border-dashed"
+                    <div class="stagger-item flex gap-4 group cursor-pointer border-b pb-4 border-dashed"
                         onclick="showToast('Highlight: National Media Fest Winners booklet released.', 'success')">
                         <div
                             class="w-24 h-16 bg-surface-variant rounded-[6px] overflow-hidden shrink-0 border border-slate-100 shadow-sm">
@@ -1306,7 +1306,7 @@
                     </div>
 
                     <!-- News Item 2 -->
-                    <div class="flex gap-4 group cursor-pointer border-b pb-4 border-dashed"
+                    <div class="stagger-item flex gap-4 group cursor-pointer border-b pb-4 border-dashed"
                         onclick="showToast('Information: Seminar scheduled on AI reporting tools.', 'info')">
                         <div
                             class="w-24 h-16 bg-surface-variant rounded-[6px] overflow-hidden shrink-0 border border-slate-100 shadow-sm">
@@ -1322,7 +1322,7 @@
                     </div>
 
                     <!-- News Item 3 -->
-                    <div class="flex gap-4 group cursor-pointer"
+                    <div class="stagger-item flex gap-4 group cursor-pointer"
                         onclick="showToast('Siddhartha 90.8 FM broadcast logs archive is online.', 'success')">
                         <div
                             class="w-24 h-16 bg-surface-variant rounded-[6px] overflow-hidden shrink-0 border border-slate-100 shadow-sm">
@@ -1872,61 +1872,7 @@
                     </div>
                 </div>
 
-                <!-- Receipt Outcome Pane -->
-                <div id="wizard-pane-receipt" class="hidden space-y-6 text-center py-6 font-light">
-                    <div
-                        class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto shadow-sm">
-                        <span class="material-symbols-outlined text-[36px]">verified</span>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-slate-800">Candidacy Registration Successful!</h4>
-                        <p class="text-xs text-slate-500 mt-1 font-light">Your basic registration forms have been
-                            successfully archived in the central admissions engine.</p>
-                    </div>
 
-                    <!-- Actual Print Slip Card with CSS Barcode -->
-                    <div
-                        class="border-2 border-slate-200 rounded-2xl p-6 bg-white max-w-sm mx-auto text-left relative overflow-hidden shadow-md">
-                        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-secondary">
-                        </div>
-                        <div class="flex justify-between items-center pb-3 border-b border-dashed mb-4 font-light">
-                            <strong class="text-xs text-primary font-black uppercase">SSCMS Admission Slip</strong>
-                            <span class="text-[10px] text-slate-400 font-bold" id="receipt-date">Date: 27-06-2026</span>
-                        </div>
-
-                        <div class="space-y-2 text-xs text-slate-700 font-light">
-                            <div>Application ID: <strong class="text-slate-900" id="receipt-id">SSCMS-2026-X948</strong>
-                            </div>
-                            <div>Applicant: <strong class="text-slate-900" id="receipt-name">John Doe</strong></div>
-                            <div>Selected Course: <strong class="text-slate-900" id="receipt-course">BAJMC</strong>
-                            </div>
-                            <div>Assigned Slot: <strong class="text-slate-900 font-normal">Interviews Round-1</strong>
-                            </div>
-                        </div>
-
-                        <!-- Styled Barcode lookalike -->
-                        <div class="mt-6 flex flex-col items-center gap-1.5">
-                            <div class="flex gap-[2px] h-8 w-fit overflow-hidden opacity-85">
-                                <div class="w-[3px] bg-black h-full"></div>
-                                <div class="w-[1px] bg-black h-full"></div>
-                                <div class="w-[2px] bg-black h-full"></div>
-                                <div class="w-[4px] bg-black h-full"></div>
-                                <div class="w-[1px] bg-black h-full"></div>
-                                <div class="w-[3px] bg-black h-full"></div>
-                                <div class="w-[2px] bg-black h-full"></div>
-                                <div class="w-[2px] bg-black h-full"></div>
-                                <div class="w-[3px] bg-black h-full"></div>
-                                <div class="w-[1px] bg-black h-full"></div>
-                                <div class="w-[4px] bg-black h-full"></div>
-                                <div class="w-[2px] bg-black h-full"></div>
-                                <div class="w-[1px] bg-black h-full"></div>
-                                <div class="w-[3px] bg-black h-full"></div>
-                            </div>
-                            <span class="text-[9px] tracking-widest text-slate-400 font-mono font-bold"
-                                id="receipt-barcode-txt">*SSCMS-02948-2026*</span>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Footer actions with Stage transitions -->
@@ -2135,7 +2081,78 @@
             initTestimonialCarousel();
             initAutoScrollObservers();
             initNavAutoHide();
+            initNavHighlighting();
         };
+
+        // Navigation Highlighting
+        function initNavHighlighting() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-30% 0px -70% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        
+                        // Desktop Nav
+                        navLinks.forEach(link => {
+                            link.classList.remove('font-bold', 'text-[#004123]', 'border-[#004123]');
+                            link.classList.add('font-semibold', 'text-slate-600', 'border-transparent');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.remove('font-semibold', 'text-slate-600', 'border-transparent');
+                                link.classList.add('font-bold', 'text-[#004123]', 'border-[#004123]');
+                            }
+                        });
+
+                        // Mobile Nav
+                        mobileNavLinks.forEach(link => {
+                            link.classList.remove('text-primary', 'font-bold');
+                            link.classList.add('hover:text-primary');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.remove('hover:text-primary');
+                                link.classList.add('text-primary', 'font-bold');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                if(section.getAttribute('id')) {
+                    observer.observe(section);
+                }
+            });
+
+            // Handle direct clicks for instant feedback
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(l => {
+                        l.classList.remove('font-bold', 'text-[#004123]', 'border-[#004123]');
+                        l.classList.add('font-semibold', 'text-slate-600', 'border-transparent');
+                    });
+                    this.classList.remove('font-semibold', 'text-slate-600', 'border-transparent');
+                    this.classList.add('font-bold', 'text-[#004123]', 'border-[#004123]');
+                });
+            });
+            
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNavLinks.forEach(l => {
+                        l.classList.remove('text-primary', 'font-bold');
+                        l.classList.add('hover:text-primary');
+                    });
+                    this.classList.remove('hover:text-primary');
+                    this.classList.add('text-primary', 'font-bold');
+                });
+            });
+        }
 
         // Visual Slide Intersection Observers
         function initAutoScrollObservers() {
@@ -2145,13 +2162,27 @@
                     if (entry.isIntersecting) {
                         entry.target.classList.add('opacity-100', 'translate-y-0');
                         entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        
+                        const staggerItems = entry.target.querySelectorAll('.stagger-item');
+                        staggerItems.forEach((child, index) => {
+                            setTimeout(() => {
+                                child.classList.add('opacity-100', 'translate-y-0');
+                                child.classList.remove('opacity-0', 'translate-y-10');
+                            }, (index + 1) * 150);
+                        });
+                        
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            document.querySelectorAll('section').forEach(section => {
+            document.querySelectorAll('section, .stagger-container').forEach(section => {
                 section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
                 observer.observe(section);
+                
+                section.querySelectorAll('.stagger-item').forEach(child => {
+                    child.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                });
             });
         }
 
@@ -2521,7 +2552,6 @@
             document.getElementById('wizard-pane-1').classList.remove('hidden');
             document.getElementById('wizard-pane-2').classList.add('hidden');
             document.getElementById('wizard-pane-3').classList.add('hidden');
-            document.getElementById('wizard-pane-receipt').classList.add('hidden');
 
             document.getElementById('wizard-footer').classList.remove('hidden');
             document.getElementById('btn-w-back').classList.add('hidden');
@@ -2621,22 +2651,26 @@
         }
 
         function generateReceiptSlip() {
-            wizardCurrentStep = 4;
-            document.getElementById('wizard-pane-3').classList.add('hidden');
-            document.getElementById('wizard-pane-receipt').classList.remove('hidden');
-            document.getElementById('wizard-footer').classList.add('hidden');
-
-            // Populate receipt slip
+            // Save data to localStorage
             const randId = 'SSCMS-' + (new Date().getFullYear()) + '-A' + Math.floor(1000 + Math.random() * 9000);
-            document.getElementById('receipt-id').textContent = randId;
-            document.getElementById('receipt-name').textContent = document.getElementById('w-fullname').value;
-            document.getElementById('receipt-course').textContent = document.getElementById('w-course').value;
-            document.getElementById('receipt-barcode-txt').textContent = `*${randId}*`;
-
-            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-            document.getElementById('receipt-date').textContent = "Date: " + new Date().toLocaleDateString('en-GB', options);
-
+            const name = document.getElementById('w-fullname').value;
+            const course = document.getElementById('w-course').value;
+            
+            const receiptData = {
+                id: randId,
+                name: name,
+                course: course,
+                date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })
+            };
+            
+            localStorage.setItem('sscms_receipt', JSON.stringify(receiptData));
+            
             showToast("Admissions candidacy archived! Registration completed.", "success");
+            
+            // Redirect to Thank You page after slight delay for toast
+            setTimeout(() => {
+                window.location.href = 'thankyou.html';
+            }, 500);
         }
 
         // Portals (Staff/Student Logins) Modal Overlay Controls
