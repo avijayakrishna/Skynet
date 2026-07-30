@@ -272,14 +272,16 @@
 
                 <!-- Desktop Navigation Menu (Perfectly aligned with logo and CTA button) -->
                 <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5" id="desktop-nav">
-                    <a class="nav-link font-bold text-[14px] text-[#004123] border-b-4 border-[#004123] h-full flex items-center px-1 transition-all"
-                        href="#hero">Home</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#about">About Us</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#programs">Programs</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="#faculty">Our Faculty</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#facilities">Facilities</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="#radio">Radio</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="#campus-life">Campus Life</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
@@ -311,9 +313,6 @@
                     class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
                     <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface" id="mobile-nav">
                         <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link text-primary font-bold py-2 border-b border-slate-100"
-                            href="#hero">Home</a>
-                        <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#about">About Us</a>
                         <a onclick="toggleMobileMenu()"
@@ -321,7 +320,13 @@
                             href="#programs">Programs</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="#faculty">Our Faculty</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#facilities">Facilities</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="#radio">Radio</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="#campus-life">Campus Life</a>
@@ -792,6 +797,53 @@
         </div>
     </div>
 
+    <section id="faculty" class="py-section-gap mx-auto px-gutter border-t border-outline-variant/30">
+        <div class="max-w-container-max mx-auto space-y-12">
+            <div class="text-center stagger-item">
+                <h3 class="text-[32px] font-extrabold text-[#004123] tracking-tight leading-tight uppercase">OUR FACULTY
+                </h3>
+                <p class="text-slate-500 font-medium mt-3 max-w-2xl mx-auto">Meet the experienced teaching and
+                    non-teaching staff at SSCMS.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Faculty 1 -->
+                <div class="flex flex-col items-center text-center group stagger-item">
+                    <div class="w-full aspect-square bg-slate-50 mb-4 flex items-center justify-center overflow-hidden">
+                        <img src="image/faculty/btm.webp" alt="Dr. B T Muddesha" onerror="this.style.display='none'"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-[18px] font-bold text-slate-800">Dr. B T Muddesha</h4>
+                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">DIRECTOR</span>
+                </div>
+
+
+
+                <!-- Faculty 3 -->
+                <div class="flex flex-col items-center text-center group stagger-item">
+                    <div class="w-full aspect-square bg-slate-50 mb-4 flex items-center justify-center overflow-hidden">
+                        <img src="image/faculty/shwetha.webp" alt="M P Shwetha" onerror="this.style.display='none'"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-[18px] font-bold text-slate-800">M P Shwetha</h4>
+                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">HOD DEPT OF M.SC
+                        ELECTRONIC MEDIA</span>
+                </div>
+
+                <!-- Faculty 4 -->
+                <div class="flex flex-col items-center text-center group stagger-item">
+                    <div class="w-full aspect-square bg-slate-50 mb-4 flex items-center justify-center overflow-hidden">
+                        <img src="image/faculty/jyothi.webp" alt="Jyothi C" onerror="this.style.display='none'"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-[18px] font-bold text-slate-800">Jyothi C</h4>
+                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">PLACEMENT
+                        HEAD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="facilities" class="py-section-gap bg-surface-container-low overflow-hidden">
         <div class=" mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left Column: Heading, description and link -->
@@ -1243,8 +1295,171 @@
         </div>
     </section>
 
+    <!-- Section: Radio Siddhartha 90.8 FM -->
+    <section id="radio" class="py-section-gap max-w-container-max mx-auto px-gutter relative overflow-hidden">
+        <!-- Intro Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+            <div class="lg:col-span-8 space-y-6 stagger-item">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 bg-orange-100 text-[#F58220] rounded-full text-xs font-bold uppercase tracking-widest mb-2 shadow-sm">
+                    <span class="material-symbols-outlined text-[16px]">radio</span>
+                    Est. 2008
+                </div>
+                <h3
+                    class="text-[36px] md:text-[42px] font-extrabold text-[#004123] tracking-tight leading-tight uppercase">
+                    Radio Siddhartha 90.8 FM
+                </h3>
+                <h4 class="text-[20px] font-bold text-[#F58220]">First Community Radio Station in Tumakuru</h4>
+                <p class="text-slate-600 leading-relaxed text-[16px]">
+                    Dedicated to empowering the local community through informative, educational, and engaging radio
+                    programming. Serving media students, women, children, farmers, and the community by providing a
+                    platform for knowledge sharing, awareness, and local voices.
+                </p>
+            </div>
+            <div class="lg:col-span-4 flex justify-center lg:justify-end stagger-item">
+                <div
+                    class="bg-white rounded-[2.5rem] shadow-xl p-10 relative group hover:-translate-y-3 transition-all duration-500 border border-slate-100 w-full max-w-[320px] flex items-center justify-center">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-50 to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-[2.5rem]">
+                    </div>
+                    <img src="image/logo/radiologo.webp" alt="Radio Siddhartha 90.8 FM Logo"
+                        class="relative z-10 w-full max-w-[220px] h-auto object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-700" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Purpose Card -->
+            <div
+                class="bg-surface-container-low rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 stagger-item border border-outline-variant/30 group relative overflow-hidden flex flex-col h-full">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-[#004123]/5 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-150">
+                </div>
+                <div
+                    class="w-14 h-14 bg-[#004123] rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-md relative z-10">
+                    <span class="material-symbols-outlined text-[28px]">volunteer_activism</span>
+                </div>
+                <h5 class="text-[18px] font-extrabold text-[#004123] uppercase tracking-wide mb-6 relative z-10">Our
+                    Purpose</h5>
+                <ul class="space-y-4 text-[14px] text-slate-600 relative z-10 flex-grow">
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-[#F58220] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                        <span class="font-medium">Promote education and skill development.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-[#F58220] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                        <span class="font-medium">Support farmers with agricultural best practices.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-[#F58220] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                        <span class="font-medium">Empower women and children through awareness.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-[#F58220] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                        <span class="font-medium">Provide practical learning for journalism students.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-[#F58220] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                        <span class="font-medium">Preserve and promote local culture and language.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Timings Card -->
+            <div class="bg-surface-container-low rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 stagger-item border border-outline-variant/30 group relative overflow-hidden flex flex-col h-full"
+                style="transition-delay: 100ms;">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-[#F58220]/5 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-150">
+                </div>
+                <div
+                    class="w-14 h-14 bg-[#F58220] rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 shadow-md relative z-10">
+                    <span class="material-symbols-outlined text-[28px]">schedule</span>
+                </div>
+                <h5 class="text-[18px] font-extrabold text-[#004123] uppercase tracking-wide mb-4 relative z-10">
+                    Broadcast Timings</h5>
+                <p class="text-[14px] text-slate-600 mb-6 relative z-10 font-medium">Broadcasting daily in three
+                    dedicated slots to reach all demographics:</p>
+                <div class="space-y-4 relative z-10 flex-grow">
+                    <div
+                        class="bg-white p-4 rounded-xl border border-slate-100 flex items-center justify-between group-hover:border-orange-200 transition-colors shadow-sm">
+                        <span class="font-bold text-[#004123] flex items-center gap-3"><span
+                                class="material-symbols-outlined text-orange-400 text-[22px]">light_mode</span>
+                            Morning</span>
+                        <span class="text-sm font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-lg">6 AM &ndash; 9
+                            AM</span>
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl border border-slate-100 flex items-center justify-between group-hover:border-orange-200 transition-colors shadow-sm">
+                        <span class="font-bold text-[#004123] flex items-center gap-3"><span
+                                class="material-symbols-outlined text-orange-500 text-[22px]">wb_sunny</span>
+                            Afternoon</span>
+                        <span class="text-sm font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-lg">12 PM &ndash; 3
+                            PM</span>
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl border border-slate-100 flex items-center justify-between group-hover:border-orange-200 transition-colors shadow-sm">
+                        <span class="font-bold text-[#004123] flex items-center gap-3"><span
+                                class="material-symbols-outlined text-slate-700 text-[22px]">dark_mode</span>
+                            Evening</span>
+                        <span class="text-sm font-bold text-slate-500 bg-slate-50 px-3 py-1 rounded-lg">6 PM &ndash; 9
+                            PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilities Card -->
+            <div class="bg-surface-container-low rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 stagger-item border border-outline-variant/30 group relative overflow-hidden flex flex-col h-full"
+                style="transition-delay: 200ms;">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-[#004123]/5 rounded-bl-full -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-150">
+                </div>
+                <div
+                    class="w-14 h-14 bg-[#004123] rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-md relative z-10">
+                    <span class="material-symbols-outlined text-[28px]">mic_external_on</span>
+                </div>
+                <h5 class="text-[18px] font-extrabold text-[#004123] uppercase tracking-wide mb-4 relative z-10">Studio
+                    Facilities</h5>
+                <p class="text-[14px] text-slate-600 mb-6 relative z-10 font-medium">Operating with professional
+                    infrastructure comparable to commercial FM stations:</p>
+                <div class="grid grid-cols-1 gap-3 text-[13px] text-slate-700 font-bold relative z-10 flex-grow">
+                    <div
+                        class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-green-200 transition-colors">
+                        <span class="material-symbols-outlined text-[#F58220] text-[20px]">graphic_eq</span>
+                        On-Air Audio Mixer
+                    </div>
+                    <div
+                        class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-green-200 transition-colors">
+                        <span class="material-symbols-outlined text-[#F58220] text-[20px]">computer</span>
+                        Digital Audio Workstation
+                    </div>
+                    <div
+                        class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-green-200 transition-colors">
+                        <span class="material-symbols-outlined text-[#F58220] text-[20px]">album</span>
+                        Professional CD/DVD Player
+                    </div>
+                    <div
+                        class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-green-200 transition-colors">
+                        <span class="material-symbols-outlined text-[#F58220] text-[20px]">mic</span>
+                        Broadcast Microphones
+                    </div>
+                    <div
+                        class="flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-green-200 transition-colors">
+                        <span class="material-symbols-outlined text-[#F58220] text-[20px]">headphones</span>
+                        Studio Headphones
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section: Campus Life Gallery -->
-    <section id="campus-life" class="py-section-gap mx-auto px-gutter">
+    <section id="campus-life" class="py-section-gap mx-auto px-gutter border-t border-outline-variant/30">
         <div class="mb-10 text-left">
             <h3 class="text-[28px] font-extrabold text-[#004123] uppercase tracking-tight">LIFE @ SRI SIDDHARTHA</h3>
         </div>
