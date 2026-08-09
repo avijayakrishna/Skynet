@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sri Siddhartha Centre for Media Studies | SSCMS</title>
+    <link rel="canonical" href="https://siddharthamedia.edu.in/" />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5NML39T');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="icon" type="image/png" href="image/logo/logo.png" />
+
+    <!-- Tailwind CSS with Forms and Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Premium Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#00522e",
+                        "secondary-container": "#ff8928",
+                        "tertiary-container": "#7e383e",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#753137",
+                        "primary-fixed-dim": "#8fd6a6",
+                        "surface-container-highest": "#e0e3de",
+                        "inverse-primary": "#8fd6a6",
+                        "secondary": "#F58220",
+                        "outline-variant": "#bfc9bf",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#0E5A35",
+                        "primary-fixed": "#aaf3c1",
+                        "surface-container": "#ecefe9",
+                        "on-secondary-container": "#642f00",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191d19",
+                        "surface-container-high": "#e6e9e3",
+                        "primary": "#004123",
+                        "surface": "#f7faf4",
+                        "on-primary-container": "#89cfa0",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#ffa8ad",
+                        "on-primary-fixed": "#00210f",
+                        "secondary-fixed-dim": "#ffb786",
+                        "surface-bright": "#f7faf4",
+                        "tertiary-fixed-dim": "#ffb3b6",
+                        "on-background": "#191d19",
+                        "surface-variant": "#e0e3de",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#3c060f",
+                        "background": "#f7faf4",
+                        "inverse-on-surface": "#eff2ec",
+                        "tertiary": "#612229",
+                        "inverse-surface": "#2d312e",
+                        "surface-tint": "#246b44",
+                        "surface-container-low": "#f2f4ef",
+                        "surface-dim": "#d8dbd5",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#723600",
+                        "on-secondary-fixed": "#311300",
+                        "on-surface-variant": "#404941",
+                        "secondary-fixed": "#ffdcc6",
+                        "tertiary-fixed": "#ffdada",
+                        "outline": "#707971"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "12px",
+                        "xl": "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-gap-mobile": "48px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Adjusted gradient overlay to make background image visible while keeping left text legible */
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(10, 20, 15, 0.85) 0%, rgba(10, 20, 15, 0.6) 50%, rgba(5, 10, 8, 0.2) 100%);
+        }
+
+        /* Custom Scrollbar for desktop slides */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Marquee speed adjustments */
+        .marquee-container {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 4rem;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transform: translateY(0);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+
+        .nav-wrapper.nav-hidden {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface overflow-x-hidden antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NML39T" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-3 pointer-events-none"></div>
+
+    <!-- Auto-hide Navigation Wrapper -->
+    <div id="nav-wrapper" class="nav-wrapper">
+
+        <!-- Top Utility Bar (Exact Match of image_fa8e3b.png) -->
+        <div class="bg-[#004123] text-white py-2.5 hidden lg:block border-b border-white/10 select-none">
+            <div
+                class="max-w-container-max mx-auto px-gutter flex justify-between items-center text-[12px] font-medium tracking-wide">
+                <!-- Left Side: Interactive Messages & Announcements -->
+                <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-1.5 text-white/95">
+                        <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">school</span>
+                        <span class="italic font-normal">Shape Your Future in Media & Communication</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">campaign</span>
+                        <span class="font-extrabold text-[#ffdcc6]">July 2026 Admissions Open!</span>
+                    </div>
+                </div>
+
+                <!-- Right Side: Navigation & Social Icons properly placed above the menu -->
+                <div class="flex items-center gap-5">
+                    <div class="flex gap-3.5 items-center">
+                        <a class="hover:text-[#ffb786] transition-colors"
+                            href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
+                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                            </svg>
+                        </a>
+                        <a class="hover:text-[#ffb786] transition-colors" href="https://www.instagram.com/sscms_tumkur/"
+                            target="_blank" title="Instagram">
+                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                        <a class="hover:text-[#ffb786] transition-colors"
+                            href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
+                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path
+                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                            </svg>
+                        </a>
+                        <a class="hover:text-[#ffb786] transition-colors" href="#" title="LinkedIn">
+                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Header -->
+        <header class="bg-white shadow-sm border-b border-outline-variant/30 h-24 transition-all duration-300">
+            <div class=" mx-auto px-gutter flex justify-between items-center h-full">
+                <!-- Logo & Three-Line Title stack -->
+                <a href="#" class="flex items-center gap-4 group focus:outline-none shrink-0">
+                    <div
+                        class="w-14 h-14 bg-white flex items-center justify-center overflow-hidden rounded-none shrink-0">
+                        <!-- Using logo.png and keeping perfect alignment -->
+                        <img class="w-full h-full object-contain"
+                            alt="Sri Siddhartha Centre for Media Studies Logo Emblem" src="image/logo/logo.png" />
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h1
+                            class="font-extrabold text-[#004123] tracking-wide uppercase leading-none text-[20px] sm:text-[22px]">
+                            SRI SIDDHARTHA</h1>
+                        <p
+                            class="text-[13px] sm:text-[14px] font-black text-slate-900 tracking-wider uppercase leading-tight mt-0.5">
+                            CENTRE FOR MEDIA STUDIES</p>
+                        <p class="text-[10px] sm:text-[11px] text-[#707971] font-semibold tracking-normal mt-0.5">—
+                            Affiliated to Tumkur University —</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu (Perfectly aligned with logo and CTA button) -->
+                <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5" id="desktop-nav">
+                    <div class="relative group h-full flex items-center">
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all cursor-pointer"
+                            href="index.html#about">
+                            About Us <span class="material-symbols-outlined text-[18px] ml-1">expand_more</span>
+                        </a>
+                        <div class="absolute top-[85%] left-0 w-72 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-2 translate-y-2 group-hover:translate-y-0">
+                            <a href="sses.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Sri Siddhartha Education Society&reg;</a>
+                            <a href="secretary.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Secretary, SSES</a>
+                            <a href="admin.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors">Administrative Officer</a>
+                        </div>
+                    </div>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#programs">Programs</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#faculty">Our Faculty</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#facilities">Facilities</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#radio">Radio</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#campus-life">Campus Life</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#placements">Placements</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#admissions-section">Admissions</a>
+                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
+                        href="index.html#contact">Contact Us</a>
+                </nav>
+
+                <!-- CTA & Hamburger menu for responsive breakpoints -->
+                <div class="flex items-center gap-4 shrink-0">
+                    <button onclick="scrollToContact()"
+                        class="hidden md:inline-flex bg-[#F58220] hover:bg-orange-600 text-white px-7 py-3 rounded-lg font-extrabold uppercase hover:scale-[1.03] active:scale-95 transition-all shadow-md tracking-wider text-[13px]">
+                        APPLY NOW
+                    </button>
+                    <button onclick="toggleMobileMenu()"
+                        class="lg:hidden p-2 rounded-lg text-primary hover:bg-slate-100 transition-colors"
+                        aria-label="Toggle Navigation Menu">
+                        <span id="menu-icon" class="material-symbols-outlined text-[30px]">menu</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Responsive Mobile Menu Sliding Drawer Overlay -->
+            <div id="mobile-menu-drawer"
+                class="fixed inset-0 top-24 bg-black/50 z-[60] transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden">
+                <div id="mobile-menu-content"
+                    class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
+                    <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface" id="mobile-nav">
+                        <div class="flex flex-col border-b border-slate-100 pb-2">
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2"
+                                href="index.html#about">About Us</a>
+                            <div class="flex flex-col pl-4 gap-3 mt-2 border-l-2 border-slate-100">
+                                <a href="sses.html" class="text-[14px] text-slate-600 hover:text-primary font-medium">Sri Siddhartha Education Society&reg;</a>
+                                <a href="secretary.html" class="text-[14px] text-slate-600 hover:text-primary font-medium">Secretary, SSES</a>
+                                <a href="admin.html" class="text-[14px] text-slate-600 hover:text-primary font-medium">Administrative Officer</a>
+                            </div>
+                        </div>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="index.html#programs">Programs</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="index.html#faculty">Our Faculty</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="index.html#facilities">Facilities</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="index.html#radio">Radio</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="index.html#campus-life">Campus Life</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="index.html#placements">Placements</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100" href="#news">News
+                            &amp; Events</a>
+                        <a onclick="toggleMobileMenu()"
+                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                            href="index.html#contact">Contact Us</a>
+                    </nav>
+                    <div class="mt-8 flex flex-col gap-4">
+                        <button onclick="toggleMobileMenu(); scrollToContact();"
+                            class="w-full bg-[#F58220] hover:bg-orange-600 text-white text-center py-3.5 rounded-lg font-extrabold shadow-md transition-all">
+                            APPLY NOW 2026-27
+                        </button>
+
+                    </div>
+                    <!-- Mobile Social Icons -->
+                    <div class="mt-auto pt-8 border-t border-slate-100 flex justify-center gap-6">
+                        <!-- Facebook -->
+                        <a class="text-slate-500 hover:text-primary transition-colors"
+                            href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
+                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a class="text-slate-500 hover:text-primary transition-colors"
+                            href="https://www.instagram.com/sscms_tumkur/" target="_blank" title="Instagram">
+                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a class="text-slate-500 hover:text-primary transition-colors"
+                            href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
+                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path
+                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="#" title="LinkedIn">
+                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    </div><!-- End nav-wrapper -->
+
+    <!-- Spacer to offset fixed nav height (utility bar ~40px on lg + header 96px) -->
+    <div id="nav-spacer" class="h-24 lg:h-[136px]"></div>
+
+    <!-- Section: Sri Siddhartha Education Society&reg; -->
+    <section id="about" class="py-section-gap relative bg-slate-50 border-b border-slate-200 min-h-[60vh]">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center justify-center gap-2 mb-4">
+                    <span class="w-12 h-[2px] bg-[#F58220]"></span>
+                    <span class="uppercase tracking-widest text-[#F58220] font-bold text-[13px]">About Us</span>
+                    <span class="w-12 h-[2px] bg-[#F58220]"></span>
+                </div>
+                <h3 class="text-[32px] md:text-[42px] font-extrabold text-[#004123] tracking-tight leading-tight mb-6">
+                    Sri Siddhartha Education Society&reg;
+                </h3>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-5xl mx-auto mt-12">
+                        <div class="lg:col-span-5 flex flex-col gap-4">
+                            <div class="rounded-2xl overflow-hidden shadow-xl h-[300px] lg:h-[450px] bg-white">
+                                <img src="image/founders/gangadharaiah.webp"
+                                    class="w-full h-full object-contain object-top hover:scale-105 transition-transform duration-700"
+                                    alt="H. M. Gangadharaiah">
+                            </div>
+                            <div class="text-center p-5 bg-white rounded-xl shadow-md border border-slate-100">
+                                <div class="mb-2">
+                                    <span
+                                        class="inline-block bg-[#F58220] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded shadow-sm">Founder,
+                                        SSES</span>
+                                </div>
+                                <h5 class="text-[18px] font-bold text-[#004123]">H. M. Gangadharaiah</h5>
+                                <p
+                                    class="text-[14px] text-slate-500 font-medium mt-1 leading-snug max-w-[250px] mx-auto">
+                                    Sri Siddhartha Education Society&reg; Tumakuru</p>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 space-y-4 text-slate-600 text-[14px] leading-relaxed text-justify">
+                            <h4 class="text-[24px] md:text-[28px] font-bold text-[#004123] leading-tight">Sri Siddhartha
+                                Education Society (SSES)</h4>
+                            <p>Sri Siddhartha Education Society (SSES) was established in the year 1959 by Shikshana
+                                Bheeshma Sri H. M. Gangadharaiah, Founder Secretary with the blessings of Acharya
+                                Vinobha Bhave to provide education to the students of rural areas and backward classes.
+                                The Society which started as a residential school in a village near Tumkur then
+                                established several nursery, primary and high schools including Pali schools in the
+                                later years. Since 1959, the activity growth of the Society is truly phenomenal. This
+                                has been possible mainly due to the strong conviction, clarity of vision, determined
+                                plan of action, dedicated band of people and down-to-earth approach of the management.
+                            </p>
+                            <p>Today the total number of institutions runs by the Society crosses 85 with a total
+                                students strength of more than 16000 and staff strength 1800. The main objective of the
+                                society is to “REACH THE UNREACHED” in the field of Education. The Society takes pride
+                                that the outgoing students of its institutions have all found successful career
+                                placements and a large number of them are positioned in Government Jobs. The Society
+                                presently manages over 85 institutions under its stewardship, the notable ones being:
+                                Engineering College, Medical College, Dental College, Center for Media studies offering
+                                PG Programs in Mass communication and Electronic Media, School of Nursing, College of
+                                Nursing, First Grade College, TCH Colleges, Training Institutes, Sanskrit Schools, Pail
+                                schools throughout Karnataka.</p>
+                            <p>Sri Siddhartha Group of Institutions has grown to be the hub of higher education with
+                                excellent teaching facilities and highly qualified and experienced teaching faculty.
+                                With diversified professional courses, the range of subjects is wide giving a good
+                                choice to the students seeking admission here.</p>
+                            <p>SSES has achieved its Golden Jubilee Celebrations in 2009 The Society to its credit has
+                                dedicated, long standing teaching and non-teaching staff members in its institutions.
+                            </p>
+                        </div>
+                    </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Block -->
+    <!-- Footer Block -->
+    <footer class="bg-[#0F4B2B] text-white pt-16 pb-10 border-t border-white/10">
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 mb-16">
+            <!-- Brand Information -->
+            <div class="space-y-6 lg:col-span-2">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-slate-100 shrink-0">
+                        <img class="w-[85%] h-[85%] object-contain" alt="SSCMS Logo" src="image/logo/logo.png" />
+                    </div>
+                    <div class="text-left whitespace-nowrap">
+                        <h4 class="font-extrabold text-[15px] tracking-wide leading-none text-white uppercase">SRI
+                            SIDDHARTHA</h4>
+                        <p class="text-[11px] font-bold text-white uppercase tracking-wider mt-1 leading-none">CENTRE
+                            FOR MEDIA STUDIES</p>
+                        <p
+                            class="text-[9px] text-emerald-400 font-semibold uppercase tracking-widest mt-1.5 leading-none">
+                            — Affiliated to Tumkur University —</p>
+                    </div>
+                </div>
+                <p class="text-[13px] text-slate-200/90 leading-relaxed text-left">
+                    Empowering future media professionals through quality education, creativity and community.
+                </p>
+                <div class="flex gap-5 pt-2">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/sscms_tumkur/" target="_blank" title="Instagram">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path
+                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- College Sections Quick navigation -->
+            <div class="text-left">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">QUICK LINKS</h5>
+                <ul class="space-y-3.5 text-[13px] text-white/80">
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#about">About Us</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#programs">Programs</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#facilities">Facilities</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#campus-life">Campus Life</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#placements">Placements</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#admissions-section">Admissions</a>
+                    </li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Academic Streams quick reference -->
+            <div class="text-left">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">PROGRAMS</h5>
+                <ul class="space-y-3.5 text-[13px] text-white/80">
+                    <li><button onclick="openProgramDetails('bajmc')"
+                            class="text-left hover:text-orange-500 transition-colors">Journalism & Mass
+                            Communication</button></li>
+                    <li><button onclick="openProgramDetails('majmc')"
+                            class="text-left hover:text-orange-500 transition-colors">Radio & Television
+                            Production</button></li>
+                    <li><button onclick="openProgramDetails('diploma')"
+                            class="text-left hover:text-orange-500 transition-colors">Digital Media & Content
+                            Creation</button></li>
+                    <li><button onclick="openProgramDetails('phd')"
+                            class="text-left hover:text-orange-500 transition-colors">Multimedia & Visual
+                            Communication</button></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="text-left space-y-6">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">CONTACT US</h5>
+                <div class="space-y-4 text-[13px] text-white/80">
+                    <p class="leading-relaxed">
+                        Sri Siddhartha Centre for Media Studies<br>
+                        SST Campus, Maralur, Tumakuru,<br>
+                        Karnataka - 572105
+                    </p>
+                    <div class="space-y-2 pt-2">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">call</span>
+                            <a href="tel:+919740693477" class="hover:underline">+91 9740693477</a>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-[18px] shrink-0">mail</span>
+                            <a href="mailto:sscmsmediastudiestumkur@gmail.com"
+                                class="hover:underline break-all">sscmsmediastudiestumkur@gmail.com</a>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-[18px] shrink-0">language</span>
+                            <a href="https://www.siddharthamedia.edu.in" target="_blank"
+                                class="hover:underline break-all">www.siddharthamedia.edu.in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visit Us: Map Card -->
+            <div class="space-y-4 text-left">
+                <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">VISIT US</h5>
+                <div
+                    class="bg-white p-3 rounded-2xl shadow-lg border border-slate-100/10 max-w-[240px] flex flex-col items-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.404770608366!2d77.0923321!3d13.3229675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb02ea37377d0f3%3A0x79b6f7c5e3629848!2sSri%20Siddhartha%20Centre%20for%20Media%20Studies!5e1!3m2!1sen!2sin!4v1785077796327!5m2!1sen!2sin"
+                        class="w-full h-32 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <a href="https://maps.google.com/?q=Sri+Siddhartha+Centre+for+Media+Studies,+Tumakuru"
+                        target="_blank"
+                        class="w-full bg-[#2A3B5C] hover:bg-[#1E293B] text-white py-2.5 rounded-lg text-[11px] font-bold text-center mt-3 tracking-wider block transition-colors uppercase">
+                        GET DIRECTIONS
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright details -->
+        <div
+            class="max-w-container-max mx-auto px-gutter border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-white/50 font-light">
+            <p>© 2026 Sri Siddhartha Centre for Media Studies. All Rights Reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="#">Accreditations &amp; RTI</a>
+                <button onclick="showToast('SSCMS Website Version 4.8.1 (Stable)', 'info')"
+                    class="hover:text-white transition-colors">System Information</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Immersive Portals (Staff/Student Logins) Modal Overlay -->
+    <div id="portal-modal"
+        class="fixed inset-0 z-50 bg-slate-950/80 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm rounded-2xl shadow-2xl overflow-hidden border flex flex-col">
+            <div class="bg-primary text-white p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h4 class="text-sm font-semibold tracking-wide uppercase" id="portal-modal-title">Student Portal
+                            Login</h4>
+                        <p class="text-[11px] text-primary-fixed mt-1 font-light">Unified secure directory integration
+                        </p>
+                    </div>
+                    <button onclick="closePortalModal()" class="text-white/60 hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+            </div>
+
+            <form onsubmit="handlePortalLogin(event)" class="p-6 space-y-4">
+                <div>
+                    <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 font-light"
+                        id="portal-user-label">Student ID Registration Number</label>
+                    <input type="text" required
+                        class="w-full border-slate-200 focus:ring-1 focus:ring-primary rounded-lg text-sm"
+                        placeholder="e.g. SSCMS22B601" id="portal-username-input" />
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 font-light">Account Secure
+                        Password</label>
+                    <input type="password" required
+                        class="w-full border-slate-200 focus:ring-1 focus:ring-primary rounded-lg text-sm"
+                        placeholder="••••••••" id="portal-password-input" />
+                </div>
+
+                <div class="flex items-center justify-between text-xs pt-1 font-light">
+                    <label class="flex items-center gap-1.5 text-slate-500">
+                        <input type="checkbox" class="border-slate-300 rounded text-primary focus:ring-primary" />
+                        Remember Session
+                    </label>
+                    <a href="#" class="text-secondary font-bold hover:underline">Forgot Access Pass?</a>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-primary hover:bg-primary-container text-white font-bold py-3 rounded-lg text-xs tracking-wider uppercase shadow-md transition-colors mt-2">
+                    AUTHORIZE SECURE LOG
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // SSCMS Program Factsheet Records Object Map
+        const PROGRAMS_DATA = {
+            bajmc: {
+                title: "Bachelor of Arts in Journalism & Mass Communication (BAJMC)",
+                code: "Undergraduate Program | BAJMC",
+                desc: "The Bachelor of Arts in Journalism & Mass Communication is a comprehensive, highly dynamic, three-year undergraduate program designed to immerse students in standard and digital reporting fields. It emphasizes objective research, concise copy compilation, professional photojournalism, and community radio transmission processes.",
+                duration: "3 Years (6 Semesters)",
+                eligibility: "Completed 10+2 / PUC equivalent board from any streams with at least 50% aggregate score.",
+                fee: "₹75,000 per Annum (Excl. Hostels)",
+                seats: "60 Intake Slots",
+                curriculum: [
+                    "Principles of Media Reporting & Feature Layout Compilation",
+                    "History and Ethics of Modern Indian Mainstream Media",
+                    "Advanced Digital Photography & Basic Photoshop Mechanics",
+                    "Simulated Newsroom Broadcasting & Chromakey Workflows",
+                    "Community FM Audio Recording, Vocal Modulation, Editing"
+                ],
+                careers: ["Broadcast Journalist", "Sub-Editor", "News Reporter", "Digital Content Manager", "Photojournalist", "Radio Jockey (RJ)"]
+            },
+            majmc: {
+                title: "Master of Arts in Journalism & Mass Communication (MAJMC)",
+                code: "Postgraduate Program | MAJMC",
+                desc: "The Master of Arts in Journalism and Mass Communication is an advanced, postgraduate research and masterclass track. Students delve deep into communication theories, media sociology, critical analysis, television documentary production, and the integration of emerging computational tools in public relations.",
+                duration: "2 Years (4 Semesters)",
+                eligibility: "Completed an undergraduate bachelor's degree (BA, B.Sc, B.Com, BBA) with minimum 55% average aggregate.",
+                fee: "₹95,000 per Annum",
+                seats: "40 Intake Slots",
+                curriculum: [
+                    "Advanced Development Communication Theories",
+                    "Television Documentary Filming, Direction, Scriptwriting",
+                    "Mainstream Print Desk Production & Digital Publishing Modules",
+                    "PR Strategy Management & Corporate Visual Communications",
+                    "Thesis Research on Societal Impacts of Digital Misinformation"
+                ],
+                careers: ["News Producer", "Communication Director", "PR Specialist", "Media Critic", "Documentary Filmmaker", "Social Researcher"]
+            },
+            diploma: {
+                title: "Executive Diploma in Creative Digital Content Creation",
+                code: "Specialized Professional Diploma | EDCCC",
+                desc: "This highly specialized, intensive technical diploma focuses specifically on the burgeoning demands of social channels, video production platforms, digital corporate branding, copywriting, and SEO systems management. It is designed for students aiming for rapid, freelance and agency readiness.",
+                duration: "1 Year (2 Semesters)",
+                eligibility: "Successfully cleared Higher Secondary (10+2) or equivalent PU board.",
+                fee: "₹50,000 total course fee",
+                seats: "30 Intake Slots",
+                curriculum: [
+                    "Copywriting Mechanics & Creative Brand Storytelling Principles",
+                    "Viral Video Content Formats: Reels, Shorts & TikTok Strategies",
+                    "Search Engine Optimization (SEO) & Web Analytics Mastery",
+                    "Basic Multi-Track Audio Engineering and Podcast Packaging",
+                    "Strategic Content Calendar Architecture & Audience Analysis"
+                ],
+                careers: ["SEO Copywriter", "Social Channel Manager", "Podcast Engineer", "Content Strategist", "Influencer Media Consultant"]
+            },
+            phd: {
+                title: "Doctor of Philosophy (Ph.D.) in Journalism & Mass Communication",
+                code: "Accredited Research Doctorate | Ph.D.",
+                desc: "Our doctoral department promotes intensive research, high-quality publication, and academic critiques focusing on communication policy, technological disruption of news delivery structures, public discourse, and visual media culture.",
+                duration: "3 to 5 Years research",
+                eligibility: "A relevant Master's Degree (MAJMC or MS Comm) with minimum 55% score and clearing SSCMS entrance examination.",
+                fee: "₹60,000 per Annum Registration Fee",
+                seats: "Based on faculty guide availability",
+                curriculum: [
+                    "Quantitative & Qualitative Communication Research Designs",
+                    "Critical Media Theory & Technological Determinism Analysis",
+                    "Pedagogical Training & Seminar Paper Composition Mechanics",
+                    "Guided Thesis Development and Peer Review Publications"
+                ],
+                careers: ["University Professor", "Senior Media Analyst", "Policy Researcher", "Author & Academic Columnist"]
+            }
+        };
+
+        // Immersive Virtual Tour Locations Object Map
+        const TOUR_DATA = {
+            tv_studio: {
+                title: "Television Broadcast Studio Spot",
+                desc: "See our professional-grade multitrack video production space. It contains specialized lighting grids, motorized green screening backgrounds, teleprompter terminals, and digital camcorder tripods.",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnpfDlVdCIFG4k_5udyF3yxALOdi5kCHy4PYJ0uaCb7zpvEJjq5SBXFtTNWkAYS014YV2TalYGPeK0LW735Zlvkxs-iVSAOyurerh71LhoV05RSLV3zxoo9ZlZvw51fa1o7jC9fm2YlcX9gMwLs586YtKihaPttboBiW7fFJZ_NJ7Rzy3dxz8IF6yYWRJ7IatzExqUfmXTaHVcaC9zWEjkuiFUo3EeMDlY7hEqYiA_oLLNwS7kHeo7h1YqUr4VqY44xQzsIGrKX9I",
+                hotspot: "Multi-View Live Panel Switchboard Spot"
+            },
+            radio: {
+                title: "Siddhartha 90.8 FM Broadcast Cabin",
+                desc: "The actual production and live broadcasting cabin of Radio Siddhartha 90.8 FM. It includes acoustical damping walls, condenser voice microphones on articulation arms, and an integrated audio mixer panel.",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAexzcBbRQrp5vCYBAL1Xl_LIjyrDy1ItwCXd7UemfoFDr_GlG5lBRdN5dEClXGuVbWLpA_zu5WVu87rjI3aSs5t9d_qX9XH6AdLVAIPk2Gp1IICwUxBdimtpIIpRoywslffhcbhedAyvHlxbjNxGztveUAV_F56txliO80k6OSxCp6CRVf3y5VWzl7ZYUUJRTjO3aCrS-BIrUcS4T29rsUtxJbUjHhE9Nx6LALEoWyXe3c6k4AIPiBX8zzYAZOLvZSAyE6hUFsLHg",
+                hotspot: "Professional Acoustical Damping Condenser Mic Spot"
+            },
+            imac: {
+                title: "iMac Multimedia Design & Edit Suite",
+                desc: "Our state-of-the-art computational workspace houses multiple Retina Apple iMac installations loaded with professional design software suite. Perfect for pagination, non-linear video editing and graphic works.",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYSn-HNjm6iFN8CIZfnx-35IgVKPoKIaL6bgjcWRyGgWW0Ee4C1IRPGN4aqj2T4kAUvQABdLRk5uWxbsyAvLZErmf3YBrFOB6Jitt-W15Mtsd8Lp0DZKq4On5B4BrmG018Ib4JgT--xaqZeLZpBFPFYYsFQrxynKVkgPbBPkF-PeFsp6sbVToXw2uLvmkOUjaxhfN5BbqHFIFzGHQh429ypODW1DvWIvX1UlBH2wEzwuJbmGy6jZiGXi7vlBf3MQeLMRRnh7l8RvI",
+                hotspot: "Final Cut Pro Video Rendering Unit Desk"
+            },
+            language: {
+                title: "Acoustics & Voice Language Lab",
+                desc: "This room features specialized computer terminal slots integrated with voice accent assessment engines. Designed to support vocal development, phonetic corrections and language communication practices.",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDjqAtwB89A_KvJF8Rdz2mu66y7n7cjVuVL_AnJbBzGXUXCUZAiqtRdqbPY0GXLLGPSf0coJeT3Oe78XrjHr34ddJ9IfRfiZPCzsMWvOvZs2sGvXsc5zKtmb6fqCR-OBjCSZBhche6OuvExWqO2S7PkSjTumiXsvP9HLNlhM_8tiZMl8w3enPUzYEFDPX_0rEZgRg1xgnaQtW7d4mQUY8K_kB2_BVRiJKZo48mUC1GWcyFsZlJdXJHW_eAEvs8B7Oy9jib5-rNkNNA",
+                hotspot: "Digital Vocals Analysis System Carrel"
+            }
+        };
+
+        // Interactive Testimonial Rotator Dataset
+        const TESTIMONIALS = [
+            {
+                quote: "The hands-on experience and amazing faculty helped me grow from a passionate student to a confident professional.",
+                name: "Ananya R.",
+                role: "BAJMC Alumni<br>News Producer, TV9",
+                avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuB3u_IaCUwIElc-pGsBeZp1pqJIy6jyMOWCMuUXSLTVzUkSlTz1m51V7LQGpJzhgZ_uJN5U5Cwm9m16VAshhZq4nWnCxLc8dNBmB8mSR-24g8GMXSTUKhYymZK6yH8xvg0ptDr_qDWhJTULa_-flKumGtxu7hDdVGuOzy5xxmkMH_os_ESC8zsluH1rK4fuJth5J44loKlUJrSmJU8QBxn0JSPVDykyPEmluqHxgIRX_ypnChq_OTrf5u4OwhkvZPzI0L7lCRrsJLM"
+            },
+            {
+                quote: "Hosting live segments on Radio Siddhartha 90.8 FM gave me real-time broadcast training that other colleges only teach theoretically.",
+                name: "Rahul Verma",
+                role: "MAJMC Alumnus<br>News Anchor, Asianet News",
+                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150"
+            },
+            {
+                quote: "Operating Final Cut Pro suites in the iMac lab directly assisted me in building a robust digital agency portfolio.",
+                name: "Shreya Ghoshal",
+                role: "Content Creator Diploma Alumna<br>Freelance Brand Lead",
+                avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150"
+            }
+        ];
+
+        // Radio Track Simulation playlist database map
+        const RADIO_PLAYLIST = {
+            drive: { title: "Morning Drive with RJ Amit", rj: "RJ Amit (Live)", dur: "10:35 / LIVE" },
+            alumni: { title: "Media Career Pathways Talk", rj: "Dr. L.S. Kumar & Guests", dur: "42:15" },
+            campus_news: { title: "SSCMS Weekly Campus News", rj: "BAJMC Desk Editorial", dur: "08:40" },
+            music: { title: "Siddhartha Cultural Medley Selection", rj: "Classical Medley Archives", dur: "15:20" }
+        };
+
+        // State Variables Global Map
+        let activeTestimonialIndex = 0;
+        let wizardCurrentStep = 1;
+        let isRadioPlaying = false;
+        let radioInterval;
+        let radioTimeElapsed = 0;
+
+        function toggleAbout(id) {
+            // Close all other accordions first
+            for (let i = 1; i <= 3; i++) {
+                if (i !== id) {
+                    const otherAns = document.getElementById('about-ans-' + i);
+                    const otherIcon = document.getElementById('about-icon-' + i);
+                    if (otherAns && !otherAns.classList.contains('hidden')) {
+                        otherAns.classList.add('hidden');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            }
+
+            // Toggle the clicked one
+            const ans = document.getElementById('about-ans-' + id);
+            const icon = document.getElementById('about-icon-' + id);
+            const isHidden = ans.classList.contains('hidden');
+
+            if (isHidden) {
+                ans.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                ans.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Initialize Page Elements & Observers
+        window.onload = function () {
+            initTestimonialCarousel();
+            initAutoScrollObservers();
+            initNavAutoHide();
+            initNavHighlighting();
+        };
+
+        // Navigation Highlighting
+        function initNavHighlighting() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-30% 0px -70% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+
+                        // Desktop Nav
+                        navLinks.forEach(link => {
+                            link.classList.remove('font-bold', 'text-[#004123]', 'border-[#004123]');
+                            link.classList.add('font-semibold', 'text-slate-600', 'border-transparent');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.remove('font-semibold', 'text-slate-600', 'border-transparent');
+                                link.classList.add('font-bold', 'text-[#004123]', 'border-[#004123]');
+                            }
+                        });
+
+                        // Mobile Nav
+                        mobileNavLinks.forEach(link => {
+                            link.classList.remove('text-primary', 'font-bold');
+                            link.classList.add('hover:text-primary');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.remove('hover:text-primary');
+                                link.classList.add('text-primary', 'font-bold');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                if (section.getAttribute('id')) {
+                    observer.observe(section);
+                }
+            });
+
+            // Handle direct clicks for instant feedback
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(l => {
+                        l.classList.remove('font-bold', 'text-[#004123]', 'border-[#004123]');
+                        l.classList.add('font-semibold', 'text-slate-600', 'border-transparent');
+                    });
+                    this.classList.remove('font-semibold', 'text-slate-600', 'border-transparent');
+                    this.classList.add('font-bold', 'text-[#004123]', 'border-[#004123]');
+                });
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileNavLinks.forEach(l => {
+                        l.classList.remove('text-primary', 'font-bold');
+                        l.classList.add('hover:text-primary');
+                    });
+                    this.classList.remove('hover:text-primary');
+                    this.classList.add('text-primary', 'font-bold');
+                });
+            });
+        }
+
+        // Visual Slide Intersection Observers
+        function initAutoScrollObservers() {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+
+                        const staggerItems = entry.target.querySelectorAll('.stagger-item');
+                        staggerItems.forEach((child, index) => {
+                            setTimeout(() => {
+                                child.classList.add('opacity-100', 'translate-y-0');
+                                child.classList.remove('opacity-0', 'translate-y-10');
+                            }, (index + 1) * 150);
+                        });
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section, .stagger-container').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+
+                section.querySelectorAll('.stagger-item').forEach(child => {
+                    child.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                });
+            });
+        }
+
+        // Intelligent Auto-Hide Navigation on Scroll
+        function initNavAutoHide() {
+            const navWrapper = document.getElementById('nav-wrapper');
+            const SCROLL_THRESHOLD = 10; // Ignore micro-scrolls (px)
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+
+            function onScroll() {
+                const currentScrollY = window.scrollY;
+                const delta = currentScrollY - lastScrollY;
+
+                // Always show nav at the very top of the page
+                if (currentScrollY <= 5) {
+                    navWrapper.classList.remove('nav-hidden');
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                    return;
+                }
+
+                // Only react if the scroll delta exceeds the threshold
+                if (Math.abs(delta) < SCROLL_THRESHOLD) {
+                    ticking = false;
+                    return;
+                }
+
+                if (delta > 0) {
+                    // Scrolling DOWN → hide nav
+                    navWrapper.classList.add('nav-hidden');
+                } else {
+                    // Scrolling UP → show nav
+                    navWrapper.classList.remove('nav-hidden');
+                }
+
+                lastScrollY = currentScrollY;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(onScroll);
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
+
+        // Dynamic Top Toast Manager
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `p-4 rounded-xl shadow-xl border text-xs sm:text-sm font-bold flex items-center gap-3 bg-white text-slate-800 transition-all transform translate-x-12 opacity-0 pointer-events-auto max-w-sm`;
+
+            let icon = `<span class="material-symbols-outlined text-blue-500">info</span>`;
+            if (type === 'success') icon = `<span class="material-symbols-outlined text-green-500">verified</span>`;
+            if (type === 'error') icon = `<span class="material-symbols-outlined text-red-500">error</span>`;
+
+            toast.innerHTML = `
+            ${icon}
+            <div class="flex-grow font-light">${message}</div>
+            <button class="text-slate-400 hover:text-slate-800"><span class="material-symbols-outlined text-[16px]">close</span></button>
+        `;
+
+            container.appendChild(toast);
+
+            // Triggers CSS transition animation
+            setTimeout(() => {
+                toast.classList.remove('translate-x-12', 'opacity-0');
+            }, 50);
+
+            // Auto Close Timeout
+            const timer = setTimeout(() => {
+                dismissToast(toast);
+            }, 4000);
+
+            toast.querySelector('button').onclick = () => {
+                clearTimeout(timer);
+                dismissToast(toast);
+            };
+        }
+
+        function dismissToast(toast) {
+            toast.classList.add('translate-x-12', 'opacity-0');
+            setTimeout(() => {
+                toast.remove();
+            }, 300);
+        }
+
+        // Toggle Mobile Navigation Drawer
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-menu-drawer');
+            const content = document.getElementById('mobile-menu-content');
+            const icon = document.getElementById('menu-icon');
+
+            if (drawer.classList.contains('pointer-events-none')) {
+                drawer.classList.remove('pointer-events-none', 'opacity-0');
+                content.classList.remove('translate-x-full');
+                icon.textContent = 'close';
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.add('pointer-events-none', 'opacity-0');
+                content.classList.add('translate-x-full');
+                icon.textContent = 'menu';
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Siddhartha Community Radio Simulated Player Controls
+        function toggleRadioPlayer() {
+            const widget = document.getElementById('live-radio-widget');
+            if (widget.classList.contains('pointer-events-none')) {
+                widget.classList.remove('pointer-events-none', 'opacity-0', 'translate-y-12');
+                showToast("Tuned into Radio Siddhartha 90.8 FM Stream.", "success");
+            } else {
+                widget.classList.add('pointer-events-none', 'opacity-0', 'translate-y-12');
+                if (isRadioPlaying) toggleRadioPlayState();
+            }
+        }
+
+        function toggleRadioPlayState() {
+            const icon = document.getElementById('radio-play-icon');
+            const button = document.getElementById('radio-play-btn');
+            const visualizer = document.getElementById('wave-visualizer');
+            const antenna = document.getElementById('radio-antenna-icon');
+
+            if (!isRadioPlaying) {
+                isRadioPlaying = true;
+                icon.textContent = 'pause';
+                button.className = 'bg-primary hover:bg-slate-800 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors shadow';
+                visualizer.classList.remove('opacity-0');
+                antenna.classList.add('animate-pulse-slow');
+                startRadioTimer();
+                showToast("Simulated live streaming began.", "success");
+            } else {
+                isRadioPlaying = false;
+                icon.textContent = 'play_arrow';
+                button.className = 'bg-secondary hover:bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors shadow';
+                visualizer.classList.add('opacity-0');
+                antenna.classList.remove('animate-pulse-slow');
+                clearInterval(radioInterval);
+            }
+        }
+
+        function startRadioTimer() {
+            clearInterval(radioInterval);
+            const timerText = document.getElementById('radio-duration');
+            radioInterval = setInterval(() => {
+                radioTimeElapsed++;
+                const mins = Math.floor(radioTimeElapsed / 60).toString().padStart(2, '0');
+                const secs = (radioTimeElapsed % 60).toString().padStart(2, '0');
+                timerText.textContent = `${mins}:${secs} / LIVE`;
+            }, 1000);
+        }
+
+        function changeRadioTrack(key) {
+            const track = RADIO_PLAYLIST[key];
+            if (!track) return;
+
+            document.getElementById('radio-track-title').textContent = track.title;
+            document.getElementById('radio-track-rj').textContent = `On Air: ${track.rj}`;
+
+            radioTimeElapsed = 0;
+            document.getElementById('radio-duration').textContent = `00:00 / LIVE`;
+
+            if (!isRadioPlaying) toggleRadioPlayState();
+        }
+
+        // Interactive Testimonial Rotator functions
+        function initTestimonialCarousel() {
+            const dotsContainer = document.getElementById('carousel-dots');
+            dotsContainer.innerHTML = '';
+            TESTIMONIALS.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-[#0F4B2B]' : 'bg-slate-200'}`;
+                dot.setAttribute('onclick', `switchTestimonial(${index})`);
+                dot.setAttribute('id', `testi-dot-${index}`);
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function switchTestimonial(index) {
+            if (index < 0 || index >= TESTIMONIALS.length) return;
+            activeTestimonialIndex = index;
+
+            const data = TESTIMONIALS[index];
+            const card = document.getElementById('testimonial-card');
+
+            card.classList.add('opacity-0', 'scale-95');
+
+            setTimeout(() => {
+                document.getElementById('t-quote').textContent = data.quote;
+                document.getElementById('t-name').textContent = data.name;
+                document.getElementById('t-role').innerHTML = data.role;
+                document.getElementById('t-avatar').src = data.avatar;
+
+                // Adjust dot indicators
+                TESTIMONIALS.forEach((_, i) => {
+                    const dot = document.getElementById(`testi-dot-${i}`);
+                    if (i === index) {
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all duration-300 bg-[#0F4B2B]';
+                    } else {
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all duration-300 bg-slate-200';
+                    }
+                });
+
+                card.classList.remove('opacity-0', 'scale-95');
+            }, 200);
+        }
+
+        function navigateTestimonial(dir) {
+            let target = activeTestimonialIndex + (dir === 'next' ? 1 : -1);
+            if (target >= TESTIMONIALS.length) target = 0;
+            if (target < 0) target = TESTIMONIALS.length - 1;
+            switchTestimonial(target);
+        }
+
+        // Program Drawer Dynamic Viewer
+        function openProgramDetails(key) {
+            const data = PROGRAMS_DATA[key];
+            if (!data) return;
+
+            document.getElementById('pd-code').textContent = data.code;
+            document.getElementById('pd-title').textContent = data.title;
+            document.getElementById('pd-desc').textContent = data.desc;
+            document.getElementById('pd-duration').textContent = data.duration;
+            document.getElementById('pd-eligibility').textContent = data.eligibility;
+            document.getElementById('pd-fee').textContent = data.fee;
+            document.getElementById('pd-seats').textContent = data.seats;
+
+            // Populate curriculum
+            const currList = document.getElementById('pd-curriculum');
+            currList.innerHTML = '';
+            data.curriculum.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                currList.appendChild(li);
+            });
+
+            // Populate Careers
+            const careerContainer = document.getElementById('pd-careers');
+            careerContainer.innerHTML = '';
+            data.careers.forEach(item => {
+                const span = document.createElement('span');
+                span.className = 'bg-primary/10 text-primary text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider';
+                span.textContent = item;
+                careerContainer.appendChild(span);
+            });
+
+            const drawer = document.getElementById('program-drawer');
+            const content = document.getElementById('program-drawer-content');
+
+            drawer.classList.remove('pointer-events-none', 'opacity-0');
+            content.classList.remove('translate-x-full');
+        }
+
+        function closeProgramDetails() {
+            const drawer = document.getElementById('program-drawer');
+            const content = document.getElementById('program-drawer-content');
+
+            drawer.classList.add('pointer-events-none', 'opacity-0');
+            content.classList.add('translate-x-full');
+        }
+
+        // Virtual Tour Immersive Modal Functions
+        function openVirtualTour() {
+            const modal = document.getElementById('virtual-tour-modal');
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            switchTourSpot('tv_studio');
+        }
+
+        function closeVirtualTour() {
+            const modal = document.getElementById('virtual-tour-modal');
+            modal.classList.add('pointer-events-none', 'opacity-0');
+        }
+
+        // Virtual tour helper trigger spot
+        function openVirtualTourSpot(key) {
+            openVirtualTour();
+            switchTourSpot(key);
+        }
+
+        function switchTourSpot(key) {
+            const data = TOUR_DATA[key];
+            if (!data) return;
+
+            document.getElementById('tour-panorama-view').src = data.img;
+            document.getElementById('tour-spot-title').textContent = data.title;
+            document.getElementById('tour-spot-desc').textContent = data.desc;
+            document.getElementById('tour-hotspot-text').textContent = data.hotspot;
+
+            // Reset sidebar button colors
+            Object.keys(TOUR_DATA).forEach(spotKey => {
+                const btn = document.getElementById(`btn-spot-${spotKey}`);
+                if (btn) {
+                    if (spotKey === key) {
+                        btn.className = 'w-full text-left py-2.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-secondary text-white';
+                    } else {
+                        btn.className = 'w-full text-left py-2.5 px-3 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-slate-400 hover:bg-slate-800 hover:text-white';
+                    }
+                }
+            });
+        }
+
+        // Gallery Dynamic Filtering Transitions
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+
+            // Reset active state for buttons
+            ['all', 'fests', 'workshops', 'shoots'].forEach(cat => {
+                const btn = document.getElementById(`btn-gal-${cat}`);
+                if (cat === category) {
+                    btn.className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-primary text-white shadow-sm';
+                } else {
+                    btn.className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700';
+                }
+            });
+
+            items.forEach(item => {
+                const itemCat = item.getAttribute('data-category');
+                if (category === 'all' || itemCat === category) {
+                    item.style.display = 'flex';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Interactive FAQ Dropdowns
+        function toggleFaq(id) {
+            const ans = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            const block = document.getElementById(`faq-${id}`);
+
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.className = 'material-symbols-outlined text-secondary transition-transform rotate-180';
+                block.className = 'border border-primary rounded-xl bg-white overflow-hidden shadow';
+            } else {
+                ans.classList.add('hidden');
+                icon.className = 'material-symbols-outlined text-primary transition-transform rotate-0';
+                block.className = 'border rounded-xl bg-white overflow-hidden';
+            }
+        }
+
+        // Portals (Staff/Student Logins) Modal Overlay Controls
+        function togglePortalModal(type) {
+            const modal = document.getElementById('portal-modal');
+            const title = document.getElementById('portal-modal-title');
+            const userLabel = document.getElementById('portal-user-label');
+            const usernameInput = document.getElementById('portal-username-input');
+
+            if (type === 'student') {
+                title.textContent = 'Student Hub Directory Access';
+                userLabel.textContent = 'Student Registration Registration Number';
+                usernameInput.placeholder = 'e.g. SSCMS22B601';
+            } else {
+                title.textContent = 'Staff Portal Access';
+                userLabel.textContent = 'Official Faculty Identity Code';
+                usernameInput.placeholder = 'e.g. SSCMS-FAC-938';
+            }
+
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+        }
+
+        function closePortalModal() {
+            const modal = document.getElementById('portal-modal');
+            modal.classList.add('pointer-events-none', 'opacity-0');
+            document.getElementById('portal-password-input').value = '';
+        }
+
+        function handlePortalLogin(e) {
+            e.preventDefault();
+            showToast("Authorizing user security clearance...", "info");
+            setTimeout(() => {
+                showToast("System Authorization complete. Redirecting...", "success");
+                closePortalModal();
+            }, 1200);
+        }
+
+        // Scroll facilities slide wrapper
+        function scrollFacilities(dir) {
+            const container = document.getElementById('facilities-container');
+            const amount = 340;
+            container.scrollLeft += dir === 'left' ? -amount : amount;
+        }
+
+        // Scroll recruiters slide wrapper
+        function scrollRecruiters(dir) {
+            const container = document.getElementById('recruiters-slider');
+            const amount = 200;
+            container.scrollLeft += dir === 'left' ? -amount : amount;
+        }
+
+        // Form handlers
+        function handleContactSubmit(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const name = form.querySelector('input[type="text"]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const phone = form.querySelector('input[type="tel"]').value;
+            const course = form.querySelector('select').value;
+            const message = form.querySelector('textarea').value;
+
+            const randId = 'INQ-' + (new Date().getFullYear()) + '-' + Math.floor(1000 + Math.random() * 9000);
+
+            const receiptData = {
+                id: randId,
+                name: name,
+                course: course,
+                email: email,
+                phone: phone,
+                message: message,
+                date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })
+            };
+
+            localStorage.setItem('sscms_receipt', JSON.stringify(receiptData));
+
+            showToast("Transmitting inquiry details to SSCMS counsel department...", "info");
+            setTimeout(() => {
+                showToast("Inquiry dispatched! Counsel advisor will email soon.", "success");
+                e.target.reset();
+                window.location.href = 'thankyou.html';
+            }, 1200);
+        }
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            showToast("Validating subscriber account details...", "info");
+            setTimeout(() => {
+                showToast("Subscribed! Newsletter will reach you monthly.", "success");
+                document.getElementById('newsletter-email').value = '';
+            }, 1000);
+        }
+
+        function scrollToContact() {
+            const section = document.getElementById('contact');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.location.href = 'index.html#contact';
+            }
+        }
+    </script>
+</body>
+
+</html>

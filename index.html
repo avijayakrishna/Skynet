@@ -272,24 +272,33 @@
 
                 <!-- Desktop Navigation Menu (Perfectly aligned with logo and CTA button) -->
                 <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5" id="desktop-nav">
+                    <div class="relative group h-full flex items-center">
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all cursor-pointer"
+                            href="index.html#about">
+                            About Us <span class="material-symbols-outlined text-[18px] ml-1">expand_more</span>
+                        </a>
+                        <div class="absolute top-[85%] left-0 w-72 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-2 translate-y-2 group-hover:translate-y-0">
+                            <a href="sses.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Sri Siddhartha Education Society&reg;</a>
+                            <a href="secretary.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Secretary, SSES</a>
+                            <a href="admin.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors">Administrative Officer</a>
+                        </div>
+                    </div>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#about">About Us</a>
+                        href="index.html#programs">Programs</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#programs">Programs</a>
+                        href="index.html#faculty">Our Faculty</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#faculty">Our Faculty</a>
+                        href="index.html#facilities">Facilities</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#facilities">Facilities</a>
+                        href="index.html#radio">Radio</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#radio">Radio</a>
+                        href="index.html#campus-life">Campus Life</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#campus-life">Campus Life</a>
+                        href="index.html#placements">Placements</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#placements">Placements</a>
+                        href="index.html#admissions-section">Admissions</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#admissions-section">Admissions</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="#contact">Contact Us</a>
+                        href="index.html#contact">Contact Us</a>
                 </nav>
 
                 <!-- CTA & Hamburger menu for responsive breakpoints -->
@@ -312,33 +321,40 @@
                 <div id="mobile-menu-content"
                     class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
                     <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface" id="mobile-nav">
+                        <div class="flex flex-col border-b border-slate-100 pb-2">
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2"
+                                href="index.html#about">About Us</a>
+                            <div class="flex flex-col pl-4 gap-3 mt-2 border-l-2 border-slate-100">
+                                <a href="sses.html" class="text-[14px] text-slate-600 hover:text-primary font-medium">Sri Siddhartha Education Society&reg;</a>
+                                <a href="secretary.html" class="text-[14px] text-slate-600 hover:text-primary font-medium">Secretary, SSES</a>
+                                <a href="admin.html" class="text-[14px] text-slate-600 hover:text-primary font-medium">Administrative Officer</a>
+                            </div>
+                        </div>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#about">About Us</a>
+                            href="index.html#programs">Programs</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#programs">Programs</a>
+                            href="index.html#faculty">Our Faculty</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#faculty">Our Faculty</a>
+                            href="index.html#facilities">Facilities</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#facilities">Facilities</a>
+                            href="index.html#radio">Radio</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#radio">Radio</a>
+                            href="index.html#campus-life">Campus Life</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#campus-life">Campus Life</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#placements">Placements</a>
+                            href="index.html#placements">Placements</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100" href="#news">News
                             &amp; Events</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="#contact">Contact Us</a>
+                            href="index.html#contact">Contact Us</a>
                     </nav>
                     <div class="mt-8 flex flex-col gap-4">
                         <button onclick="toggleMobileMenu(); scrollToContact();"
@@ -415,7 +431,7 @@
             </p>
 
             <div class="flex flex-wrap gap-4">
-                <a href="#programs"
+                <a href="index.html#programs"
                     class="bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-lg font-bold flex items-center gap-2 transition-all shadow-lg hover:translate-y-[-2px]">
                     EXPLORE PROGRAMS <span class="material-symbols-outlined">arrow_forward</span>
                 </a>
@@ -619,167 +635,6 @@
             </div>
         </div>
 
-        <!-- About Us Accordion -->
-        <div class="mt-24 w-full stagger-item space-y-4 font-light">
-            <!-- Accordion 1: SSES -->
-            <div class="border rounded-xl bg-white overflow-hidden transition-colors shadow-sm" id="about-acc-1">
-                <button onclick="toggleAbout(1)"
-                    class="w-full flex items-center justify-between p-5 text-left font-bold text-[#004123] hover:bg-slate-50 transition-colors text-sm md:text-base">
-                    <span>Sri Siddhartha Education Society&reg;</span>
-                    <span id="about-icon-1"
-                        class="material-symbols-outlined text-[#F58220] transition-transform">expand_more</span>
-                </button>
-                <div id="about-ans-1" class="hidden border-t border-slate-100 p-5 lg:p-8 bg-surface">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                        <div class="lg:col-span-5 flex flex-col gap-4">
-                            <div class="rounded-2xl overflow-hidden shadow-xl h-[300px] lg:h-[450px] bg-white">
-                                <img src="image/founders/gangadharaiah.webp"
-                                    class="w-full h-full object-contain object-top hover:scale-105 transition-transform duration-700"
-                                    alt="H. M. Gangadharaiah">
-                            </div>
-                            <div class="text-center p-5 bg-white rounded-xl shadow-md border border-slate-100">
-                                <div class="mb-2">
-                                    <span
-                                        class="inline-block bg-[#F58220] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded shadow-sm">Founder,
-                                        SSES</span>
-                                </div>
-                                <h5 class="text-[18px] font-bold text-[#004123]">H. M. Gangadharaiah</h5>
-                                <p
-                                    class="text-[14px] text-slate-500 font-medium mt-1 leading-snug max-w-[250px] mx-auto">
-                                    Sri Siddhartha Education Society&reg; Tumakuru</p>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-7 space-y-4 text-slate-600 text-[14px] leading-relaxed text-justify">
-                            <h4 class="text-[24px] md:text-[28px] font-bold text-[#004123] leading-tight">Sri Siddhartha
-                                Education Society (SSES)</h4>
-                            <p>Sri Siddhartha Education Society (SSES) was established in the year 1959 by Shikshana
-                                Bheeshma Sri H. M. Gangadharaiah, Founder Secretary with the blessings of Acharya
-                                Vinobha Bhave to provide education to the students of rural areas and backward classes.
-                                The Society which started as a residential school in a village near Tumkur then
-                                established several nursery, primary and high schools including Pali schools in the
-                                later years. Since 1959, the activity growth of the Society is truly phenomenal. This
-                                has been possible mainly due to the strong conviction, clarity of vision, determined
-                                plan of action, dedicated band of people and down-to-earth approach of the management.
-                            </p>
-                            <p>Today the total number of institutions runs by the Society crosses 85 with a total
-                                students strength of more than 16000 and staff strength 1800. The main objective of the
-                                society is to “REACH THE UNREACHED” in the field of Education. The Society takes pride
-                                that the outgoing students of its institutions have all found successful career
-                                placements and a large number of them are positioned in Government Jobs. The Society
-                                presently manages over 85 institutions under its stewardship, the notable ones being:
-                                Engineering College, Medical College, Dental College, Center for Media studies offering
-                                PG Programs in Mass communication and Electronic Media, School of Nursing, College of
-                                Nursing, First Grade College, TCH Colleges, Training Institutes, Sanskrit Schools, Pail
-                                schools throughout Karnataka.</p>
-                            <p>Sri Siddhartha Group of Institutions has grown to be the hub of higher education with
-                                excellent teaching facilities and highly qualified and experienced teaching faculty.
-                                With diversified professional courses, the range of subjects is wide giving a good
-                                choice to the students seeking admission here.</p>
-                            <p>SSES has achieved its Golden Jubilee Celebrations in 2009 The Society to its credit has
-                                dedicated, long standing teaching and non-teaching staff members in its institutions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Accordion 2: Secretary -->
-            <div class="border rounded-xl bg-white overflow-hidden transition-colors shadow-sm" id="about-acc-2">
-                <button onclick="toggleAbout(2)"
-                    class="w-full flex items-center justify-between p-5 text-left font-bold text-[#004123] hover:bg-slate-50 transition-colors text-sm md:text-base">
-                    <span>Secretary, SSES</span>
-                    <span id="about-icon-2"
-                        class="material-symbols-outlined text-[#F58220] transition-transform">expand_more</span>
-                </button>
-                <div id="about-ans-2" class="hidden border-t border-slate-100 p-5 lg:p-8 bg-surface">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                        <div class="lg:col-span-5 flex flex-col gap-4">
-                            <div class="rounded-2xl overflow-hidden shadow-xl h-[300px] lg:h-[450px] bg-slate-100">
-                                <img src="image/founders/Parameshwara.webp"
-                                    class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
-                                    alt="Secretary">
-                            </div>
-                            <div class="text-center p-5 bg-white rounded-xl shadow-md border border-slate-100">
-                                <div class="mb-2">
-                                    <span class="inline-block bg-[#F58220] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded shadow-sm">Secretary, SSES</span>
-                                </div>
-                                <h5 class="text-[18px] font-bold text-[#004123]">Dr G Parameshwara</h5>
-                                <p class="text-[14px] text-slate-500 font-medium mt-1 leading-snug max-w-[250px] mx-auto">M.Sc (Agric), Ph.D, MISPP, MISTE</p>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-7 space-y-4 text-slate-600 text-[14px] leading-relaxed text-justify">
-
-                            <p class="mt-4">He holds Ph.D in Agricultural Science from Waite Agricultural Research
-                                Institute, University of Adelaide, Australia. He was also a fellow of the Indian
-                                Institute of Agricultural Technology. Able leader, reformer, facilitator, motivator and
-                                a down to earth pragmatist, he believes that education must have practical applications
-                                to be valuable.</p>
-                            <p>He is the Secretary of SSES. For Dr Parameshwara, good education is imperative for the
-                                welfare of humanity. Sri Siddhartha Centre for Media Studies (SSCMS) is the brainchild
-                                of Dr G Parameshwara.</p>
-
-                            <h5 class="text-[18px] font-bold text-slate-800 mt-6 mb-2">Message From Secretary Desk</h5>
-                            <p>It’s a pleasure to welcome you to SSCMS for pursuing higher education in M.S
-                                Communication and M.Sc. in Electronic Media. SSES became one of the premier educational
-                                centers in the country with the support and blessings of many well-wishers and friends.
-                                A single school establishment in the late 1950s has now grown into nearly 100 schools
-                                and professional colleges ranging from Medical, Dental, Nursing, Engineering, Management
-                                school, and SSCMS which is exclusively for Media studies.</p>
-                            <p>Media education is all about practice with the right amount of theoretical knowledge. At
-                                SSCMS you will get a chance to home your skills using the labs and studios. The much
-                                needed theoretical foundation will also be given. The library is well stocked with media
-                                books, English and regional newspapers and magazines. State of the art of TV Studio has
-                                become a common feature in media schools. What sets the SSCMS TV studio apart is the
-                                fact that it is also a full-fledged production house. You will also have the opportunity
-                                to take part in the numerous ongoing production activities. Radio Siddhartha-90.8 FM,
-                                the community radio station also helps the students to voice their talent through air.
-                            </p>
-                            <p>Computer assisted language learning is made possible through the establishment of
-                                Language Lab. Siddhartha Sampada, weekly Siddhartha news, Focus newsletters(SSIT) is the
-                                arena for practicing the techniques required for the print media, especially reporting,
-                                writing, editing and pagination. I am sure that this will take the Centre to new heights
-                                in terms of both academic and professional growth.</p>
-                            <p>I hope that the advanced facilities we have will give an impetus to new ideas and instill
-                                in you the courage to face challenges with confidence and do well in life.</p>
-                            <p class="font-semibold text-slate-800">I take this opportunity to welcome you to Siddhartha
-                                family.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Accordion 3: Admin -->
-            <div class="border rounded-xl bg-white overflow-hidden transition-colors shadow-sm" id="about-acc-3">
-                <button onclick="toggleAbout(3)"
-                    class="w-full flex items-center justify-between p-5 text-left font-bold text-[#004123] hover:bg-slate-50 transition-colors text-sm md:text-base">
-                    <span>Administrative Officer</span>
-                    <span id="about-icon-3"
-                        class="material-symbols-outlined text-[#F58220] transition-transform">expand_more</span>
-                </button>
-                <div id="about-ans-3" class="hidden border-t border-slate-100 p-5 lg:p-8 bg-surface">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                        <div class="lg:col-span-5 flex flex-col gap-4">
-                            <div class="rounded-2xl overflow-hidden shadow-xl h-[300px] lg:h-[450px]">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
-                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                                    alt="Administrative Officer">
-                            </div>
-                            <div class="text-center p-5 bg-white rounded-xl shadow-md border border-slate-100">
-                                <div class="mb-2">
-                                    <span class="inline-block bg-[#F58220] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded shadow-sm">SSCMS Administration</span>
-                                </div>
-                                <h5 class="text-[18px] font-bold text-[#004123]">Administrative Officer</h5>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-7 space-y-4 text-slate-600 text-[14px] leading-relaxed flex flex-col justify-center h-full text-justify">
-
-                            <p class="mt-4 italic text-slate-400">#</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
         </div>
     </section>
 
@@ -1017,7 +872,7 @@
                 <p class="text-slate-500 text-[14px] leading-relaxed font-light">
                     Learn with industry-standard infrastructure and hands-on experience.
                 </p>
-                <a href="#about"
+                <a href="index.html#about"
                     class="text-[#0F4B2B] hover:text-[#0a351e] font-bold text-[13px] inline-flex items-center gap-1.5 mt-2 transition-all hover:gap-2.5">
                     EXPLORE FACILITIES <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </a>
@@ -1208,7 +1063,7 @@
                 <p class="text-white/75 mb-9 leading-relaxed text-[14px] md:text-[16px] font-medium">
                     We combine academic excellence with real-world exposure to prepare you for tomorrow.
                 </p>
-                <a href="#about" aria-label="Know more about Sri Siddhartha"
+                <a href="index.html#about" aria-label="Know more about Sri Siddhartha"
                     class="inline-flex items-center justify-between bg-white hover:bg-slate-50 text-[#0F4B2B] font-bold rounded-xl h-[52px] w-[190px] px-5 text-[15px] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white/50">
                     <span>KNOW MORE</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -2035,14 +1890,14 @@
             <div class="text-left">
                 <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">QUICK LINKS</h5>
                 <ul class="space-y-3.5 text-[13px] text-white/80">
-                    <li><a class="hover:text-orange-500 transition-colors" href="#about">About Us</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="#programs">Programs</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="#facilities">Facilities</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="#campus-life">Campus Life</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="#placements">Placements</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="#admissions-section">Admissions</a>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#about">About Us</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#programs">Programs</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#facilities">Facilities</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#campus-life">Campus Life</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#placements">Placements</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#admissions-section">Admissions</a>
                     </li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="#contact">Contact Us</a></li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#contact">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -2891,7 +2746,11 @@
 
         function scrollToContact() {
             const section = document.getElementById('contact');
-            if (section) section.scrollIntoView({ behavior: 'smooth' });
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.location.href = 'index.html#contact';
+            }
         }
     </script>
 </body>
