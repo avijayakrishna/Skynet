@@ -1,0 +1,13 @@
+# Siddharthamedia
+
+> An educational site for Sri Siddhartha Centre for Media Studies providing information about leadership and faculty.
+
+## Main
+
+- [Sri Siddhartha Centre for Media Studies | SSCMS](https://siddharthamedia.edu.in/): Sri Siddhartha Centre for Media Studies
+
+## More
+
+- [Sri Siddhartha Centre for Media Studies | SSCMS](https://siddharthamedia.edu.in/secretary): Secretary page for SSCMS
+- [Our Faculty | Sri Siddhartha Centre for Media Studies (SSCMS)](https://siddharthamedia.edu.in/faculty): Faculty list and profiles at SSCMS
+- [H. M. Gangadharaiah Sri Siddhartha Education Society® Tumakuru](https://siddharthamedia.edu.in/sses): SSCMS
