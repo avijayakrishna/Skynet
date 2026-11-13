@@ -1,959 +1,980 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
+<meta="description" content="SSCMS Gallery">
 
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Campus Events &amp; Gallery | Sri Siddhartha Centre for Media Studies (SSCMS)</title>
-    <link rel="canonical" href="https://siddharthamedia.edu.in/events.html" />
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5NML39T');</script>
-    <!-- End Google Tag Manager -->
-    <link rel="icon" type="image/png" href="image/logo/logo.png" />
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Campus Events &amp; Gallery | Sri Siddhartha Centre for Media Studies (SSCMS)</title>
+        <link rel="canonical" href="https://siddharthamedia.edu.in/events.html" />
+        <!-- Google Tag Manager -->
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5NML39T');</script>
+        <!-- End Google Tag Manager -->
+        <link rel="icon" type="image/png" href="image/logo/logo.png" />
 
-    <!-- Tailwind CSS with Forms and Container Queries -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!-- Tailwind CSS with Forms and Container Queries -->
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <!-- Premium Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+        <!-- Premium Fonts & Icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet" />
 
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "on-primary-fixed-variant": "#00522e",
-                        "secondary-container": "#ff8928",
-                        "tertiary-container": "#7e383e",
-                        "error": "#ba1a1a",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-fixed-variant": "#753137",
-                        "primary-fixed-dim": "#8fd6a6",
-                        "surface-container-highest": "#e0e3de",
-                        "inverse-primary": "#8fd6a6",
-                        "secondary": "#F58220",
-                        "outline-variant": "#bfc9bf",
-                        "on-primary": "#ffffff",
-                        "primary-container": "#0E5A35",
-                        "primary-fixed": "#aaf3c1",
-                        "surface-container": "#ecefe9",
-                        "on-secondary-container": "#642f00",
-                        "on-error-container": "#93000a",
-                        "surface-container-lowest": "#ffffff",
-                        "on-surface": "#191d19",
-                        "surface-container-high": "#e6e9e3",
-                        "primary": "#004123",
-                        "surface": "#f7faf4",
-                        "on-primary-container": "#89cfa0",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-container": "#ffa8ad",
-                        "on-primary-fixed": "#00210f",
-                        "secondary-fixed-dim": "#ffb786",
-                        "surface-bright": "#f7faf4",
-                        "tertiary-fixed-dim": "#ffb3b6",
-                        "on-background": "#191d19",
-                        "surface-variant": "#e0e3de",
-                        "on-tertiary": "#ffffff",
-                        "on-tertiary-fixed": "#3c060f",
-                        "background": "#f7faf4",
-                        "inverse-on-surface": "#eff2ec",
-                        "tertiary": "#612229",
-                        "inverse-surface": "#2d312e",
-                        "surface-tint": "#246b44",
-                        "surface-container-low": "#f2f4ef",
-                        "surface-dim": "#d8dbd5",
-                        "on-error": "#ffffff",
-                        "on-secondary-fixed-variant": "#723600",
-                        "on-secondary-fixed": "#311300",
-                        "on-surface-variant": "#404941",
-                        "secondary-fixed": "#ffdcc6",
-                        "tertiary-fixed": "#ffdada",
-                        "outline": "#707971"
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "12px",
-                        "xl": "20px",
-                        "2xl": "24px",
-                        "3xl": "32px",
-                        "full": "9999px"
-                    },
-                    spacing: {
-                        "section-gap-mobile": "48px",
-                        "container-max": "1280px",
-                        "section-gap": "80px",
-                        "gutter": "24px",
-                        "base": "8px",
-                        "margin-mobile": "16px"
-                    },
-                    fontFamily: {
-                        "headline": ["Inter", "sans-serif"],
-                        "body": ["Inter", "sans-serif"]
-                    },
-                    animation: {
-                        'marquee': 'marquee 25s linear infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-50%)' }
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-primary-fixed-variant": "#00522e",
+                            "secondary-container": "#ff8928",
+                            "tertiary-container": "#7e383e",
+                            "error": "#ba1a1a",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary-fixed-variant": "#753137",
+                            "primary-fixed-dim": "#8fd6a6",
+                            "surface-container-highest": "#e0e3de",
+                            "inverse-primary": "#8fd6a6",
+                            "secondary": "#F58220",
+                            "outline-variant": "#bfc9bf",
+                            "on-primary": "#ffffff",
+                            "primary-container": "#0E5A35",
+                            "primary-fixed": "#aaf3c1",
+                            "surface-container": "#ecefe9",
+                            "on-secondary-container": "#642f00",
+                            "on-error-container": "#93000a",
+                            "surface-container-lowest": "#ffffff",
+                            "on-surface": "#191d19",
+                            "surface-container-high": "#e6e9e3",
+                            "primary": "#004123",
+                            "surface": "#f7faf4",
+                            "on-primary-container": "#89cfa0",
+                            "error-container": "#ffdad6",
+                            "on-tertiary-container": "#ffa8ad",
+                            "on-primary-fixed": "#00210f",
+                            "secondary-fixed-dim": "#ffb786",
+                            "surface-bright": "#f7faf4",
+                            "tertiary-fixed-dim": "#ffb3b6",
+                            "on-background": "#191d19",
+                            "surface-variant": "#e0e3de",
+                            "on-tertiary": "#ffffff",
+                            "on-tertiary-fixed": "#3c060f",
+                            "background": "#f7faf4",
+                            "inverse-on-surface": "#eff2ec",
+                            "tertiary": "#612229",
+                            "inverse-surface": "#2d312e",
+                            "surface-tint": "#246b44",
+                            "surface-container-low": "#f2f4ef",
+                            "surface-dim": "#d8dbd5",
+                            "on-error": "#ffffff",
+                            "on-secondary-fixed-variant": "#723600",
+                            "on-secondary-fixed": "#311300",
+                            "on-surface-variant": "#404941",
+                            "secondary-fixed": "#ffdcc6",
+                            "tertiary-fixed": "#ffdada",
+                            "outline": "#707971"
+                        },
+                        borderRadius: {
+                            "DEFAULT": "0.25rem",
+                            "lg": "12px",
+                            "xl": "20px",
+                            "2xl": "24px",
+                            "3xl": "32px",
+                            "full": "9999px"
+                        },
+                        spacing: {
+                            "section-gap-mobile": "48px",
+                            "container-max": "1280px",
+                            "section-gap": "80px",
+                            "gutter": "24px",
+                            "base": "8px",
+                            "margin-mobile": "16px"
+                        },
+                        fontFamily: {
+                            "headline": ["Inter", "sans-serif"],
+                            "body": ["Inter", "sans-serif"]
+                        },
+                        animation: {
+                            'marquee': 'marquee 25s linear infinite',
+                            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        },
+                        keyframes: {
+                            marquee: {
+                                '0%': { transform: 'translateX(0%)' },
+                                '100%': { transform: 'translateX(-50%)' }
+                            }
                         }
-                    }
+                    },
                 },
-            },
-        }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
+            }
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                vertical-align: middle;
+            }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(8px);
-        }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(8px);
+            }
 
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
 
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
 
-        .nav-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            transform: translateY(0);
-            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-            will-change: transform;
-        }
+            .nav-wrapper {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+                transform: translateY(0);
+                transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                will-change: transform;
+            }
 
-        .nav-wrapper.nav-hidden {
-            transform: translateY(-100%);
-        }
-    </style>
-</head>
+            .nav-wrapper.nav-hidden {
+                transform: translateY(-100%);
+            }
+        </style>
+    </head>
 
-<body class="bg-surface font-body text-on-surface overflow-x-hidden antialiased">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NML39T" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <body class="bg-surface font-body text-on-surface overflow-x-hidden antialiased">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NML39T" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
-    <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-3 pointer-events-none"></div>
+        <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-3 pointer-events-none"></div>
 
-    <!-- Auto-hide Navigation Wrapper -->
-    <div id="nav-wrapper" class="nav-wrapper">
+        <!-- Auto-hide Navigation Wrapper -->
+        <div id="nav-wrapper" class="nav-wrapper">
 
-        <!-- Top Utility Bar -->
-        <div class="bg-[#004123] text-white py-2.5 hidden lg:block border-b border-white/10 select-none">
-            <div
-                class="max-w-container-max mx-auto px-gutter flex justify-between items-center text-[12px] font-medium tracking-wide">
-                <!-- Left Side: Interactive Messages & Announcements -->
-                <div class="flex items-center gap-6">
-                    <div class="flex items-center gap-1.5 text-white/95">
-                        <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">school</span>
-                        <span class="italic font-normal">Shape Your Future in Media & Communication</span>
+            <!-- Top Utility Bar -->
+            <div class="bg-[#004123] text-white py-2.5 hidden lg:block border-b border-white/10 select-none">
+                <div
+                    class="max-w-container-max mx-auto px-gutter flex justify-between items-center text-[12px] font-medium tracking-wide">
+                    <!-- Left Side: Interactive Messages & Announcements -->
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-1.5 text-white/95">
+                            <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">school</span>
+                            <span class="italic font-normal">Shape Your Future in Media & Communication</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">campaign</span>
+                            <span class="font-extrabold text-[#ffdcc6]">July 2026 Admissions Open!</span>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-1.5">
-                        <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">campaign</span>
-                        <span class="font-extrabold text-[#ffdcc6]">July 2026 Admissions Open!</span>
-                    </div>
-                </div>
 
-                <!-- Right Side: Navigation & Social Icons -->
-                <div class="flex items-center gap-5">
-                    <div class="flex gap-3.5 items-center">
-                        <a class="hover:text-[#ffb786] transition-colors"
-                            href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
-                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path
-                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
-                            </svg>
-                        </a>
-                        <a class="hover:text-[#ffb786] transition-colors" href="https://www.instagram.com/sscms_tumkur/"
-                            target="_blank" title="Instagram">
-                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                            </svg>
-                        </a>
-                        <a class="hover:text-[#ffb786] transition-colors"
-                            href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
-                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                <path
-                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
-                            </svg>
-                        </a>
-                        <a class="hover:text-[#ffb786] transition-colors" href="https://linkedin.com" target="_blank"
-                            title="LinkedIn">
-                            <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                            </svg>
-                        </a>
+                    <!-- Right Side: Navigation & Social Icons -->
+                    <div class="flex items-center gap-5">
+                        <div class="flex gap-3.5 items-center">
+                            <a class="hover:text-[#ffb786] transition-colors"
+                                href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                                </svg>
+                            </a>
+                            <a class="hover:text-[#ffb786] transition-colors"
+                                href="https://www.instagram.com/sscms_tumkur/" target="_blank" title="Instagram">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                </svg>
+                            </a>
+                            <a class="hover:text-[#ffb786] transition-colors"
+                                href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                                </svg>
+                            </a>
+                            <a class="hover:text-[#ffb786] transition-colors" href="https://linkedin.com"
+                                target="_blank" title="LinkedIn">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Navigation Header (Unchanged as requested: do not link in header menu) -->
-        <header class="bg-white shadow-sm border-b border-outline-variant/30 h-24 transition-all duration-300">
-            <div class="mx-auto px-gutter flex justify-between items-center h-full">
-                <!-- Logo & Three-Line Title stack -->
-                <a href="index.html" class="flex items-center gap-4 group focus:outline-none shrink-0">
-                    <div
-                        class="w-14 h-14 bg-white flex items-center justify-center overflow-hidden rounded-none shrink-0">
-                        <img class="w-full h-full object-contain"
-                            alt="Sri Siddhartha Centre for Media Studies Logo Emblem" src="image/logo/logo.png" />
-                    </div>
-                    <div class="flex flex-col justify-center">
-                        <h1
-                            class="font-extrabold text-[#004123] tracking-wide uppercase leading-none text-[20px] sm:text-[22px]">
-                            SRI SIDDHARTHA</h1>
-                        <p
-                            class="text-[13px] sm:text-[14px] font-black text-slate-900 tracking-wider uppercase leading-tight mt-0.5">
-                            CENTRE FOR MEDIA STUDIES</p>
-                        <p class="text-[10px] sm:text-[11px] text-[#707971] font-semibold tracking-normal mt-0.5">—
-                            Affiliated to Tumkur University —</p>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation Menu (Unchanged) -->
-                <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5" id="desktop-nav">
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#about">About Us</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#programs">Programs</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="faculty.html">Our Faculty</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#facilities">Facilities</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#radio">Radio</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#campus-life">Campus Life</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#placements">Placements</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#admissions-section">Admissions</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#contact">Contact Us</a>
-                </nav>
-
-                <!-- CTA & Hamburger menu for responsive breakpoints -->
-                <div class="flex items-center gap-4 shrink-0">
-                    <button onclick="scrollToContact()"
-                        class="hidden md:inline-flex bg-[#F58220] hover:bg-orange-600 text-white px-7 py-3 rounded-lg font-extrabold uppercase hover:scale-[1.03] active:scale-95 transition-all shadow-md tracking-wider text-[13px]">
-                        APPLY NOW
-                    </button>
-                    <button onclick="toggleMobileMenu()"
-                        class="lg:hidden p-2 rounded-lg text-primary hover:bg-slate-100 transition-colors"
-                        aria-label="Toggle Navigation Menu">
-                        <span id="menu-icon" class="material-symbols-outlined text-[30px]">menu</span>
-                    </button>
                 </div>
             </div>
 
-            <!-- Responsive Mobile Menu Sliding Drawer Overlay -->
-            <div id="mobile-menu-drawer"
-                class="fixed inset-0 top-24 bg-black/50 z-[60] transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden">
-                <div id="mobile-menu-content"
-                    class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
-                    <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface" id="mobile-nav">
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+            <!-- Main Navigation Header (Unchanged as requested: do not link in header menu) -->
+            <header class="bg-white shadow-sm border-b border-outline-variant/30 h-24 transition-all duration-300">
+                <div class="mx-auto px-gutter flex justify-between items-center h-full">
+                    <!-- Logo & Three-Line Title stack -->
+                    <a href="index.html" class="flex items-center gap-4 group focus:outline-none shrink-0">
+                        <div
+                            class="w-14 h-14 bg-white flex items-center justify-center overflow-hidden rounded-none shrink-0">
+                            <img class="w-full h-full object-contain"
+                                alt="Sri Siddhartha Centre for Media Studies Logo Emblem" src="image/logo/logo.png" />
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h1
+                                class="font-extrabold text-[#004123] tracking-wide uppercase leading-none text-[20px] sm:text-[22px]">
+                                SRI SIDDHARTHA</h1>
+                            <p
+                                class="text-[13px] sm:text-[14px] font-black text-slate-900 tracking-wider uppercase leading-tight mt-0.5">
+                                CENTRE FOR MEDIA STUDIES</p>
+                            <p class="text-[10px] sm:text-[11px] text-[#707971] font-semibold tracking-normal mt-0.5">—
+                                Affiliated to Tumkur University —</p>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Navigation Menu (Unchanged) -->
+                    <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5" id="desktop-nav">
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#about">About Us</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#programs">Programs</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="faculty.html">Our Faculty</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#facilities">Facilities</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#radio">Radio</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#campus-life">Campus Life</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#placements">Placements</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#admissions-section">Admissions</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#contact">Contact Us</a>
                     </nav>
-                    <div class="mt-8 flex flex-col gap-4">
-                        <button onclick="toggleMobileMenu(); scrollToContact();"
-                            class="w-full bg-[#F58220] hover:bg-orange-600 text-white text-center py-3.5 rounded-lg font-extrabold shadow-md transition-all">
-                            APPLY NOW 2026-27
+
+                    <!-- CTA & Hamburger menu for responsive breakpoints -->
+                    <div class="flex items-center gap-4 shrink-0">
+                        <button onclick="scrollToContact()"
+                            class="hidden md:inline-flex bg-[#F58220] hover:bg-orange-600 text-white px-7 py-3 rounded-lg font-extrabold uppercase hover:scale-[1.03] active:scale-95 transition-all shadow-md tracking-wider text-[13px]">
+                            APPLY NOW
+                        </button>
+                        <button onclick="toggleMobileMenu()"
+                            class="lg:hidden p-2 rounded-lg text-primary hover:bg-slate-100 transition-colors"
+                            aria-label="Toggle Navigation Menu">
+                            <span id="menu-icon" class="material-symbols-outlined text-[30px]">menu</span>
                         </button>
                     </div>
-                    <!-- Mobile Social Icons -->
-                    <div class="mt-auto pt-8 border-t border-slate-100 flex justify-center gap-6">
-                        <a class="text-slate-500 hover:text-primary transition-colors"
-                            href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
-                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                </div>
+
+                <!-- Responsive Mobile Menu Sliding Drawer Overlay -->
+                <div id="mobile-menu-drawer"
+                    class="fixed inset-0 top-24 bg-black/50 z-[60] transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden">
+                    <div id="mobile-menu-content"
+                        class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
+                        <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface" id="mobile-nav">
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#about">About Us</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#programs">Programs</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="faculty.html">Our Faculty</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#facilities">Facilities</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#radio">Radio</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#campus-life">Campus Life</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#placements">Placements</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#admissions-section">Admissions</a>
+                            <a onclick="toggleMobileMenu()"
+                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
+                                href="index.html#contact">Contact Us</a>
+                        </nav>
+                        <div class="mt-8 flex flex-col gap-4">
+                            <button onclick="toggleMobileMenu(); scrollToContact();"
+                                class="w-full bg-[#F58220] hover:bg-orange-600 text-white text-center py-3.5 rounded-lg font-extrabold shadow-md transition-all">
+                                APPLY NOW 2026-27
+                            </button>
+                        </div>
+                        <!-- Mobile Social Icons -->
+                        <div class="mt-auto pt-8 border-t border-slate-100 flex justify-center gap-6">
+                            <a class="text-slate-500 hover:text-primary transition-colors"
+                                href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
+                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                                </svg>
+                            </a>
+                            <a class="text-slate-500 hover:text-primary transition-colors"
+                                href="https://www.instagram.com/sscms_tumkur/" target="_blank" title="Instagram">
+                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                </svg>
+                            </a>
+                            <a class="text-slate-500 hover:text-primary transition-colors"
+                                href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
+                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                                </svg>
+                            </a>
+                            <a class="text-slate-500 hover:text-primary transition-colors" href="https://linkedin.com"
+                                target="_blank" title="LinkedIn">
+                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        </div><!-- End nav-wrapper -->
+
+        <!-- Spacer to offset fixed nav height -->
+        <div id="nav-spacer" class="h-24 lg:h-[136px]"></div>
+
+        <!-- Page Header / Breadcrumb Section -->
+        <section class="py-12 bg-white border-b border-slate-200/80">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <!-- Breadcrumbs -->
+                <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-6">
+                    <a href="index.html" class="hover:text-primary transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[16px]">home</span>
+                        <span>Home</span>
+                    </a>
+                    <span class="text-slate-400">/</span>
+                    <span class="text-slate-700">Events &amp; Gallery</span>
+                </nav>
+
+                <!-- Section Title -->
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center justify-center gap-2 mb-3">
+                        <span class="w-12 h-[2px] bg-[#F58220]"></span>
+                        <span class="uppercase tracking-widest text-[#F58220] font-bold text-[13px]">Campus Life &amp;
+                            Activities</span>
+                        <span class="w-12 h-[2px] bg-[#F58220]"></span>
+                    </div>
+                    <h2
+                        class="text-[32px] md:text-[42px] font-extrabold text-[#004123] tracking-tight leading-tight mb-4">
+                        Campus Events &amp; Gallery
+                    </h2>
+                    <p class="text-slate-600 text-[15px] md:text-[16px] leading-relaxed max-w-2xl mx-auto">
+                        Explore memorable moments, student productions, workshops, seminars, and celebratory events
+                        capturing the vibrant spirit of Sri Siddhartha Centre for Media Studies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Gallery Section (4 images in a row on desktop, uniform size) -->
+        <section class="py-section-gap relative bg-slate-50 border-b border-slate-200">
+            <div class="max-w-container-max mx-auto px-gutter">
+
+                <!-- 4 in a row grid with uniform aspect ratio -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                    <!-- Image 1 -->
+                    <div onclick="openLightbox(0)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/b31d46e0-feed-2bf2-e361-74ab5f96f366.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div onclick="openLightbox(1)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/dc41b054-5ca2-ec5b-1118-883766cf177f.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div onclick="openLightbox(2)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/c0f36d76-a11a-833b-dc98-9bb2d8a3777c.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div onclick="openLightbox(3)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/7a0a200e-d36c-38d1-8e66-1c61b7e1bea9.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 5 -->
+                    <div onclick="openLightbox(4)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/74b8f391-0fa9-b8cd-50b8-1c18ca39fdd0.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 6 -->
+                    <div onclick="openLightbox(5)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/23d7bc56-dc54-657d-cace-1a2cab9f4ce6.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 7 -->
+                    <div onclick="openLightbox(6)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/5a4e6b5b-e666-86bd-c89f-ef3bfdb0c4d7.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 8 -->
+                    <div onclick="openLightbox(7)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/916164eb-2a9e-3057-a951-20ce58600a1f.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 9 -->
+                    <div onclick="openLightbox(8)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/a25f54b8-e676-b482-fb66-f6552ccd8017.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 10 -->
+                    <div onclick="openLightbox(9)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/89c5da9a-c476-5e5d-2d96-7487091fd77a.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 11 -->
+                    <div onclick="openLightbox(10)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/e83f938a-a22e-9b14-5332-bba1dbc09487.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 12 -->
+                    <div onclick="openLightbox(11)"
+                        class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
+                        <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/3296027c-8263-c77f-8370-d7b7fb2bdd84.jpg"
+                            alt="SSCMS Campus Event" loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
+                            <span
+                                class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Lightbox Modal -->
+        <div id="lightbox-modal"
+            class="fixed inset-0 z-50 bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+            <!-- Close Button -->
+            <button onclick="closeLightbox()"
+                class="absolute top-5 right-5 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-2.5 z-10">
+                <span class="material-symbols-outlined text-[28px]">close</span>
+            </button>
+
+            <!-- Previous Button -->
+            <button onclick="navigateLightbox(-1)"
+                class="absolute left-4 sm:left-8 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-3 z-10">
+                <span class="material-symbols-outlined text-[28px]">arrow_back</span>
+            </button>
+
+            <!-- Image Container -->
+            <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center">
+                <img id="lightbox-img" src="" alt="SSCMS Event Photo Preview"
+                    class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transition-all duration-200" />
+                <p id="lightbox-counter" class="text-white/70 text-xs mt-3 font-semibold tracking-wider"></p>
+            </div>
+
+            <!-- Next Button -->
+            <button onclick="navigateLightbox(1)"
+                class="absolute right-4 sm:right-8 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-3 z-10">
+                <span class="material-symbols-outlined text-[28px]">arrow_forward</span>
+            </button>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <section class="py-16 bg-[#004123] text-white text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-gutter relative z-10 space-y-6">
+                <span
+                    class="inline-block bg-[#F58220] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+                    Join Siddhartha Media
+                </span>
+                <h3 class="text-[28px] sm:text-[36px] font-extrabold tracking-tight">
+                    Experience Media Education Beyond Textbooks
+                </h3>
+                <p class="text-white/80 text-[15px] max-w-2xl mx-auto leading-relaxed">
+                    Be part of our vibrant media hub. Learn storytelling, film-making, newsroom production, and
+                    broadcast
+                    communication through live practical training.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <button onclick="scrollToContact()"
+                        class="bg-[#F58220] hover:bg-orange-600 text-white font-extrabold px-8 py-3.5 rounded-xl uppercase tracking-wider text-xs shadow-lg transition-all hover:scale-105 active:scale-95">
+                        APPLY FOR ADMISSION
+                    </button>
+                    <a href="index.html#programs"
+                        class="bg-white/10 hover:bg-white/20 text-white font-extrabold px-8 py-3.5 rounded-xl uppercase tracking-wider text-xs border border-white/20 transition-all">
+                        EXPLORE PROGRAMS
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Block -->
+        <footer class="bg-[#0F4B2B] text-white pt-16 pb-10 border-t border-white/10">
+            <div
+                class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 mb-16">
+                <!-- Brand Information -->
+                <div class="space-y-6 lg:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-slate-100 shrink-0">
+                            <img class="w-[85%] h-[85%] object-contain" alt="SSCMS Logo" src="image/logo/logo.png" />
+                        </div>
+                        <div class="text-left whitespace-nowrap">
+                            <h4 class="font-extrabold text-[15px] tracking-wide leading-none text-white uppercase">SRI
+                                SIDDHARTHA</h4>
+                            <p class="text-[11px] font-bold text-white uppercase tracking-wider mt-1 leading-none">
+                                CENTRE
+                                FOR MEDIA STUDIES</p>
+                            <p
+                                class="text-[9px] text-emerald-400 font-semibold uppercase tracking-widest mt-1.5 leading-none">
+                                — Affiliated to Tumkur University —</p>
+                        </div>
+                    </div>
+                    <p class="text-[13px] text-slate-200/90 leading-relaxed text-left">
+                        Empowering future media professionals through quality education, creativity and community.
+                    </p>
+                    <div class="flex gap-5 pt-2">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
+                            <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path
                                     d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
                             </svg>
                         </a>
-                        <a class="text-slate-500 hover:text-primary transition-colors"
-                            href="https://www.instagram.com/sscms_tumkur/" target="_blank" title="Instagram">
-                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/sscms_tumkur/" target="_blank" title="Instagram">
+                            <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path
                                     d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                             </svg>
                         </a>
-                        <a class="text-slate-500 hover:text-primary transition-colors"
-                            href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
-                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
+                            <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                 <path
                                     d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
                             </svg>
                         </a>
-                        <a class="text-slate-500 hover:text-primary transition-colors" href="https://linkedin.com"
-                            target="_blank" title="LinkedIn">
-                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                            <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path
                                     d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
                             </svg>
                         </a>
                     </div>
                 </div>
-            </div>
-        </header>
 
-    </div><!-- End nav-wrapper -->
-
-    <!-- Spacer to offset fixed nav height -->
-    <div id="nav-spacer" class="h-24 lg:h-[136px]"></div>
-
-    <!-- Page Header / Breadcrumb Section -->
-    <section class="py-12 bg-white border-b border-slate-200/80">
-        <div class="max-w-container-max mx-auto px-gutter">
-            <!-- Breadcrumbs -->
-            <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-6">
-                <a href="index.html" class="hover:text-primary transition-colors flex items-center gap-1">
-                    <span class="material-symbols-outlined text-[16px]">home</span>
-                    <span>Home</span>
-                </a>
-                <span class="text-slate-400">/</span>
-                <span class="text-slate-700">Events &amp; Gallery</span>
-            </nav>
-
-            <!-- Section Title -->
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="inline-flex items-center justify-center gap-2 mb-3">
-                    <span class="w-12 h-[2px] bg-[#F58220]"></span>
-                    <span class="uppercase tracking-widest text-[#F58220] font-bold text-[13px]">Campus Life &amp;
-                        Activities</span>
-                    <span class="w-12 h-[2px] bg-[#F58220]"></span>
-                </div>
-                <h2 class="text-[32px] md:text-[42px] font-extrabold text-[#004123] tracking-tight leading-tight mb-4">
-                    Campus Events &amp; Gallery
-                </h2>
-                <p class="text-slate-600 text-[15px] md:text-[16px] leading-relaxed max-w-2xl mx-auto">
-                    Explore memorable moments, student productions, workshops, seminars, and celebratory events
-                    capturing the vibrant spirit of Sri Siddhartha Centre for Media Studies.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Gallery Section (4 images in a row on desktop, uniform size) -->
-    <section class="py-section-gap relative bg-slate-50 border-b border-slate-200">
-        <div class="max-w-container-max mx-auto px-gutter">
-
-            <!-- 4 in a row grid with uniform aspect ratio -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-                <!-- Image 1 -->
-                <div onclick="openLightbox(0)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/b31d46e0-feed-2bf2-e361-74ab5f96f366.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
+                <!-- College Sections Quick navigation -->
+                <div class="text-left">
+                    <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">QUICK LINKS</h5>
+                    <ul class="space-y-3.5 text-[13px] text-white/80">
+                        <li><a class="hover:text-orange-500 transition-colors" href="index.html#about">About Us</a></li>
+                        <li><a class="hover:text-orange-500 transition-colors" href="faculty.html">Our Faculty</a></li>
+                        <li><a class="hover:text-orange-500 transition-colors" href="index.html#programs">Programs</a>
+                        </li>
+                        <li><a class="hover:text-orange-500 transition-colors"
+                                href="index.html#facilities">Facilities</a>
+                        </li>
+                        <li><a class="hover:text-orange-500 transition-colors" href="index.html#campus-life">Campus
+                                Life</a>
+                        </li>
+                        <li><a class="hover:text-orange-500 transition-colors"
+                                href="index.html#placements">Placements</a>
+                        </li>
+                        <li><a class="hover:text-orange-500 transition-colors"
+                                href="index.html#admissions-section">Admissions</a></li>
+                        <li><a class="hover:text-orange-500 transition-colors" href="index.html#contact">Contact Us</a>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Image 2 -->
-                <div onclick="openLightbox(1)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/dc41b054-5ca2-ec5b-1118-883766cf177f.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
+                <!-- Academic Streams quick reference -->
+                <div class="text-left">
+                    <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">PROGRAMS</h5>
+                    <ul class="space-y-3.5 text-[13px] text-white/80">
+                        <li><a href="index.html#programs"
+                                class="text-left hover:text-orange-500 transition-colors">Journalism &amp; Mass
+                                Communication</a></li>
+                        <li><a href="index.html#programs"
+                                class="text-left hover:text-orange-500 transition-colors">Radio
+                                &amp; Television Production</a></li>
+                        <li><a href="index.html#programs"
+                                class="text-left hover:text-orange-500 transition-colors">Digital
+                                Media &amp; Content Creation</a></li>
+                        <li><a href="index.html#programs"
+                                class="text-left hover:text-orange-500 transition-colors">Multimedia &amp; Visual
+                                Communication</a></li>
+                    </ul>
                 </div>
 
-                <!-- Image 3 -->
-                <div onclick="openLightbox(2)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/c0f36d76-a11a-833b-dc98-9bb2d8a3777c.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 4 -->
-                <div onclick="openLightbox(3)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/7a0a200e-d36c-38d1-8e66-1c61b7e1bea9.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 5 -->
-                <div onclick="openLightbox(4)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/74b8f391-0fa9-b8cd-50b8-1c18ca39fdd0.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 6 -->
-                <div onclick="openLightbox(5)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/23d7bc56-dc54-657d-cace-1a2cab9f4ce6.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 7 -->
-                <div onclick="openLightbox(6)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/5a4e6b5b-e666-86bd-c89f-ef3bfdb0c4d7.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 8 -->
-                <div onclick="openLightbox(7)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/916164eb-2a9e-3057-a951-20ce58600a1f.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 9 -->
-                <div onclick="openLightbox(8)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/a25f54b8-e676-b482-fb66-f6552ccd8017.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 10 -->
-                <div onclick="openLightbox(9)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/89c5da9a-c476-5e5d-2d96-7487091fd77a.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 11 -->
-                <div onclick="openLightbox(10)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/e83f938a-a22e-9b14-5332-bba1dbc09487.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-                <!-- Image 12 -->
-                <div onclick="openLightbox(11)"
-                    class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 cursor-pointer">
-                    <img src="https://mcusercontent.com/b44c04c2ab470881cca951790/images/3296027c-8263-c77f-8370-d7b7fb2bdd84.jpg"
-                        alt="SSCMS Campus Event" loading="lazy"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold tracking-wide">View Full Photo</span>
-                        <span
-                            class="material-symbols-outlined text-white text-[22px] bg-black/40 rounded-full p-1">zoom_in</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Lightbox Modal -->
-    <div id="lightbox-modal"
-        class="fixed inset-0 z-50 bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
-        <!-- Close Button -->
-        <button onclick="closeLightbox()"
-            class="absolute top-5 right-5 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-2.5 z-10">
-            <span class="material-symbols-outlined text-[28px]">close</span>
-        </button>
-
-        <!-- Previous Button -->
-        <button onclick="navigateLightbox(-1)"
-            class="absolute left-4 sm:left-8 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-3 z-10">
-            <span class="material-symbols-outlined text-[28px]">arrow_back</span>
-        </button>
-
-        <!-- Image Container -->
-        <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center">
-            <img id="lightbox-img" src="" alt="SSCMS Event Photo Preview"
-                class="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transition-all duration-200" />
-            <p id="lightbox-counter" class="text-white/70 text-xs mt-3 font-semibold tracking-wider"></p>
-        </div>
-
-        <!-- Next Button -->
-        <button onclick="navigateLightbox(1)"
-            class="absolute right-4 sm:right-8 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 rounded-full p-3 z-10">
-            <span class="material-symbols-outlined text-[28px]">arrow_forward</span>
-        </button>
-    </div>
-
-    <!-- Call to Action Banner -->
-    <section class="py-16 bg-[#004123] text-white text-center relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-gutter relative z-10 space-y-6">
-            <span
-                class="inline-block bg-[#F58220] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
-                Join Siddhartha Media
-            </span>
-            <h3 class="text-[28px] sm:text-[36px] font-extrabold tracking-tight">
-                Experience Media Education Beyond Textbooks
-            </h3>
-            <p class="text-white/80 text-[15px] max-w-2xl mx-auto leading-relaxed">
-                Be part of our vibrant media hub. Learn storytelling, film-making, newsroom production, and broadcast
-                communication through live practical training.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 pt-2">
-                <button onclick="scrollToContact()"
-                    class="bg-[#F58220] hover:bg-orange-600 text-white font-extrabold px-8 py-3.5 rounded-xl uppercase tracking-wider text-xs shadow-lg transition-all hover:scale-105 active:scale-95">
-                    APPLY FOR ADMISSION
-                </button>
-                <a href="index.html#programs"
-                    class="bg-white/10 hover:bg-white/20 text-white font-extrabold px-8 py-3.5 rounded-xl uppercase tracking-wider text-xs border border-white/20 transition-all">
-                    EXPLORE PROGRAMS
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Block -->
-    <footer class="bg-[#0F4B2B] text-white pt-16 pb-10 border-t border-white/10">
-        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 mb-16">
-            <!-- Brand Information -->
-            <div class="space-y-6 lg:col-span-2">
-                <div class="flex items-center gap-3">
-                    <div
-                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden border border-slate-100 shrink-0">
-                        <img class="w-[85%] h-[85%] object-contain" alt="SSCMS Logo" src="image/logo/logo.png" />
-                    </div>
-                    <div class="text-left whitespace-nowrap">
-                        <h4 class="font-extrabold text-[15px] tracking-wide leading-none text-white uppercase">SRI
-                            SIDDHARTHA</h4>
-                        <p class="text-[11px] font-bold text-white uppercase tracking-wider mt-1 leading-none">CENTRE
-                            FOR MEDIA STUDIES</p>
-                        <p
-                            class="text-[9px] text-emerald-400 font-semibold uppercase tracking-widest mt-1.5 leading-none">
-                            — Affiliated to Tumkur University —</p>
-                    </div>
-                </div>
-                <p class="text-[13px] text-slate-200/90 leading-relaxed text-left">
-                    Empowering future media professionals through quality education, creativity and community.
-                </p>
-                <div class="flex gap-5 pt-2">
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/siddharthamedia.edu/" target="_blank" title="Facebook">
-                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path
-                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
-                        </svg>
-                    </a>
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/sscms_tumkur/" target="_blank" title="Instagram">
-                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path
-                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                        </svg>
-                    </a>
-                    <!-- YouTube -->
-                    <a href="https://www.youtube.com/@siddharthanewstumkur" target="_blank" title="YouTube">
-                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                            <path
-                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
-                        </svg>
-                    </a>
-                    <!-- LinkedIn -->
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
-                        <svg class="w-5 h-5 text-white hover:text-[#F58220] transition-colors" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path
-                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- College Sections Quick navigation -->
-            <div class="text-left">
-                <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">QUICK LINKS</h5>
-                <ul class="space-y-3.5 text-[13px] text-white/80">
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#about">About Us</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="faculty.html">Our Faculty</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#programs">Programs</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#facilities">Facilities</a>
-                    </li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#campus-life">Campus Life</a>
-                    </li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#placements">Placements</a>
-                    </li>
-                    <li><a class="hover:text-orange-500 transition-colors"
-                            href="index.html#admissions-section">Admissions</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#contact">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Academic Streams quick reference -->
-            <div class="text-left">
-                <h5 class="text-[14px] font-bold tracking-wide uppercase mb-6 text-white">PROGRAMS</h5>
-                <ul class="space-y-3.5 text-[13px] text-white/80">
-                    <li><a href="index.html#programs"
-                            class="text-left hover:text-orange-500 transition-colors">Journalism &amp; Mass
-                            Communication</a></li>
-                    <li><a href="index.html#programs" class="text-left hover:text-orange-500 transition-colors">Radio
-                            &amp; Television Production</a></li>
-                    <li><a href="index.html#programs" class="text-left hover:text-orange-500 transition-colors">Digital
-                            Media &amp; Content Creation</a></li>
-                    <li><a href="index.html#programs"
-                            class="text-left hover:text-orange-500 transition-colors">Multimedia &amp; Visual
-                            Communication</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="text-left space-y-6">
-                <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">CONTACT US</h5>
-                <div class="space-y-4 text-[13px] text-white/80">
-                    <p class="leading-relaxed">
-                        Sri Siddhartha Centre for Media Studies<br>
-                        SST Campus, Maralur, Tumakuru,<br>
-                        Karnataka - 572105
-                    </p>
-                    <div class="space-y-2 pt-2">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-[18px]">call</span>
-                            <a href="tel:+919740693477" class="hover:underline">+91 9740693477</a>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-[18px] shrink-0">mail</span>
-                            <a href="mailto:sscmsmediastudiestumkur@gmail.com"
-                                class="hover:underline break-all">sscmsmediastudiestumkur@gmail.com</a>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-[18px] shrink-0">language</span>
-                            <a href="https://www.siddharthamedia.edu.in" target="_blank"
-                                class="hover:underline break-all">www.siddharthamedia.edu.in</a>
+                <!-- Contact Information -->
+                <div class="text-left space-y-6">
+                    <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">CONTACT US</h5>
+                    <div class="space-y-4 text-[13px] text-white/80">
+                        <p class="leading-relaxed">
+                            Sri Siddhartha Centre for Media Studies<br>
+                            SST Campus, Maralur, Tumakuru,<br>
+                            Karnataka - 572105
+                        </p>
+                        <div class="space-y-2 pt-2">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[18px]">call</span>
+                                <a href="tel:+919740693477" class="hover:underline">+91 9740693477</a>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-[18px] shrink-0">mail</span>
+                                <a href="mailto:sscmsmediastudiestumkur@gmail.com"
+                                    class="hover:underline break-all">sscmsmediastudiestumkur@gmail.com</a>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-[18px] shrink-0">language</span>
+                                <a href="https://www.siddharthamedia.edu.in" target="_blank"
+                                    class="hover:underline break-all">www.siddharthamedia.edu.in</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Visit Us: Map Card -->
-            <div class="space-y-4 text-left">
-                <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">VISIT US</h5>
-                <div
-                    class="bg-white p-3 rounded-2xl shadow-lg border border-slate-100/10 max-w-[240px] flex flex-col items-center">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.404770608366!2d77.0923321!3d13.3229675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb02ea37377d0f3%3A0x79b6f7c5e3629848!2sSri%20Siddhartha%20Centre%20for%20Media%20Studies!5e1!3m2!1sen!2sin!4v1785077796327!5m2!1sen!2sin"
-                        class="w-full h-32 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    <a href="https://maps.google.com/?q=Sri+Siddhartha+Centre+for+Media+Studies,+Tumakuru"
-                        target="_blank"
-                        class="w-full bg-[#2A3B5C] hover:bg-[#1E293B] text-white py-2.5 rounded-lg text-[11px] font-bold text-center mt-3 tracking-wider block transition-colors uppercase">
-                        GET DIRECTIONS
-                    </a>
+                <!-- Visit Us: Map Card -->
+                <div class="space-y-4 text-left">
+                    <h5 class="text-[14px] font-bold tracking-wide uppercase text-white">VISIT US</h5>
+                    <div
+                        class="bg-white p-3 rounded-2xl shadow-lg border border-slate-100/10 max-w-[240px] flex flex-col items-center">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.404770608366!2d77.0923321!3d13.3229675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb02ea37377d0f3%3A0x79b6f7c5e3629848!2sSri%20Siddhartha%20Centre%20for%20Media%20Studies!5e1!3m2!1sen!2sin!4v1785077796327!5m2!1sen!2sin"
+                            class="w-full h-32 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <a href="https://maps.google.com/?q=Sri+Siddhartha+Centre+for+Media+Studies,+Tumakuru"
+                            target="_blank"
+                            class="w-full bg-[#2A3B5C] hover:bg-[#1E293B] text-white py-2.5 rounded-lg text-[11px] font-bold text-center mt-3 tracking-wider block transition-colors uppercase">
+                            GET DIRECTIONS
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Copyright details -->
-        <div
-            class="max-w-container-max mx-auto px-gutter border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-white/50 font-light">
-            <p>© 2026 Sri Siddhartha Centre for Media Studies. All Rights Reserved.</p>
-            <div class="flex gap-6 mt-4 md:mt-0">
-                <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-                <a class="hover:text-white transition-colors" href="#">Accreditations &amp; RTI</a>
-                <button onclick="showToast('SSCMS Website Version 4.8.1 (Stable)', 'info')"
-                    class="hover:text-white transition-colors">System Information</button>
+            <!-- Copyright details -->
+            <div
+                class="max-w-container-max mx-auto px-gutter border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-white/50 font-light">
+                <p>© 2026 Sri Siddhartha Centre for Media Studies. All Rights Reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Accreditations &amp; RTI</a>
+                    <button onclick="showToast('SSCMS Website Version 4.8.1 (Stable)', 'info')"
+                        class="hover:text-white transition-colors">System Information</button>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script>
-        // Array of all 12 Event Images
-        const EVENT_IMAGES = [
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/b31d46e0-feed-2bf2-e361-74ab5f96f366.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/dc41b054-5ca2-ec5b-1118-883766cf177f.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/c0f36d76-a11a-833b-dc98-9bb2d8a3777c.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/7a0a200e-d36c-38d1-8e66-1c61b7e1bea9.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/74b8f391-0fa9-b8cd-50b8-1c18ca39fdd0.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/23d7bc56-dc54-657d-cace-1a2cab9f4ce6.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/5a4e6b5b-e666-86bd-c89f-ef3bfdb0c4d7.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/916164eb-2a9e-3057-a951-20ce58600a1f.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/a25f54b8-e676-b482-fb66-f6552ccd8017.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/89c5da9a-c476-5e5d-2d96-7487091fd77a.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/e83f938a-a22e-9b14-5332-bba1dbc09487.jpg",
-            "https://mcusercontent.com/b44c04c2ab470881cca951790/images/3296027c-8263-c77f-8370-d7b7fb2bdd84.jpg"
-        ];
+        <script>
+            // Array of all 12 Event Images
+            const EVENT_IMAGES = [
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/b31d46e0-feed-2bf2-e361-74ab5f96f366.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/dc41b054-5ca2-ec5b-1118-883766cf177f.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/c0f36d76-a11a-833b-dc98-9bb2d8a3777c.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/7a0a200e-d36c-38d1-8e66-1c61b7e1bea9.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/74b8f391-0fa9-b8cd-50b8-1c18ca39fdd0.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/23d7bc56-dc54-657d-cace-1a2cab9f4ce6.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/5a4e6b5b-e666-86bd-c89f-ef3bfdb0c4d7.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/916164eb-2a9e-3057-a951-20ce58600a1f.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/a25f54b8-e676-b482-fb66-f6552ccd8017.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/89c5da9a-c476-5e5d-2d96-7487091fd77a.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/e83f938a-a22e-9b14-5332-bba1dbc09487.jpg",
+                "https://mcusercontent.com/b44c04c2ab470881cca951790/images/3296027c-8263-c77f-8370-d7b7fb2bdd84.jpg"
+            ];
 
-        let currentLightboxIndex = 0;
+            let currentLightboxIndex = 0;
 
-        function openLightbox(index) {
-            currentLightboxIndex = index;
-            const modal = document.getElementById('lightbox-modal');
-            const img = document.getElementById('lightbox-img');
-            const counter = document.getElementById('lightbox-counter');
+            function openLightbox(index) {
+                currentLightboxIndex = index;
+                const modal = document.getElementById('lightbox-modal');
+                const img = document.getElementById('lightbox-img');
+                const counter = document.getElementById('lightbox-counter');
 
-            img.src = EVENT_IMAGES[index];
-            counter.textContent = `Photo ${index + 1} of ${EVENT_IMAGES.length}`;
+                img.src = EVENT_IMAGES[index];
+                counter.textContent = `Photo ${index + 1} of ${EVENT_IMAGES.length}`;
 
-            modal.classList.remove('pointer-events-none', 'opacity-0');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const modal = document.getElementById('lightbox-modal');
-            modal.classList.add('pointer-events-none', 'opacity-0');
-            document.body.style.overflow = '';
-        }
-
-        function navigateLightbox(direction) {
-            currentLightboxIndex += direction;
-            if (currentLightboxIndex < 0) currentLightboxIndex = EVENT_IMAGES.length - 1;
-            if (currentLightboxIndex >= EVENT_IMAGES.length) currentLightboxIndex = 0;
-
-            const img = document.getElementById('lightbox-img');
-            const counter = document.getElementById('lightbox-counter');
-
-            img.src = EVENT_IMAGES[currentLightboxIndex];
-            counter.textContent = `Photo ${currentLightboxIndex + 1} of ${EVENT_IMAGES.length}`;
-        }
-
-        // Close on background click
-        document.getElementById('lightbox-modal').addEventListener('click', function (e) {
-            if (e.target === this) {
-                closeLightbox();
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                document.body.style.overflow = 'hidden';
             }
-        });
 
-        // Keyboard navigation for Lightbox
-        document.addEventListener('keydown', function (e) {
-            const modal = document.getElementById('lightbox-modal');
-            if (!modal.classList.contains('opacity-0')) {
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') navigateLightbox(-1);
-                if (e.key === 'ArrowRight') navigateLightbox(1);
+            function closeLightbox() {
+                const modal = document.getElementById('lightbox-modal');
+                modal.classList.add('pointer-events-none', 'opacity-0');
+                document.body.style.overflow = '';
             }
-        });
 
-        // Intelligent Auto-Hide Navigation on Scroll
-        function initNavAutoHide() {
-            const navWrapper = document.getElementById('nav-wrapper');
-            const SCROLL_THRESHOLD = 10;
-            let lastScrollY = window.scrollY;
-            let ticking = false;
+            function navigateLightbox(direction) {
+                currentLightboxIndex += direction;
+                if (currentLightboxIndex < 0) currentLightboxIndex = EVENT_IMAGES.length - 1;
+                if (currentLightboxIndex >= EVENT_IMAGES.length) currentLightboxIndex = 0;
 
-            function onScroll() {
-                const currentScrollY = window.scrollY;
-                const delta = currentScrollY - lastScrollY;
+                const img = document.getElementById('lightbox-img');
+                const counter = document.getElementById('lightbox-counter');
 
-                if (currentScrollY <= 5) {
-                    navWrapper.classList.remove('nav-hidden');
+                img.src = EVENT_IMAGES[currentLightboxIndex];
+                counter.textContent = `Photo ${currentLightboxIndex + 1} of ${EVENT_IMAGES.length}`;
+            }
+
+            // Close on background click
+            document.getElementById('lightbox-modal').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeLightbox();
+                }
+            });
+
+            // Keyboard navigation for Lightbox
+            document.addEventListener('keydown', function (e) {
+                const modal = document.getElementById('lightbox-modal');
+                if (!modal.classList.contains('opacity-0')) {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+                    if (e.key === 'ArrowRight') navigateLightbox(1);
+                }
+            });
+
+            // Intelligent Auto-Hide Navigation on Scroll
+            function initNavAutoHide() {
+                const navWrapper = document.getElementById('nav-wrapper');
+                const SCROLL_THRESHOLD = 10;
+                let lastScrollY = window.scrollY;
+                let ticking = false;
+
+                function onScroll() {
+                    const currentScrollY = window.scrollY;
+                    const delta = currentScrollY - lastScrollY;
+
+                    if (currentScrollY <= 5) {
+                        navWrapper.classList.remove('nav-hidden');
+                        lastScrollY = currentScrollY;
+                        ticking = false;
+                        return;
+                    }
+
+                    if (Math.abs(delta) < SCROLL_THRESHOLD) {
+                        ticking = false;
+                        return;
+                    }
+
+                    if (delta > 0) {
+                        navWrapper.classList.add('nav-hidden');
+                    } else {
+                        navWrapper.classList.remove('nav-hidden');
+                    }
+
                     lastScrollY = currentScrollY;
                     ticking = false;
-                    return;
                 }
 
-                if (Math.abs(delta) < SCROLL_THRESHOLD) {
-                    ticking = false;
-                    return;
-                }
-
-                if (delta > 0) {
-                    navWrapper.classList.add('nav-hidden');
-                } else {
-                    navWrapper.classList.remove('nav-hidden');
-                }
-
-                lastScrollY = currentScrollY;
-                ticking = false;
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        window.requestAnimationFrame(onScroll);
+                        ticking = true;
+                    }
+                }, { passive: true });
             }
 
-            window.addEventListener('scroll', function () {
-                if (!ticking) {
-                    window.requestAnimationFrame(onScroll);
-                    ticking = true;
-                }
-            }, { passive: true });
-        }
+            // Dynamic Top Toast Manager
+            function showToast(message, type = 'info') {
+                const container = document.getElementById('toast-container');
+                const toast = document.createElement('div');
+                toast.className = `p-4 rounded-xl shadow-xl border text-xs sm:text-sm font-bold flex items-center gap-3 bg-white text-slate-800 transition-all transform translate-x-12 opacity-0 pointer-events-auto max-w-sm`;
 
-        // Dynamic Top Toast Manager
-        function showToast(message, type = 'info') {
-            const container = document.getElementById('toast-container');
-            const toast = document.createElement('div');
-            toast.className = `p-4 rounded-xl shadow-xl border text-xs sm:text-sm font-bold flex items-center gap-3 bg-white text-slate-800 transition-all transform translate-x-12 opacity-0 pointer-events-auto max-w-sm`;
+                let icon = `<span class="material-symbols-outlined text-blue-500">info</span>`;
+                if (type === 'success') icon = `<span class="material-symbols-outlined text-green-500">verified</span>`;
+                if (type === 'error') icon = `<span class="material-symbols-outlined text-red-500">error</span>`;
 
-            let icon = `<span class="material-symbols-outlined text-blue-500">info</span>`;
-            if (type === 'success') icon = `<span class="material-symbols-outlined text-green-500">verified</span>`;
-            if (type === 'error') icon = `<span class="material-symbols-outlined text-red-500">error</span>`;
-
-            toast.innerHTML = `
+                toast.innerHTML = `
                 ${icon}
                 <div class="flex-grow font-light">${message}</div>
                 <button class="text-slate-400 hover:text-slate-800"><span class="material-symbols-outlined text-[16px]">close</span></button>
             `;
 
-            container.appendChild(toast);
+                container.appendChild(toast);
 
-            setTimeout(() => {
-                toast.classList.remove('translate-x-12', 'opacity-0');
-            }, 50);
+                setTimeout(() => {
+                    toast.classList.remove('translate-x-12', 'opacity-0');
+                }, 50);
 
-            const timer = setTimeout(() => {
-                dismissToast(toast);
-            }, 4000);
+                const timer = setTimeout(() => {
+                    dismissToast(toast);
+                }, 4000);
 
-            toast.querySelector('button').onclick = () => {
-                clearTimeout(timer);
-                dismissToast(toast);
-            };
-        }
-
-        function dismissToast(toast) {
-            toast.classList.add('translate-x-12', 'opacity-0');
-            setTimeout(() => {
-                toast.remove();
-            }, 300);
-        }
-
-        // Toggle Mobile Navigation Drawer
-        function toggleMobileMenu() {
-            const drawer = document.getElementById('mobile-menu-drawer');
-            const content = document.getElementById('mobile-menu-content');
-            const icon = document.getElementById('menu-icon');
-
-            if (drawer.classList.contains('pointer-events-none')) {
-                drawer.classList.remove('pointer-events-none', 'opacity-0');
-                content.classList.remove('translate-x-full');
-                icon.textContent = 'close';
-                document.body.style.overflow = 'hidden';
-            } else {
-                drawer.classList.add('pointer-events-none', 'opacity-0');
-                content.classList.add('translate-x-full');
-                icon.textContent = 'menu';
-                document.body.style.overflow = '';
+                toast.querySelector('button').onclick = () => {
+                    clearTimeout(timer);
+                    dismissToast(toast);
+                };
             }
-        }
 
-        function scrollToContact() {
-            const section = document.getElementById('contact');
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                window.location.href = 'index.html#contact';
+            function dismissToast(toast) {
+                toast.classList.add('translate-x-12', 'opacity-0');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
             }
-        }
 
-        // Initialize on DOM ready
-        document.addEventListener('DOMContentLoaded', () => {
-            initNavAutoHide();
-        });
-    </script>
-</body>
+            // Toggle Mobile Navigation Drawer
+            function toggleMobileMenu() {
+                const drawer = document.getElementById('mobile-menu-drawer');
+                const content = document.getElementById('mobile-menu-content');
+                const icon = document.getElementById('menu-icon');
+
+                if (drawer.classList.contains('pointer-events-none')) {
+                    drawer.classList.remove('pointer-events-none', 'opacity-0');
+                    content.classList.remove('translate-x-full');
+                    icon.textContent = 'close';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    drawer.classList.add('pointer-events-none', 'opacity-0');
+                    content.classList.add('translate-x-full');
+                    icon.textContent = 'menu';
+                    document.body.style.overflow = '';
+                }
+            }
+
+            function scrollToContact() {
+                const section = document.getElementById('contact');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    window.location.href = 'index.html#contact';
+                }
+            }
+
+            // Initialize on DOM ready
+            document.addEventListener('DOMContentLoaded', () => {
+                initNavAutoHide();
+            });
+        </script>
+    </body>
 
 </html>
