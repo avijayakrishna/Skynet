@@ -21,10 +21,12 @@
     <!-- Tailwind CSS with Forms and Container Queries -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <!-- Premium Fonts & Icons -->
+    <!-- Premium Fonts & Icons with Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block"
         rel="stylesheet" />
 
     <script id="tailwind-config">
@@ -117,8 +119,19 @@
     </script>
     <style>
         .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined', sans-serif;
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: 'liga';
         }
 
         .glass-card {
@@ -203,11 +216,15 @@
                 <!-- Left Side: Interactive Messages & Announcements -->
                 <div class="flex items-center gap-6">
                     <div class="flex items-center gap-1.5 text-white/95">
-                        <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">school</span>
+                        <svg class="w-[18px] h-[18px] text-[#ffb786] fill-current shrink-0" viewBox="0 0 24 24">
+                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                        </svg>
                         <span class="italic font-normal">Shape Your Future in Media & Communication</span>
                     </div>
                     <div class="flex items-center gap-1.5">
-                        <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">campaign</span>
+                        <svg class="w-[18px] h-[18px] text-[#ffb786] fill-current shrink-0" viewBox="0 0 24 24">
+                            <path d="M18 11c0-.67 0-1.33-.21-1.95l2.42-1.39-1-1.74-2.42 1.39C15.84 6.47 14.54 6 13 6v2c1.08 0 2.06.48 2.74 1.26l-1.35.79c-.37-.53-.98-.8-1.7-.8v2c.72 0 1.33.27 1.7.8l1.35-.79C15.06 12.52 14.08 13 13 13v2c1.54 0 2.84-.47 3.79-1.31l2.42 1.39 1-1.74-2.42-1.39c.21-.62.21-1.28.21-1.95zM4 9v6h2l5 4V5L6 9H4zm11.5 2c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                        </svg>
                         <span class="font-extrabold text-[#ffdcc6]">2027 Admissions Coming Soon!</span>
                     </div>
                 </div>
@@ -236,7 +253,8 @@
                                     d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
                             </svg>
                         </a>
-                        <a class="hover:text-[#ffb786] transition-colors" href="https://www.linkedin.com/company/siddharthamedia/" title="LinkedIn">
+                        <a class="hover:text-[#ffb786] transition-colors"
+                            href="https://www.linkedin.com/company/siddharthamedia/" title="LinkedIn">
                             <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path
                                     d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
@@ -275,13 +293,20 @@
                     <div class="relative group h-full flex items-center">
                         <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all cursor-pointer"
                             href="index.html#about">
-                            About Us <!-- <span class="material-symbols-outlined text-[18px] ml-1">expand_more</span> -->
+                            About Us <svg class="w-4 h-4 ml-1 fill-current transition-transform duration-200 group-hover:rotate-180 shrink-0" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
                         </a>
-                        <!-- <div class="absolute top-[85%] left-0 w-72 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-2 translate-y-2 group-hover:translate-y-0">
-                            <a href="sses.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Sri Siddhartha Education Society&reg;</a>
-                            <a href="secretary.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Secretary, SSES</a>
-                            <a href="admin.html" class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors">Administrative Officer</a>
-                        </div> -->
+                        <div
+                            class="absolute top-[85%] left-0 w-72 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-2 translate-y-2 group-hover:translate-y-0">
+                            <a href="sses.html"
+                                class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Sri
+                                Siddhartha Education Society&reg;</a>
+                            <a href="secretary.html"
+                                class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Secretary,
+                                SSES</a>
+                            <a href="admin.html"
+                                class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors">Administrative
+                                Officer</a>
+                        </div>
                     </div>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="index.html#programs">Programs</a>
@@ -291,8 +316,19 @@
                         href="index.html#facilities">Facilities</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="index.html#radio">Radio</a>
-                    <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                        href="index.html#campus-life">Campus Life</a>
+                    <div class="relative group h-full flex items-center">
+                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all cursor-pointer"
+                            href="index.html#campus-life">
+                            Campus Life <svg class="w-4 h-4 ml-1 fill-current transition-transform duration-200 group-hover:rotate-180 shrink-0" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </a>
+                        <div
+                            class="absolute top-[85%] left-0 w-60 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-2 translate-y-2 group-hover:translate-y-0">
+                            <a href="index.html#campus-life"
+                                class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Campus Experience</a>
+                            <a href="events.html"
+                                class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors">Events &amp; Gallery</a>
+                        </div>
+                    </div>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                         href="index.html#placements">Placements</a>
                     <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
@@ -322,8 +358,7 @@
                     class="absolute top-0 right-0 w-[80%] max-w-sm h-[calc(100vh-5rem)] bg-white shadow-xl flex flex-col p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
                     <nav class="flex flex-col gap-5 text-[16px] font-semibold text-on-surface" id="mobile-nav">
                         <div class="flex flex-col border-b border-slate-100 pb-2">
-                            <a onclick="toggleMobileMenu()"
-                                class="mobile-nav-link hover:text-primary py-2"
+                            <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2"
                                 href="index.html#about">About Us</a>
                             <!-- <div class="flex flex-col pl-4 gap-3 mt-2 border-l-2 border-slate-100">
                                 <a href="sses.html" class="text-[14px] text-slate-600 hover:text-primary font-medium">Sri Siddhartha Education Society&reg;</a>
@@ -343,15 +378,19 @@
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="index.html#radio">Radio</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                            href="index.html#campus-life">Campus Life</a>
+                        <div class="flex flex-col border-b border-slate-100 pb-2">
+                            <a onclick="toggleMobileMenu()" class="mobile-nav-link hover:text-primary py-2"
+                                href="index.html#campus-life">Campus Life</a>
+                            <div class="flex flex-col pl-4 gap-2 mt-1 border-l-2 border-slate-100">
+                                <a onclick="toggleMobileMenu()" href="index.html#campus-life"
+                                    class="text-[14px] text-slate-600 hover:text-primary font-medium py-1">Campus Experience</a>
+                                <a onclick="toggleMobileMenu()" href="events.html"
+                                    class="text-[14px] text-slate-600 hover:text-primary font-medium py-1">Events &amp; Gallery</a>
+                            </div>
+                        </div>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="index.html#placements">Placements</a>
-                        <a onclick="toggleMobileMenu()"
-                            class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100" href="#news">News
-                            &amp; Events</a>
                         <a onclick="toggleMobileMenu()"
                             class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                             href="index.html#contact">Contact Us</a>
@@ -390,7 +429,8 @@
                             </svg>
                         </a>
                         <!-- LinkedIn -->
-                        <a class="text-slate-500 hover:text-primary transition-colors" href="https://www.linkedin.com/company/siddharthamedia/" title="LinkedIn">
+                        <a class="text-slate-500 hover:text-primary transition-colors"
+                            href="https://www.linkedin.com/company/siddharthamedia/" title="LinkedIn">
                             <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path
                                     d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
@@ -450,7 +490,8 @@
                             class="material-symbols-outlined text-secondary text-[30px] font-bold">event_available</span>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-slate-800 text-[15px] tracking-tight leading-tight">2027–28 ADMISSIONS COMING SOON</h4>
+                        <h4 class="font-semibold text-slate-800 text-[15px] tracking-tight leading-tight">2027–28
+                            ADMISSIONS COMING SOON</h4>
                         <p class="text-slate-500 text-[12px] font-semibold mt-0.5">Apply for BAJMC &amp; MAJMC Courses
                         </p>
                     </div>
@@ -826,52 +867,72 @@
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
                 <!-- Faculty 1 -->
                 <a href="faculty.html#muddesha" class="flex flex-col items-center text-center group stagger-item block">
-                    <div class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
-                        <img src="image/faculty/b-t-muddesha.webp" alt="Dr. B T Muddesha" onerror="this.style.display='none'"
+                    <div
+                        class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+                        <img src="image/faculty/b-t-muddesha.webp" alt="Dr. B T Muddesha"
+                            onerror="this.style.display='none'"
                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <h4 class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">Dr. B T Muddesha</h4>
+                    <h4
+                        class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">
+                        Dr. B T Muddesha</h4>
                     <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">DIRECTOR</span>
                 </a>
 
                 <!-- Faculty 2 -->
                 <a href="faculty.html#jyothi" class="flex flex-col items-center text-center group stagger-item block">
-                    <div class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+                    <div
+                        class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
                         <img src="image/faculty/jyothi-c.webp" alt="Dr. Jyothi C" onerror="this.style.display='none'"
                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <h4 class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">Dr. Jyothi C</h4>
-                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">HOD &amp; PLACEMENT OFFICER</span>
+                    <h4
+                        class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">
+                        Dr. Jyothi C</h4>
+                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">HOD &amp; PLACEMENT
+                        OFFICER</span>
                 </a>
 
                 <!-- Faculty 3 -->
                 <a href="faculty.html#swetha" class="flex flex-col items-center text-center group stagger-item block">
-                    <div class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+                    <div
+                        class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
                         <img src="image/faculty/swetha-m.webp" alt="Mrs. Swetha M P" onerror="this.style.display='none'"
                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <h4 class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">Mrs. Swetha M P</h4>
-                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">ASSISTANT PROFESSOR</span>
+                    <h4
+                        class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">
+                        Mrs. Swetha M P</h4>
+                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">ASSISTANT
+                        PROFESSOR</span>
                 </a>
 
                 <!-- Faculty 4 -->
                 <a href="faculty.html#kokila" class="flex flex-col items-center text-center group stagger-item block">
-                    <div class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+                    <div
+                        class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
                         <img src="image/faculty/kokila-m.webp" alt="Ms. Kokila M S" onerror="this.style.display='none'"
                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <h4 class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">Ms. Kokila M S</h4>
-                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">ASSISTANT PROFESSOR</span>
+                    <h4
+                        class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">
+                        Ms. Kokila M S</h4>
+                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">ASSISTANT
+                        PROFESSOR</span>
                 </a>
 
                 <!-- Faculty 5 -->
                 <a href="faculty.html#naveen" class="flex flex-col items-center text-center group stagger-item block">
-                    <div class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
+                    <div
+                        class="w-full aspect-square bg-slate-50 mb-3.5 flex items-center justify-center overflow-hidden rounded-xl border border-slate-100 shadow-sm">
                         <img src="image/faculty/naveen-n.webp" alt="Mr. Naveen N G" onerror="this.style.display='none'"
                             class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
-                    <h4 class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">Mr. Naveen N G</h4>
-                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">LECTURER / FILMMAKER</span>
+                    <h4
+                        class="text-[16px] sm:text-[17px] font-bold text-slate-800 group-hover:text-primary transition-colors">
+                        Mr. Naveen N G</h4>
+                    <span class="text-[10px] font-bold text-[#F58220] uppercase tracking-wider mt-1">LECTURER /
+                        FILMMAKER</span>
                 </a>
             </div>
 
@@ -1509,15 +1570,15 @@
         <!-- Gallery Grid with 5 Columns -->
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6" id="gallery-grid">
             <!-- Photo Card 1 -->
-            <div class="stagger-item flex flex-col group cursor-pointer">
+            <a href="events.html" class="stagger-item flex flex-col group cursor-pointer block">
                 <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         alt="Events & Fests" src="image/sscms_1/00007.webp" />
                 </div>
                 <p
-                    class="text-center font-bold text-slate-700 text-[14px] mt-4 group-hover:text-primary transition-colors">
-                    Events & Fests</p>
-            </div>
+                    class="text-center font-bold text-slate-700 text-[14px] mt-4 group-hover:text-primary transition-colors flex items-center justify-center gap-1">
+                    Events &amp; Fests <span class="material-symbols-outlined text-[16px]">arrow_forward</span></p>
+            </a>
             <!-- Photo Card 2 -->
             <div class="stagger-item flex flex-col group cursor-pointer">
                 <div class="h-44 md:h-52 rounded-none overflow-hidden shadow-sm relative">
@@ -1638,7 +1699,8 @@
                             FOR JULY 2027–2028 BATCH</p>
                     </div>
                     <p class="text-white/80 text-[14px] leading-relaxed max-w-md">
-                        Take the first step towards a successful career in media and communication. Limited seats. Enroll
+                        Take the first step towards a successful career in media and communication. Limited seats.
+                        Enroll
                         today!
                     </p>
 
@@ -1916,10 +1978,14 @@
                 <ul class="space-y-3.5 text-[13px] text-white/80">
                     <li><a class="hover:text-orange-500 transition-colors" href="index.html#about">About Us</a></li>
                     <li><a class="hover:text-orange-500 transition-colors" href="index.html#programs">Programs</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#facilities">Facilities</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#campus-life">Campus Life</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#placements">Placements</a></li>
-                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#admissions-section">Admissions</a>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#facilities">Facilities</a>
+                    </li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#campus-life">Campus Life</a>
+                    </li>
+                    <li><a class="hover:text-orange-500 transition-colors" href="index.html#placements">Placements</a>
+                    </li>
+                    <li><a class="hover:text-orange-500 transition-colors"
+                            href="index.html#admissions-section">Admissions</a>
                     </li>
                     <li><a class="hover:text-orange-500 transition-colors" href="index.html#contact">Contact Us</a></li>
                 </ul>
@@ -1993,7 +2059,8 @@
         <!-- Copyright details -->
         <div
             class="max-w-container-max mx-auto px-gutter border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-white/50 font-light">
-            <p>© 2026 SSCMS. All Rights Reserved. Digital Experience by <a href="https://aloakjawali.com/" target="_blank" rel="noopener">Aloak Jawali</a></p>
+            <p>© 2026 SSCMS. All Rights Reserved. Digital Experience by <a href="https://aloakjawali.com/"
+                    target="_blank" rel="noopener">Aloak Jawali</a></p>
             <div class="flex gap-6 mt-4 md:mt-0">
                 <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
                 <a class="hover:text-white transition-colors" href="#">Accreditations &amp; RTI</a>

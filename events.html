@@ -22,11 +22,13 @@
         <!-- Tailwind CSS with Forms and Container Queries -->
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-        <!-- Premium Fonts & Icons -->
+        <!-- Premium Fonts & Icons with Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
             rel="stylesheet" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block"
             rel="stylesheet" />
 
         <script id="tailwind-config">
@@ -119,8 +121,19 @@
         </script>
         <style>
             .material-symbols-outlined {
+                font-family: 'Material Symbols Outlined', sans-serif;
                 font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
                 vertical-align: middle;
+                display: inline-block;
+                line-height: 1;
+                text-transform: none;
+                letter-spacing: normal;
+                word-wrap: normal;
+                white-space: nowrap;
+                direction: ltr;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+                font-feature-settings: 'liga';
             }
 
             .glass-card {
@@ -172,12 +185,16 @@
                     <!-- Left Side: Interactive Messages & Announcements -->
                     <div class="flex items-center gap-6">
                         <div class="flex items-center gap-1.5 text-white/95">
-                            <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">school</span>
+                            <svg class="w-[18px] h-[18px] text-[#ffb786] fill-current shrink-0" viewBox="0 0 24 24">
+                                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                            </svg>
                             <span class="italic font-normal">Shape Your Future in Media & Communication</span>
                         </div>
                         <div class="flex items-center gap-1.5">
-                            <span class="material-symbols-outlined text-[18px] text-[#ffb786] fill-1">campaign</span>
-                            <span class="font-extrabold text-[#ffdcc6]">July 2026 Admissions Open!</span>
+                            <svg class="w-[18px] h-[18px] text-[#ffb786] fill-current shrink-0" viewBox="0 0 24 24">
+                                <path d="M18 11c0-.67 0-1.33-.21-1.95l2.42-1.39-1-1.74-2.42 1.39C15.84 6.47 14.54 6 13 6v2c1.08 0 2.06.48 2.74 1.26l-1.35.79c-.37-.53-.98-.8-1.7-.8v2c.72 0 1.33.27 1.7.8l1.35-.79C15.06 12.52 14.08 13 13 13v2c1.54 0 2.84-.47 3.79-1.31l2.42 1.39 1-1.74-2.42-1.39c.21-.62.21-1.28.21-1.95zM4 9v6h2l5 4V5L6 9H4zm11.5 2c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                            </svg>
+                            <span class="font-extrabold text-[#ffdcc6]">July 2027 Admissions Open!</span>
                         </div>
                     </div>
 
@@ -245,8 +262,24 @@
 
                     <!-- Desktop Navigation Menu (Unchanged) -->
                     <nav class="hidden lg:flex items-center gap-6 h-full pt-1.5" id="desktop-nav">
-                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                            href="index.html#about">About Us</a>
+                        <div class="relative group h-full flex items-center">
+                            <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all cursor-pointer"
+                                href="index.html#about">
+                                About Us <svg class="w-4 h-4 ml-1 fill-current transition-transform duration-200 group-hover:rotate-180 shrink-0" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                            </a>
+                            <div
+                                class="absolute top-[85%] left-0 w-72 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-2 translate-y-2 group-hover:translate-y-0">
+                                <a href="sses.html"
+                                    class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Sri
+                                    Siddhartha Education Society&reg;</a>
+                                <a href="secretary.html"
+                                    class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Secretary,
+                                    SSES</a>
+                                <a href="admin.html"
+                                    class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors">Administrative
+                                    Officer</a>
+                            </div>
+                        </div>
                         <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#programs">Programs</a>
                         <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
@@ -255,8 +288,19 @@
                             href="index.html#facilities">Facilities</a>
                         <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#radio">Radio</a>
-                        <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
-                            href="index.html#campus-life">Campus Life</a>
+                        <div class="relative group h-full flex items-center">
+                            <a class="nav-link font-semibold text-[14px] text-[#004123] border-b-4 border-[#004123] h-full flex items-center px-1 transition-all cursor-pointer"
+                                href="index.html#campus-life">
+                                Campus Life <svg class="w-4 h-4 ml-1 fill-current transition-transform duration-200 group-hover:rotate-180 shrink-0" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                            </a>
+                            <div
+                                class="absolute top-[85%] left-0 w-60 bg-white shadow-xl rounded-lg border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col py-2 translate-y-2 group-hover:translate-y-0">
+                                <a href="index.html#campus-life"
+                                    class="px-5 py-3 text-[13px] font-bold text-slate-700 hover:text-[#004123] hover:bg-slate-50 transition-colors border-b border-slate-50">Campus Experience</a>
+                                <a href="events.html"
+                                    class="px-5 py-3 text-[13px] font-bold text-[#004123] bg-slate-50 hover:bg-slate-100 transition-colors">Events &amp; Gallery</a>
+                            </div>
+                        </div>
                         <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
                             href="index.html#placements">Placements</a>
                         <a class="nav-link font-semibold text-[14px] text-slate-600 hover:text-[#004123] border-b-4 border-transparent h-full flex items-center px-1 transition-all"
@@ -300,9 +344,16 @@
                             <a onclick="toggleMobileMenu()"
                                 class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                                 href="index.html#radio">Radio</a>
-                            <a onclick="toggleMobileMenu()"
-                                class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
-                                href="index.html#campus-life">Campus Life</a>
+                            <div class="flex flex-col border-b border-slate-100 pb-2">
+                                <a onclick="toggleMobileMenu()" class="mobile-nav-link text-primary font-bold py-2"
+                                    href="index.html#campus-life">Campus Life</a>
+                                <div class="flex flex-col pl-4 gap-2 mt-1 border-l-2 border-[#004123]">
+                                    <a onclick="toggleMobileMenu()" href="index.html#campus-life"
+                                        class="text-[14px] text-slate-600 hover:text-primary font-medium py-1">Campus Experience</a>
+                                    <a onclick="toggleMobileMenu()" href="events.html"
+                                        class="text-[14px] text-[#004123] font-bold py-1">Events &amp; Gallery</a>
+                                </div>
+                            </div>
                             <a onclick="toggleMobileMenu()"
                                 class="mobile-nav-link hover:text-primary py-2 border-b border-slate-100"
                                 href="index.html#placements">Placements</a>
@@ -316,7 +367,7 @@
                         <div class="mt-8 flex flex-col gap-4">
                             <button onclick="toggleMobileMenu(); scrollToContact();"
                                 class="w-full bg-[#F58220] hover:bg-orange-600 text-white text-center py-3.5 rounded-lg font-extrabold shadow-md transition-all">
-                                APPLY NOW 2026-27
+                                APPLY NOW 2027-28
                             </button>
                         </div>
                         <!-- Mobile Social Icons -->
